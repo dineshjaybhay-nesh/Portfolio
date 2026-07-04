@@ -3,144 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dinesh Jaybhay | Sr. Operations & B2B Sales Leader Portfolio</title>
-    <!-- Tailwind CSS CDN -->
+    <title>Dinesh Jaybhay | Product Operations & Senior B2B Leader Portfolio</title>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome for Premium Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts: Inter & Plus Jakarta Sans -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        display: ['Plus Jakarta Sans', 'sans-serif'],
-                    },
                     colors: {
                         brand: {
-                            deep: '#0F172A', // Slate 900
-                            navy: '#1E293B', // Slate 800
-                            accent: '#0EA5E9', // Sky 500
-                            gold: '#F59E0B', // Amber 500
-                            silver: '#94A3B8', // Slate 400
-                            emerald: '#10B981', // Emerald 500
+                            deep: '#0B0F19',
+                            navy: '#151D30',
+                            accent: '#3B82F6',
+                            highlight: '#10B981',
+                            gold: '#F59E0B'
                         }
                     },
-                    animation: {
-                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                        'float': 'float 6s ease-in-out infinite',
-                    },
-                    keyframes: {
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0px)' },
-                            '50%': { transform: 'translateY(-10px)' },
-                        }
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
                     }
                 }
             }
         }
     </script>
-
+    <!-- Google Fonts & FontAwesome Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Print Styles for Pristine PDF Resume -->
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0B0F19;
-            color: #E2E8F0;
-        }
-        .text-gradient {
-            background: linear-gradient(135deg, #38BDF8 0%, #0EA5E9 50%, #6366F1 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .card-glow:hover {
-            box-shadow: 0 0 20px rgba(14, 165, 233, 0.15);
-            border-color: rgba(14, 165, 233, 0.3);
-        }
-        /* Custom scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #0F172A;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #1E293B;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #334155;
-        }
-
-        /* Print Media Stylesheet for clean resume export */
         @media print {
             body {
-                background-color: #FFFFFF !important;
-                color: #000000 !important;
-                font-size: 11pt;
+                background: white !important;
+                color: black !important;
+                font-family: 'Inter', sans-serif !important;
             }
             .no-print {
                 display: none !important;
             }
             .print-layout {
                 display: block !important;
-                max-width: 100% !important;
-                margin: 0 !important;
-                padding: 1.5cm !important;
             }
-            .print-card {
-                background: #FFFFFF !important;
-                color: #000000 !important;
-                border: none !important;
-                box-shadow: none !important;
-                margin-bottom: 1.5rem !important;
-                page-break-inside: avoid;
+            .page-break {
+                page-break-before: always;
             }
-            .print-header {
-                border-bottom: 2px solid #E2E8F0 !important;
-                padding-bottom: 1rem !important;
-                margin-bottom: 1.5rem !important;
-            }
-            .print-timeline-item {
-                border-left: 2px solid #CBD5E1 !important;
-                padding-left: 1.5rem !important;
-                margin-bottom: 1.5rem !important;
-                page-break-inside: avoid;
-            }
-            a {
-                text-decoration: underline !important;
-                color: #000000 !important;
-            }
+        }
+        .print-layout {
+            display: none;
         }
     </style>
 </head>
-<body class="overflow-x-hidden antialiased selection:bg-brand-accent selection:text-white">
+<body class="bg-brand-deep text-slate-100 font-sans antialiased selection:bg-brand-accent selection:text-white">
 
-    <header class="no-print fixed top-0 left-0 w-full z-50 bg-[#0B0F19]/80 backdrop-blur-md border-b border-slate-800 transition-all duration-300">
+    <!-- Sticky Navigation Header -->
+    <header class="sticky top-0 z-50 bg-brand-deep/90 backdrop-blur-md border-b border-slate-800/80 no-print">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-brand-accent to-indigo-600 flex items-center justify-center font-bold text-white shadow-lg shadow-brand-accent/20">
+            <!-- Brand Logo -->
+            <a href="#hero" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-accent to-indigo-600 flex items-center justify-center text-white font-extrabold text-lg shadow-lg shadow-brand-accent/20 transition-transform group-hover:scale-105">
                     DJ
                 </div>
                 <div>
-                    <span class="font-display font-bold text-lg tracking-tight text-white block">Dinesh Jaybhay</span>
-                    <span class="text-xs text-brand-accent font-medium uppercase tracking-widest block -mt-1">Operations Portfolio</span>
+                    <span class="block text-white font-bold text-base leading-none tracking-tight">Dinesh Jaybhay</span>
+                    <span class="block text-[11px] text-brand-accent font-semibold tracking-wider uppercase mt-1">Product Ops & B2B Leader</span>
                 </div>
-            </div>
+            </a>
 
-            <!-- Desktop Navigation -->
+            <!-- Desktop Navigation Links -->
             <nav class="hidden md:flex items-center gap-8">
                 <a href="#about" class="text-sm font-medium text-slate-300 hover:text-brand-accent transition-colors">About</a>
-                <a href="#metrics" class="text-sm font-medium text-slate-300 hover:text-brand-accent transition-colors">Impact Metrics</a>
+                <a href="#skills" class="text-sm font-medium text-slate-300 hover:text-brand-accent transition-colors">PM & Ops Skills</a>
                 <a href="#experience" class="text-sm font-medium text-slate-300 hover:text-brand-accent transition-colors">Experience</a>
-                <a href="#projects" class="text-sm font-medium text-slate-300 hover:text-brand-accent transition-colors">Case Work</a>
-                <a href="#education" class="text-sm font-medium text-slate-300 hover:text-brand-accent transition-colors">Qualifications</a>
                 <a href="#interactive-suite" class="text-sm font-medium text-slate-300 hover:text-brand-accent transition-colors bg-slate-800/80 px-3 py-1.5 rounded-full border border-slate-700/50 flex items-center gap-1.5">
-                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+                    <span class="w-2 h-2 rounded-full bg-brand-highlight animate-ping"></span>
                     Interactive Suite
                 </a>
             </nav>
@@ -148,7 +85,7 @@
             <!-- Actions -->
             <div class="hidden lg:flex items-center gap-4">
                 <button onclick="window.print()" class="text-slate-300 hover:text-white text-sm font-medium flex items-center gap-2 border border-slate-700 hover:border-slate-500 px-4 py-2 rounded-lg transition-all bg-slate-800/20">
-                    <i class="fa-solid fa-print"></i> Save / Print PDF
+                    <i class="fa-solid fa-print"></i> Save / Print Resume
                 </button>
                 <a href="mailto:dineshjaybhay@gmail.com" class="bg-gradient-to-r from-brand-accent to-indigo-600 hover:from-brand-accent hover:to-indigo-500 text-white font-medium text-sm px-5 py-2.5 rounded-lg transition-all duration-300 shadow-md shadow-brand-accent/10 hover:shadow-brand-accent/20 flex items-center gap-2">
                     <i class="fa-regular fa-envelope"></i> Hire Dinesh
@@ -161,114 +98,88 @@
             </button>
         </div>
 
-        <!-- Mobile Drawer -->
+        <!-- Mobile Drawer Menu -->
         <div id="mobileMenu" class="hidden md:hidden bg-brand-deep border-b border-slate-800 px-6 py-4 space-y-3">
             <a href="#about" class="block text-slate-300 hover:text-brand-accent transition-colors text-lg font-medium">About</a>
-            <a href="#metrics" class="block text-slate-300 hover:text-brand-accent transition-colors text-lg font-medium">Impact Metrics</a>
+            <a href="#skills" class="block text-slate-300 hover:text-brand-accent transition-colors text-lg font-medium">PM & Ops Skills</a>
             <a href="#experience" class="block text-slate-300 hover:text-brand-accent transition-colors text-lg font-medium">Experience</a>
-            <a href="#projects" class="block text-slate-300 hover:text-brand-accent transition-colors text-lg font-medium">Case Work</a>
-            <a href="#education" class="block text-slate-300 hover:text-brand-accent transition-colors text-lg font-medium">Qualifications</a>
             <a href="#interactive-suite" class="block text-slate-300 hover:text-brand-accent transition-colors text-lg font-medium">Interactive Tools</a>
             <div class="pt-4 border-t border-slate-800 flex flex-col gap-3">
-                <button onclick="window.print()" class="w-full text-slate-300 hover:text-white text-sm font-medium flex items-center justify-center gap-2 border border-slate-700 px-4 py-3 rounded-lg bg-slate-800/20">
-                    <i class="fa-solid fa-print"></i> Save / Print PDF
+                <button onclick="window.print()" class="w-full text-center text-slate-300 hover:text-white text-sm font-medium border border-slate-700 hover:border-slate-500 py-2.5 rounded-lg transition-all bg-slate-800/20 flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-print"></i> Print Resume PDF
                 </button>
-                <a href="mailto:dineshjaybhay@gmail.com" class="w-full bg-brand-accent text-white font-medium text-center py-3 rounded-lg block">
-                    Hire Dinesh
+                <a href="mailto:dineshjaybhay@gmail.com" class="w-full text-center bg-brand-accent hover:bg-brand-accent/90 text-white font-medium text-sm py-2.5 rounded-lg transition-all flex items-center justify-center gap-2">
+                    <i class="fa-regular fa-envelope"></i> Contact Me
                 </a>
             </div>
         </div>
     </header>
 
-    <section id="about" class="pt-32 pb-20 md:pt-40 md:pb-28 relative overflow-hidden">
-        <!-- Background Grid Graphics -->
-        <div class="absolute inset-0 z-0 opacity-15 pointer-events-none">
-            <div class="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-brand-accent/30 filter blur-3xl animate-float"></div>
-            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full bg-indigo-500/20 filter blur-3xl animate-pulse-slow"></div>
-            <div class="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
-        </div>
-
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                
-                <!-- Left Column: Key Pitch & Details -->
+    <!-- Hero / Intro Section -->
+    <section id="hero" class="relative py-20 lg:py-32 overflow-hidden no-print">
+        <!-- Graphic backgrounds -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-brand-accent/10 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute top-10 right-10 w-[300px] h-[300px] bg-purple-600/5 rounded-full blur-[100px] pointer-events-none"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <!-- Hero Left: Title & Subtitle -->
                 <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-                    <div class="inline-flex items-center gap-2 bg-brand-accent/10 border border-brand-accent/30 text-brand-accent px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider">
-                        <span class="w-2 h-2 rounded-full bg-brand-accent animate-ping"></span>
-                        Available for Senior Leadership Roles
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-800/60 border border-slate-700/50">
+                        <span class="w-2.5 h-2.5 rounded-full bg-brand-highlight animate-pulse"></span>
+                        <span class="text-xs font-semibold text-slate-300 tracking-wide">Available for Senior Product Ops & PM Roles</span>
                     </div>
-                    
-                    <h1 class="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-tight">
-                        Optimizing Operations. <br class="hidden sm:inline">
-                        <span class="text-gradient">Accelerating Growth.</span>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.1]">
+                        Bridging <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-indigo-400">Operations Strategy</span> & B2B Product Growth
                     </h1>
-
                     <p class="text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
-                        I am <strong class="text-white font-semibold">Dinesh Jaybhay</strong>, an Operations and B2B Sales Professional with <span class="text-brand-accent font-semibold">8+ years of expertise</span> in driving demand generation, optimizing sales pipelines, and leading cross-functional customer success workflows across international markets including <strong class="text-slate-200">US, APAC, ANZ, and EMEA</strong>.
+                        I am <strong class="text-white font-semibold">Dinesh Jaybhay</strong>, an Operations and B2B Specialist with <span class="text-brand-accent font-semibold">8+ years of expertise</span> in driving campaign deployment, structuring product execution pipelines, and reducing system errors across <strong class="text-slate-200">US, APAC, ANZ, and EMEA</strong>.
                     </p>
-
-                    <!-- Contact Bar Card -->
-                    <div class="bg-brand-navy/60 backdrop-blur-md border border-slate-800 rounded-xl p-4 inline-flex flex-wrap items-center justify-center lg:justify-start gap-y-3 gap-x-6 max-w-xl mx-auto lg:mx-0 w-full">
-                        <div class="flex items-center gap-2.5 text-slate-300 text-sm">
-                            <i class="fa-solid fa-location-dot text-brand-accent"></i>
-                            <span>Pune, MH, India</span>
-                        </div>
-                        <div class="hidden sm:block w-1.5 h-1.5 rounded-full bg-slate-700"></div>
-                        <a href="mailto:dineshjaybhay@gmail.com" class="flex items-center gap-2.5 text-slate-300 hover:text-brand-accent text-sm transition-colors">
-                            <i class="fa-regular fa-envelope text-brand-accent"></i>
-                            <span>dineshjaybhay@gmail.com</span>
+                    
+                    <!-- Quick Contact / Stats Row -->
+                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="mailto:dineshjaybhay@gmail.com" class="px-5 py-3 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-xl font-medium text-sm text-white flex items-center gap-2 transition-all">
+                            <i class="fa-regular fa-envelope text-brand-accent"></i> dineshjaybhay@gmail.com
                         </a>
-                        <div class="hidden sm:block w-1.5 h-1.5 rounded-full bg-slate-700"></div>
-                        <a href="tel:9561015344" class="flex items-center gap-2.5 text-slate-300 hover:text-brand-accent text-sm transition-colors">
-                            <i class="fa-solid fa-phone text-brand-accent"></i>
-                            <span>9561015344</span>
-                        </a>
-                    </div>
-
-                    <!-- CTA Buttons -->
-                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
-                        <a href="#interactive-suite" class="w-full sm:w-auto text-center bg-brand-accent hover:bg-brand-accent/90 text-white font-semibold px-8 py-4 rounded-xl shadow-lg shadow-brand-accent/25 transition-all flex items-center justify-center gap-2">
-                            Interactive Assistant <i class="fa-solid fa-robot"></i>
-                        </a>
-                        <a href="#experience" class="w-full sm:w-auto text-center bg-slate-800 hover:bg-slate-700 text-white font-semibold px-8 py-4 rounded-xl border border-slate-700 transition-all flex items-center justify-center gap-2">
-                            Explore Career Timeline <i class="fa-solid fa-arrow-down text-xs"></i>
+                        <a href="tel:9561015344" class="px-5 py-3 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-xl font-medium text-sm text-white flex items-center gap-2 transition-all">
+                            <i class="fa-solid fa-phone text-brand-highlight"></i> +91 9561015344
                         </a>
                     </div>
                 </div>
 
-                <!-- Right Column: Live Executive Stat Grid -->
-                <div class="lg:col-span-5 relative mt-8 lg:mt-0">
-                    <div class="absolute inset-0 bg-gradient-to-tr from-brand-accent/20 to-purple-600/10 rounded-2xl filter blur-xl"></div>
-                    <div class="bg-brand-navy/80 border border-slate-700/60 rounded-2xl p-8 relative z-10 backdrop-blur-lg">
+                <!-- Hero Right: Live Interactive Stat Panel -->
+                <div class="lg:col-span-5 relative">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-brand-accent/15 to-purple-600/10 rounded-2xl filter blur-xl"></div>
+                    <div class="bg-brand-navy/80 border border-slate-700/50 rounded-2xl p-8 relative z-10 backdrop-blur-lg">
                         <div class="flex items-center justify-between mb-8">
-                            <h3 class="font-display font-bold text-lg text-white">Operational Competencies</h3>
-                            <span class="text-xs bg-slate-800 text-brand-accent border border-slate-700 px-2 py-1 rounded-md font-mono">Verifiable Records</span>
+                            <h3 class="font-bold text-lg text-white">Operational Excellence</h3>
+                            <span class="text-[10px] bg-slate-800 text-brand-accent border border-slate-700 px-2 py-1 rounded-md font-mono font-bold tracking-wider">PORTFOLIO TRACK</span>
                         </div>
 
                         <div class="grid grid-cols-2 gap-4">
                             <!-- Metric 1 -->
                             <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-800 flex flex-col justify-between">
-                                <span class="text-brand-accent text-xs font-semibold tracking-wider uppercase">B2B Experience</span>
+                                <span class="text-brand-accent text-xs font-semibold tracking-wider uppercase">B2B Core Experience</span>
                                 <span class="text-3xl font-extrabold text-white my-1">8+ Yrs</span>
-                                <span class="text-slate-400 text-[11px]">Sales & Operations</span>
+                                <span class="text-slate-400 text-[11px]">Ops & Campaign Execution</span>
                             </div>
                             <!-- Metric 2 -->
                             <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-800 flex flex-col justify-between">
-                                <span class="text-emerald-500 text-xs font-semibold tracking-wider uppercase">Error Reduction</span>
-                                <span class="text-3xl font-extrabold text-white my-1">96%</span>
-                                <span class="text-slate-400 text-[11px]">Standardized Guidelines</span>
+                                <span class="text-brand-highlight text-xs font-semibold tracking-wider uppercase">Process Accuracy</span>
+                                <span class="text-3xl font-extrabold text-white my-1">94%</span>
+                                <span class="text-slate-400 text-[11px]">Standardized SLA Focus</span>
                             </div>
                             <!-- Metric 3 -->
                             <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-800 flex flex-col justify-between">
                                 <span class="text-brand-gold text-xs font-semibold tracking-wider uppercase">Global Coverage</span>
                                 <span class="text-3xl font-extrabold text-white my-1">4</span>
-                                <span class="text-slate-400 text-[11px]">Major World Regions</span>
+                                <span class="text-slate-400 text-[11px]">Key Market Geographies</span>
                             </div>
                             <!-- Metric 4 -->
                             <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-800 flex flex-col justify-between">
-                                <span class="text-indigo-400 text-xs font-semibold tracking-wider uppercase">CRM Workflow</span>
-                                <span class="text-3xl font-extrabold text-white my-1">100%</span>
-                                <span class="text-slate-400 text-[11px]">Clean Data Assurance</span>
+                                <span class="text-indigo-400 text-xs font-semibold tracking-wider uppercase">AI Automation</span>
+                                <span class="text-3xl font-extrabold text-white my-1">Enabled</span>
+                                <span class="text-slate-400 text-[11px]">Prompt Design Cert</span>
                             </div>
                         </div>
 
@@ -276,10 +187,10 @@
                             <div class="flex -space-x-2">
                                 <span class="w-8 h-8 rounded-full bg-brand-accent flex items-center justify-center font-bold text-xs text-white ring-2 ring-slate-800">US</span>
                                 <span class="w-8 h-8 rounded-full bg-indigo-500 flex items-center justify-center font-bold text-xs text-white ring-2 ring-slate-800">APAC</span>
-                                <span class="w-8 h-8 rounded-full bg-emerald-500 flex items-center justify-center font-bold text-xs text-white ring-2 ring-slate-800">ANZ</span>
+                                <span class="w-8 h-8 rounded-full bg-brand-highlight flex items-center justify-center font-bold text-xs text-white ring-2 ring-slate-800">ANZ</span>
                                 <span class="w-8 h-8 rounded-full bg-purple-600 flex items-center justify-center font-bold text-xs text-white ring-2 ring-slate-800">EMEA</span>
                             </div>
-                            <span class="text-xs text-slate-400">Campaigns deployment experience</span>
+                            <span class="text-xs text-slate-400">Verified International Campaigns</span>
                         </div>
                     </div>
                 </div>
@@ -288,663 +199,708 @@
         </div>
     </section>
 
-    <section id="metrics" class="no-print py-16 bg-slate-900/40 border-y border-slate-800/80">
+    <!-- About and Reference Section -->
+    <section id="about" class="py-16 bg-slate-900/40 border-y border-slate-800/80 no-print">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-r from-brand-navy to-slate-900 border border-slate-800 rounded-2xl p-8 lg:p-12 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-brand-accent/5 rounded-full blur-3xl pointer-events-none"></div>
+                
+                <div class="relative z-10 grid lg:grid-cols-12 gap-8 items-center">
+                    <div class="lg:col-span-8 space-y-4">
+                        <span class="text-xs text-brand-accent font-bold uppercase tracking-widest">Document & Resume Verification</span>
+                        <h2 class="text-2xl lg:text-3xl font-extrabold text-white">Verifiable Resume & Professional Record</h2>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            For comprehensive background check verification and complete work history, please reference the formal document named <strong class="text-brand-accent font-semibold">"DINESH_JAYBHAY_Resume (1) (2) (1) (1).pdf"</strong> verbatim. This interactive portfolio has been fully updated to display all core skills, metrics, certifications, and operational accomplishments documented therein.
+                        </p>
+                    </div>
+                    <div class="lg:col-span-4 flex justify-center lg:justify-end">
+                        <button onclick="window.print()" class="bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white font-semibold py-3.5 px-6 rounded-xl transition-all shadow-md flex items-center gap-2 text-sm">
+                            <i class="fa-solid fa-file-pdf text-brand-accent"></i> Export Verifiable PDF
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive PM & Ops Skills Hub -->
+    <section id="skills" class="py-20 relative no-print">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-12">
-                <h2 class="font-display font-bold text-2xl sm:text-3xl text-white">Target-Driven Expertise</h2>
-                <p class="text-slate-400 mt-2">Dinesh leverages modern toolstacks and strict SLA metrics to convert organizational targets into recurring revenue cycles.</p>
+                <span class="text-xs text-brand-accent font-bold uppercase tracking-widest block mb-2">Capabilities Matrix</span>
+                <h2 class="text-3xl font-extrabold text-white">Product Management & Operations Competencies</h2>
+                <p class="text-slate-400 mt-2 text-sm sm:text-base">
+                    How eight years of operational scale, cross-functional collaboration, and strategic B2B planning transition seamlessly into high-performance Product Operations.
+                </p>
             </div>
 
-            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-                <div class="bg-brand-navy/40 border border-slate-800 p-4 rounded-xl text-center hover:border-brand-accent/40 transition-all">
-                    <i class="fa-solid fa-chart-line text-brand-accent text-2xl mb-2.5"></i>
-                    <h4 class="text-sm font-semibold text-white">Pipeline Optimization</h4>
-                </div>
-                <div class="bg-brand-navy/40 border border-slate-800 p-4 rounded-xl text-center hover:border-brand-accent/40 transition-all">
-                    <i class="fa-solid fa-users text-brand-accent text-2xl mb-2.5"></i>
-                    <h4 class="text-sm font-semibold text-white">B2B Demand Gen</h4>
-                </div>
-                <div class="bg-brand-navy/40 border border-slate-800 p-4 rounded-xl text-center hover:border-brand-accent/40 transition-all">
-                    <i class="fa-solid fa-arrows-spin text-brand-accent text-2xl mb-2.5"></i>
-                    <h4 class="text-sm font-semibold text-white">CRM Data Hygiene</h4>
-                </div>
-                <div class="bg-brand-navy/40 border border-slate-800 p-4 rounded-xl text-center hover:border-brand-accent/40 transition-all">
-                    <i class="fa-solid fa-list-check text-brand-accent text-2xl mb-2.5"></i>
-                    <h4 class="text-sm font-semibold text-white">SLA/KPI Compliance</h4>
-                </div>
-                <div class="bg-brand-navy/40 border border-slate-800 p-4 rounded-xl text-center hover:border-brand-accent/40 transition-all">
-                    <i class="fa-solid fa-gears text-brand-accent text-2xl mb-2.5"></i>
-                    <h4 class="text-sm font-semibold text-white">Process Outlining</h4>
-                </div>
-                <div class="bg-brand-navy/40 border border-slate-800 p-4 rounded-xl text-center hover:border-brand-accent/40 transition-all">
-                    <i class="fa-solid fa-robot text-brand-accent text-2xl mb-2.5"></i>
-                    <h4 class="text-sm font-semibold text-white">AI Automation</h4>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="experience" class="py-20 relative">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
-                <div>
-                    <span class="text-xs text-brand-accent font-semibold uppercase tracking-widest block mb-2">My Career Path</span>
-                    <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white">Work History</h2>
-                </div>
-                
-                <!-- Interactive Timeline Filter Tabs -->
-                <div class="no-print mt-6 md:mt-0 flex flex-wrap gap-2">
-                    <button onclick="filterExperience('all')" id="tab-all" class="tab-btn active px-4 py-2 text-xs font-semibold rounded-lg bg-brand-accent text-white border border-brand-accent transition-all">
-                        Show All
+            <!-- Tab Switcher -->
+            <div class="flex justify-center mb-10">
+                <div class="inline-flex p-1.5 bg-brand-navy rounded-xl border border-slate-800">
+                    <button onclick="switchPMTab('product-ops')" id="tab-pm-ops" class="pm-tab-btn active px-4 py-2 text-xs sm:text-sm font-semibold rounded-lg bg-brand-accent text-white transition-all">
+                        Product Operations
                     </button>
-                    <button onclick="filterExperience('leadership')" id="tab-leadership" class="tab-btn px-4 py-2 text-xs font-semibold rounded-lg bg-brand-navy/50 text-slate-300 border border-slate-800 hover:border-slate-700 transition-all">
-                        Leadership & Ops
+                    <button onclick="switchPMTab('product-strategy')" id="tab-pm-strat" class="pm-tab-btn px-4 py-2 text-xs sm:text-sm font-semibold text-slate-400 hover:text-white transition-all">
+                        Strategy & Planning
                     </button>
-                    <button onclick="filterExperience('sales')" id="tab-sales" class="tab-btn px-4 py-2 text-xs font-semibold rounded-lg bg-brand-navy/50 text-slate-300 border border-slate-800 hover:border-slate-700 transition-all">
-                        Sales & Account Growth
+                    <button onclick="switchPMTab('growth-analytics')" id="tab-pm-growth" class="pm-tab-btn px-4 py-2 text-xs sm:text-sm font-semibold text-slate-400 hover:text-white transition-all">
+                        Growth & Analytics
                     </button>
                 </div>
             </div>
 
-            <!-- Timeline Stack -->
-            <div class="relative border-l-2 border-slate-800 pl-6 sm:pl-10 space-y-12 ml-4">
-                
-                <!-- Exp 1: Infuse Media -->
-                <div class="exp-card relative transition-all duration-300" data-category="leadership text-emerald-500">
-                    <!-- Marker Circle -->
-                    <span class="absolute -left-[35px] sm:-left-[51px] top-1.5 w-6 h-6 rounded-full bg-brand-accent border-4 border-brand-deep flex items-center justify-center text-xs text-white z-10 shadow-md"></span>
-                    
-                    <div class="bg-brand-navy/40 border border-slate-850 p-6 sm:p-8 rounded-2xl hover:border-brand-accent/30 transition-all">
-                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
-                            <div>
-                                <h3 class="font-display font-bold text-xl text-white">Sr. Team Leader Operations</h3>
-                                <p class="text-sm text-slate-400">Infuse Media • Pune, Maharashtra</p>
-                            </div>
-                            <span class="self-start sm:self-center px-3 py-1 bg-brand-accent/10 border border-brand-accent/20 rounded-full text-brand-accent text-xs font-semibold font-mono">
-                                Feb 2023 - Present
-                            </span>
-                        </div>
-                        
-                        <!-- Description Points -->
-                        <ul class="space-y-3.5 text-slate-300 text-sm">
-                            <li class="flex items-start gap-3">
-                                <span class="text-brand-accent mt-1.5 text-xs"><i class="fa-solid fa-circle"></i></span>
-                                <span>Led and executed global B2B lead generation and sales operations campaigns across <strong>US, APAC, ANZ, and EMEA</strong> markets, supporting enterprise and mid-market clients.</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <span class="text-brand-accent mt-1.5 text-xs"><i class="fa-solid fa-circle"></i></span>
-                                <span>Delivered results as both a Team Leader and Individual Contributor, driving lead generation, pipeline management, and end-to-end client delivery.</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <span class="text-brand-accent mt-1.5 text-xs"><i class="fa-solid fa-circle"></i></span>
-                                <span>Collaborated with Sales, Marketing, and Customer Success teams to align campaign strategy, accelerating pipeline velocity and driving revenue growth.</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <span class="text-brand-accent mt-1.5 text-xs"><i class="fa-solid fa-circle"></i></span>
-                                <span>Managed CRM workflows, lead research, data hygiene, and outbound operations, enhancing lead quality and conversion rates while boosting campaign performance.</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <span class="text-brand-accent mt-1.5 text-xs"><i class="fa-solid fa-circle"></i></span>
-                                <span>Met and exceeded client SLAs and KPIs through process optimization and performance tracking, ensuring execution excellence.</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Exp 2: Oxytech Systems -->
-                <div class="exp-card relative transition-all duration-300" data-category="sales">
-                    <!-- Marker Circle -->
-                    <span class="absolute -left-[35px] sm:-left-[51px] top-1.5 w-6 h-6 rounded-full bg-slate-700 border-4 border-brand-deep flex items-center justify-center text-xs text-white z-10 shadow-md"></span>
-                    
-                    <div class="bg-brand-navy/40 border border-slate-850 p-6 sm:p-8 rounded-2xl hover:border-brand-accent/30 transition-all">
-                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
-                            <div>
-                                <h3 class="font-display font-bold text-xl text-white">Business Development Manager</h3>
-                                <p class="text-sm text-slate-400">Oxytech Systems • Pune, Maharashtra (Remote)</p>
-                            </div>
-                            <span class="self-start sm:self-center px-3 py-1 bg-slate-800 border border-slate-700 rounded-full text-slate-300 text-xs font-semibold font-mono">
-                                Oct 2022 - Jan 2023
-                            </span>
-                        </div>
-                        
-                        <!-- Description Points -->
-                        <ul class="space-y-3.5 text-slate-300 text-sm">
-                            <li class="flex items-start gap-3">
-                                <span class="text-slate-500 mt-1.5 text-xs"><i class="fa-solid fa-circle"></i></span>
-                                <span>Led the end-to-end sales function, managing the full cycle from lead generation to contract closure, boosting overall sales conversion performance.</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <span class="text-slate-500 mt-1.5 text-xs"><i class="fa-solid fa-circle"></i></span>
-                                <span>Expanded market presence for software development and staff augmentation, delivering consistent new, and repeat revenue.</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <span class="text-slate-500 mt-1.5 text-xs"><i class="fa-solid fa-circle"></i></span>
-                                <span>Created scalable sales playbooks, scripts, and objection-handling frameworks, accelerating deal velocity, and improving close rates.</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <span class="text-slate-500 mt-1.5 text-xs"><i class="fa-solid fa-circle"></i></span>
-                                <span>Delivered consultative, value-based selling, aligning client needs with customized solutions to drive retention and upsell.</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Exp 3: Ziff Davis -->
-                <div class="exp-card relative transition-all duration-300" data-category="leadership">
-                    <!-- Marker Circle -->
-                    <span class="absolute -left-[35px] sm:-left-[51px] top-1.5 w-6 h-6 rounded-full bg-slate-700 border-4 border-brand-deep flex items-center justify-center text-xs text-white z-10 shadow-md"></span>
-                    
-                    <div class="bg-brand-navy/40 border border-slate-850 p-6 sm:p-8 rounded-2xl hover:border-brand-accent/30 transition-all">
-                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
-                            <div>
-                                <h3 class="font-display font-bold text-xl text-white">Sr. Research Executive / Process Expert</h3>
-                                <p class="text-sm text-slate-400">Ziff Davis Performance Marketing • Pune, Maharashtra</p>
-                            </div>
-                            <span class="self-start sm:self-center px-3 py-1 bg-slate-800 border border-slate-700 rounded-full text-slate-300 text-xs font-semibold font-mono">
-                                May 2018 - Sep 2022
-                            </span>
-                        </div>
-                        
-                        <!-- Description Points -->
-                        <ul class="space-y-3.5 text-slate-300 text-sm">
-                            <li class="flex items-start gap-3">
-                                <span class="text-slate-500 mt-1.5 text-xs"><i class="fa-solid fa-circle"></i></span>
-                                <span>Drove IT pre-sales and B2B demand generation, delivering high-quality, sales-ready leads aligned to client ICPs and campaign goals.</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <span class="text-slate-500 mt-1.5 text-xs"><i class="fa-solid fa-circle"></i></span>
-                                <span>Executed contact discovery and decision-maker outreach (RPCs), positioning client solutions to build brand awareness and buying interest.</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <span class="text-slate-500 mt-1.5 text-xs"><i class="fa-solid fa-circle"></i></span>
-                                <span>Verified prospect data, secured consent, and scheduled qualified sales conversations, ensuring lead authenticity and compliance.</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <span class="text-slate-500 mt-1.5 text-xs"><i class="fa-solid fa-circle"></i></span>
-                                <span>Mentored team members, set clear goals, shared best practices, and fostered collaboration for better outcomes.</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Exp 4: Core Elite Consulting -->
-                <div class="exp-card relative transition-all duration-300" data-category="leadership">
-                    <!-- Marker Circle -->
-                    <span class="absolute -left-[35px] sm:-left-[51px] top-1.5 w-6 h-6 rounded-full bg-slate-700 border-4 border-brand-deep flex items-center justify-center text-xs text-white z-10 shadow-md"></span>
-                    
-                    <div class="bg-brand-navy/40 border border-slate-850 p-6 sm:p-8 rounded-2xl hover:border-brand-accent/30 transition-all">
-                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
-                            <div>
-                                <h3 class="font-display font-bold text-xl text-white">Operation Team Lead</h3>
-                                <p class="text-sm text-slate-400">Core Elite Consulting Pvt Ltd • Pune, Maharashtra</p>
-                            </div>
-                            <span class="self-start sm:self-center px-3 py-1 bg-slate-800 border border-slate-700 rounded-full text-slate-300 text-xs font-semibold font-mono">
-                                Jan 2017 - May 2018
-                            </span>
-                        </div>
-                        
-                        <!-- Description Points -->
-                        <ul class="space-y-3.5 text-slate-300 text-sm">
-                            <li class="flex items-start gap-3">
-                                <span class="text-slate-500 mt-1.5 text-xs"><i class="fa-solid fa-circle"></i></span>
-                                <span>Drove consistent sales target achievement while upholding high order accuracy and turnaround time standards.</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <span class="text-slate-500 mt-1.5 text-xs"><i class="fa-solid fa-circle"></i></span>
-                                <span>Owned operational reporting, data management, and documentation to enable performance tracking and informed decisions.</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <span class="text-slate-500 mt-1.5 text-xs"><i class="fa-solid fa-circle"></i></span>
-                                <span>Ensured operational excellence by enforcing process compliance, quality benchmarks, and productivity standards.</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <span class="text-slate-500 mt-1.5 text-xs"><i class="fa-solid fa-circle"></i></span>
-                                <span>Turned customer escalations into revenue opportunities via effective resolution and negotiation.</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="py-20 bg-slate-900/30 border-t border-slate-800/80">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-xs text-brand-accent font-semibold uppercase tracking-widest block mb-2">Portfolio Projects</span>
-                <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white">Strategic Interventions & Success Stories</h2>
-                <p class="text-slate-400 mt-2">Documented frameworks and guidelines instituted by Dinesh that led to verifiable metrics boosts.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                
-                <!-- Project 1: Oxcytech Guidelines -->
-                <div class="bg-brand-navy border border-slate-800 p-6 rounded-2xl flex flex-col justify-between card-glow transition-all duration-300">
-                    <div>
-                        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 text-xl mb-6">
-                            <i class="fa-solid fa-clipboard-check"></i>
-                        </div>
-                        <h3 class="font-display font-bold text-lg text-white mb-2">Standardization Protocol</h3>
-                        <p class="text-slate-400 text-sm mb-4">Oxcytech Systems</p>
-                        <p class="text-slate-300 text-sm leading-relaxed mb-6">
-                            Set up holistic operations guidelines for the team to standardize delivery pipelines, guarantee process compliance, and eliminate systemic bottlenecks.
-                        </p>
-                    </div>
-                    <div class="pt-4 border-t border-slate-800 flex items-center justify-between">
-                        <span class="text-[11px] font-mono tracking-wider uppercase text-emerald-400 font-semibold bg-emerald-500/10 px-2.5 py-1 rounded-md">
-                            96% Error Reduction (To 6%)
-                        </span>
-                    </div>
-                </div>
-
-                <!-- Project 2: Ziff Davis Workflows -->
-                <div class="bg-brand-navy border border-slate-800 p-6 rounded-2xl flex flex-col justify-between card-glow transition-all duration-300">
-                    <div>
-                        <div class="w-12 h-12 rounded-xl bg-brand-accent/10 border border-brand-accent/20 flex items-center justify-center text-brand-accent text-xl mb-6">
-                            <i class="fa-solid fa-code-branch"></i>
-                        </div>
-                        <h3 class="font-display font-bold text-lg text-white mb-2">Streamlined Pipeline Automation</h3>
-                        <p class="text-slate-400 text-sm mb-4">Ziff Davis Performance Marketing</p>
-                        <p class="text-slate-300 text-sm leading-relaxed mb-6">
-                            Designed structured daily task blueprints and integrated research workflows that minimized bottlenecks, increasing individual multi-project output.
-                        </p>
-                    </div>
-                    <div class="pt-4 border-t border-slate-800 flex items-center justify-between">
-                        <span class="text-[11px] font-mono tracking-wider uppercase text-brand-accent font-semibold bg-brand-accent/10 px-2.5 py-1 rounded-md">
-                            Accelerated Productivity
-                        </span>
-                    </div>
-                </div>
-
-                <!-- Project 3: Core Elite Risk Prevention -->
-                <div class="bg-brand-navy border border-slate-800 p-6 rounded-2xl flex flex-col justify-between card-glow transition-all duration-300">
-                    <div>
-                        <div class="w-12 h-12 rounded-xl bg-brand-gold/10 border border-brand-gold/20 flex items-center justify-center text-brand-gold text-xl mb-6">
-                            <i class="fa-solid fa-shield-halved"></i>
-                        </div>
-                        <h3 class="font-display font-bold text-lg text-white mb-2">Loss Prevention Operations</h3>
-                        <p class="text-slate-400 text-sm mb-4">Core Elite Consulting</p>
-                        <p class="text-slate-300 text-sm leading-relaxed mb-6">
-                            Formulated strict quality-oriented screening workflows preventing critical operational downtime, maintaining SLA execution integrity across all core business sectors.
-                        </p>
-                    </div>
-                    <div class="pt-4 border-t border-slate-800 flex items-center justify-between">
-                        <span class="text-[11px] font-mono tracking-wider uppercase text-brand-gold font-semibold bg-brand-gold/10 px-2.5 py-1 rounded-md">
-                            Zero Operational Loss
-                        </span>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section id="interactive-suite" class="no-print py-20 bg-brand-deep relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center max-w-3xl mx-auto mb-12">
-                <span class="text-xs text-brand-accent font-semibold uppercase tracking-widest block mb-2">Recruiter Toolbox</span>
-                <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white">Dinesh's Interactive Engagement Suite</h2>
-                <p class="text-slate-400 mt-2">Calculate simulated organizational savings or conduct an interactive preliminary text interview.</p>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-                
-                <!-- Tool 1: Interactive Pipeline ROI Simulator -->
-                <div class="lg:col-span-6 bg-brand-navy/60 border border-slate-800 p-6 sm:p-8 rounded-2xl backdrop-blur-md">
-                    <div class="flex items-center gap-3 mb-6">
-                        <div class="w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-400 text-lg">
-                            <i class="fa-solid fa-calculator"></i>
-                        </div>
+            <!-- Skills Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Group 1: Product Operations -->
+                <div class="pm-skill-card block product-ops space-y-4">
+                    <div class="bg-brand-navy/60 border border-slate-800/80 p-6 rounded-2xl hover:border-brand-accent/40 transition-all h-full flex flex-col justify-between">
                         <div>
-                            <h3 class="font-display font-bold text-lg text-white">Pipeline ROI Simulator</h3>
-                            <p class="text-xs text-slate-400">Estimate savings from Dinesh's workflow standardization</p>
-                        </div>
-                    </div>
-
-                    <div class="space-y-6">
-                        <!-- Input 1 -->
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <label for="leadsInput" class="text-xs font-semibold text-slate-300">Monthly Target Leads Generated</label>
-                                <span class="text-xs font-bold text-brand-accent" id="leadsVal">2,000</span>
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="p-2.5 rounded-lg bg-brand-accent/10 text-brand-accent"><i class="fa-solid fa-gears text-lg"></i></span>
+                                <h4 class="font-bold text-white text-base">Workflow Automation</h4>
                             </div>
-                            <input type="range" id="leadsInput" min="500" max="10000" step="100" value="2000" oninput="calculateROI()" class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-brand-accent">
-                        </div>
-
-                        <!-- Input 2 -->
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <label for="errorRateInput" class="text-xs font-semibold text-slate-300">Current Lead Error Rate (Before Dinesh)</label>
-                                <span class="text-xs font-bold text-brand-gold" id="errorRateVal">20%</span>
-                            </div>
-                            <input type="range" id="errorRateInput" min="8" max="40" step="1" value="20" oninput="calculateROI()" class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-brand-gold">
-                        </div>
-
-                        <!-- Outputs Display Panel -->
-                        <div class="bg-slate-900/90 rounded-xl p-5 border border-slate-800/80 grid grid-cols-2 gap-4 mt-6">
-                            <div>
-                                <span class="text-[10px] uppercase font-bold text-slate-400 tracking-wider">With Dinesh's Protocol</span>
-                                <div class="text-2xl font-black text-emerald-400 mt-1" id="newErrorVal">6.0%</div>
-                                <span class="text-[10px] text-slate-500">Industry-proven benchmark</span>
-                            </div>
-                            <div>
-                                <span class="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Clean Pipeline Gain</span>
-                                <div class="text-2xl font-black text-white mt-1" id="gainLeadsVal">280 Leads</div>
-                                <span class="text-[10px] text-slate-500">Recovered monthly volume</span>
-                            </div>
-                        </div>
-
-                        <!-- Impact Callout -->
-                        <div class="bg-indigo-950/20 border border-indigo-900/30 rounded-xl p-4 flex items-start gap-3">
-                            <i class="fa-solid fa-circle-info text-brand-accent mt-1 text-sm"></i>
                             <p class="text-xs text-slate-300 leading-relaxed">
-                                <strong>Historical Insight:</strong> Dinesh managed critical B2B standardization at Oxcytech Systems which saw accuracy leap to 94%, successfully preventing hundreds of high-value client drop-offs.
+                                Formulated structured daily blueprints and task workflows that reduced processing bottlenecks and elevated daily operational velocity.
+                            </p>
+                        </div>
+                        <span class="inline-block mt-6 text-[10px] font-mono uppercase bg-slate-800 text-brand-accent px-2 py-1 rounded font-bold self-start">Workflow Compliance</span>
+                    </div>
+                </div>
+
+                <div class="pm-skill-card block product-ops space-y-4">
+                    <div class="bg-brand-navy/60 border border-slate-800/80 p-6 rounded-2xl hover:border-brand-accent/40 transition-all h-full flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="p-2.5 rounded-lg bg-brand-highlight/10 text-brand-highlight"><i class="fa-solid fa-clipboard-check text-lg"></i></span>
+                                <h4 class="font-bold text-white text-base">SLA & Quality Governance</h4>
+                            </div>
+                            <p class="text-xs text-slate-300 leading-relaxed">
+                                Established clear QA guidelines to standardize execution across operations pipelines, turning high-level goals into tactical checklist requirements.
+                            </p>
+                        </div>
+                        <span class="inline-block mt-6 text-[10px] font-mono uppercase bg-slate-800 text-brand-highlight px-2 py-1 rounded font-bold self-start">94% Target SLA Delivery</span>
+                    </div>
+                </div>
+
+                <div class="pm-skill-card block product-ops space-y-4">
+                    <div class="bg-brand-navy/60 border border-slate-800/80 p-6 rounded-2xl hover:border-brand-accent/40 transition-all h-full flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="p-2.5 rounded-lg bg-indigo-500/10 text-indigo-400"><i class="fa-solid fa-code-branch text-lg"></i></span>
+                                <h4 class="font-bold text-white text-base">CRM Stack Administration</h4>
+                            </div>
+                            <p class="text-xs text-slate-300 leading-relaxed">
+                                Managed advanced CRM workflows, custom integrations, and data validation rules to secure absolute database hygiene and multi-market consistency.
+                            </p>
+                        </div>
+                        <span class="inline-block mt-6 text-[10px] font-mono uppercase bg-slate-800 text-indigo-400 px-2 py-1 rounded font-bold self-start">Salesforce & HubSpot Stack</span>
+                    </div>
+                </div>
+
+                <!-- Group 2: Strategy & Planning (Hidden by default) -->
+                <div class="pm-skill-card hidden product-strategy space-y-4">
+                    <div class="bg-brand-navy/60 border border-slate-800/80 p-6 rounded-2xl hover:border-brand-accent/40 transition-all h-full flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="p-2.5 rounded-lg bg-brand-accent/10 text-brand-accent"><i class="fa-solid fa-compass text-lg"></i></span>
+                                <h4 class="font-bold text-white text-base">GTM Roadmap Alignment</h4>
+                            </div>
+                            <p class="text-xs text-slate-300 leading-relaxed">
+                                Collaborated closely with Sales, Marketing, and Customer Success to align regional strategies, accelerating client delivery schedules.
+                            </p>
+                        </div>
+                        <span class="inline-block mt-6 text-[10px] font-mono uppercase bg-slate-800 text-brand-accent px-2 py-1 rounded font-bold self-start">Cross-Functional GTM</span>
+                    </div>
+                </div>
+
+                <div class="pm-skill-card hidden product-strategy space-y-4">
+                    <div class="bg-brand-navy/60 border border-slate-800/80 p-6 rounded-2xl hover:border-brand-accent/40 transition-all h-full flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="p-2.5 rounded-lg bg-purple-500/10 text-purple-400"><i class="fa-solid fa-users-viewfinder text-lg"></i></span>
+                                <h4 class="font-bold text-white text-base">Persona & Ideal Client Profile (ICP)</h4>
+                            </div>
+                            <p class="text-xs text-slate-300 leading-relaxed">
+                                Executed contact discovery and buying center research (RPCs) to identify target user profiles, ensuring product-market-fit accuracy.
+                            </p>
+                        </div>
+                        <span class="inline-block mt-6 text-[10px] font-mono uppercase bg-slate-800 text-purple-400 px-2 py-1 rounded font-bold self-start">User Demographics</span>
+                    </div>
+                </div>
+
+                <div class="pm-skill-card hidden product-strategy space-y-4">
+                    <div class="bg-brand-navy/60 border border-slate-800/80 p-6 rounded-2xl hover:border-brand-accent/40 transition-all h-full flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="p-2.5 rounded-lg bg-brand-gold/10 text-brand-gold"><i class="fa-solid fa-lightbulb text-lg"></i></span>
+                                <h4 class="font-bold text-white text-base">Agile Operations Prioritization</h4>
+                            </div>
+                            <p class="text-xs text-slate-300 leading-relaxed">
+                                Applied automated task structures and Prompt Engineering logic to prioritize bugs and pipeline barriers dynamically.
+                            </p>
+                        </div>
+                        <span class="inline-block mt-6 text-[10px] font-mono uppercase bg-slate-800 text-brand-gold px-2 py-1 rounded font-bold self-start">Backlog Grooming</span>
+                    </div>
+                </div>
+
+                <!-- Group 3: Growth & Analytics (Hidden by default) -->
+                <div class="pm-skill-card hidden growth-analytics space-y-4">
+                    <div class="bg-brand-navy/60 border border-slate-800/80 p-6 rounded-2xl hover:border-brand-accent/40 transition-all h-full flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="p-2.5 rounded-lg bg-brand-accent/10 text-brand-accent"><i class="fa-solid fa-chart-line text-lg"></i></span>
+                                <h4 class="font-bold text-white text-base">Conversion Funnel Optimization</h4>
+                            </div>
+                            <p class="text-xs text-slate-300 leading-relaxed">
+                                Mapped complex buyer journeys, resolving pipeline exit rates and accelerating speed-to-revenue for mid-market client accounts.
+                            </p>
+                        </div>
+                        <span class="inline-block mt-6 text-[10px] font-mono uppercase bg-slate-800 text-brand-accent px-2 py-1 rounded font-bold self-start">Funnel Analysis</span>
+                    </div>
+                </div>
+
+                <div class="pm-skill-card hidden growth-analytics space-y-4">
+                    <div class="bg-brand-navy/60 border border-slate-800/80 p-6 rounded-2xl hover:border-brand-accent/40 transition-all h-full flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="p-2.5 rounded-lg bg-brand-highlight/10 text-brand-highlight"><i class="fa-solid fa-magnifying-glass-chart text-lg"></i></span>
+                                <h4 class="font-bold text-white text-base">Data Quality Hygiene</h4>
+                            </div>
+                            <p class="text-xs text-slate-300 leading-relaxed">
+                                Engineered advanced lead validation rules to prevent database rot, protecting system pipelines and boosting communication efficiency.
+                            </p>
+                        </div>
+                        <span class="inline-block mt-6 text-[10px] font-mono uppercase bg-slate-800 text-brand-highlight px-2 py-1 rounded font-bold self-start">Database Integrity</span>
+                    </div>
+                </div>
+
+                <div class="pm-skill-card hidden growth-analytics space-y-4">
+                    <div class="bg-brand-navy/60 border border-slate-800/80 p-6 rounded-2xl hover:border-brand-accent/40 transition-all h-full flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="p-2.5 rounded-lg bg-indigo-500/10 text-indigo-400"><i class="fa-solid fa-arrows-to-circle text-lg"></i></span>
+                                <h4 class="font-bold text-white text-base">Global Demand Generation</h4>
+                            </div>
+                            <p class="text-xs text-slate-300 leading-relaxed">
+                                Formulated global outbound strategies across US, EMEA, APAC and ANZ, optimizing and standardizing campaign deployment rules.
+                            </p>
+                        </div>
+                        <span class="inline-block mt-6 text-[10px] font-mono uppercase bg-slate-800 text-indigo-400 px-2 py-1 rounded font-bold self-start">Outbound Growth</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Work History Section -->
+    <section id="experience" class="py-20 bg-slate-900/20 border-t border-slate-800/80 no-print">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-xs text-brand-accent font-bold uppercase tracking-widest block mb-2">Professional Journey</span>
+                <h2 class="text-3xl font-extrabold text-white">Detailed Work History</h2>
+                <p class="text-slate-400 mt-2 text-sm">Consistent delivery across elite operations and growth campaigns</p>
+            </div>
+
+            <!-- Timeline -->
+            <div class="space-y-12 relative before:absolute before:inset-y-0 before:left-4 sm:before:left-1/2 before:w-0.5 before:bg-slate-800">
+                
+                <!-- Position 1: Infuse Media -->
+                <div class="relative flex flex-col sm:flex-row sm:items-center group">
+                    <div class="absolute left-4 sm:left-1/2 w-4 h-4 rounded-full bg-brand-accent -translate-x-1.5 ring-4 ring-brand-deep z-10 transition-transform group-hover:scale-125"></div>
+                    
+                    <div class="w-full sm:w-1/2 sm:pr-12 pl-10 sm:pl-0 sm:text-right">
+                        <span class="inline-block text-xs font-bold text-brand-accent mb-1">Feb 2023 - Current</span>
+                        <h3 class="text-xl font-bold text-white">Sr. Team Leader Operations</h3>
+                        <h4 class="text-slate-300 text-sm font-semibold">Infuse Media</h4>
+                        <p class="text-slate-400 text-xs mt-1">Pune, Maharashtra</p>
+                    </div>
+                    
+                    <div class="w-full sm:w-1/2 sm:pl-12 pl-10 mt-4 sm:mt-0">
+                        <div class="bg-brand-navy p-6 rounded-2xl border border-slate-800 hover:border-slate-700 transition-all">
+                            <ul class="space-y-2 text-xs text-slate-300">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-brand-accent mt-0.5"><i class="fa-solid fa-circle-check"></i></span>
+                                    <span>Led and executed global B2B lead generation campaigns targeting US, APAC, ANZ, and EMEA markets.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-brand-accent mt-0.5"><i class="fa-solid fa-circle-check"></i></span>
+                                    <span>Acted as both Team Leader and Individual Contributor (IC) to maximize pipeline delivery.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-brand-accent mt-0.5"><i class="fa-solid fa-circle-check"></i></span>
+                                    <span>Collaborated with Sales and Customer Success teams to optimize GTM campaigns, accelerating speed-to-revenue.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-brand-accent mt-0.5"><i class="fa-solid fa-circle-check"></i></span>
+                                    <span>Supervised complex CRM database records, assuring validation accuracy and optimal CRM hygiene.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Position 2: Oxytech Systems -->
+                <div class="relative flex flex-col sm:flex-row-reverse sm:items-center group">
+                    <div class="absolute left-4 sm:left-1/2 w-4 h-4 rounded-full bg-indigo-500 -translate-x-1.5 ring-4 ring-brand-deep z-10 transition-transform group-hover:scale-125"></div>
+                    
+                    <div class="w-full sm:w-1/2 sm:pl-12 pl-10 sm:text-left">
+                        <span class="inline-block text-xs font-bold text-indigo-400 mb-1">Oct 2022 - Jan 2023</span>
+                        <h3 class="text-xl font-bold text-white">Business Development Manager</h3>
+                        <h4 class="text-slate-300 text-sm font-semibold">Oxytech Systems</h4>
+                        <p class="text-slate-400 text-xs mt-1">Pune, Maharashtra (Remote)</p>
+                    </div>
+                    
+                    <div class="w-full sm:w-1/2 sm:pr-12 pl-10 mt-4 sm:mt-0">
+                        <div class="bg-brand-navy p-6 rounded-2xl border border-slate-800 hover:border-slate-700 transition-all">
+                            <ul class="space-y-2 text-xs text-slate-300">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-indigo-400 mt-0.5"><i class="fa-solid fa-circle-check"></i></span>
+                                    <span>Owned the full sales cycle from initial contact discovery to contractual alignment and signatures.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-indigo-400 mt-0.5"><i class="fa-solid fa-circle-check"></i></span>
+                                    <span>Formulated robust operational playbooks that stabilized project error output rates to just 6% (94% accuracy).</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-indigo-400 mt-0.5"><i class="fa-solid fa-circle-check"></i></span>
+                                    <span>Created scalable sales templates and client objection playbooks that reduced sales process friction.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Position 3: Ziff Davis -->
+                <div class="relative flex flex-col sm:flex-row sm:items-center group">
+                    <div class="absolute left-4 sm:left-1/2 w-4 h-4 rounded-full bg-brand-highlight -translate-x-1.5 ring-4 ring-brand-deep z-10 transition-transform group-hover:scale-125"></div>
+                    
+                    <div class="w-full sm:w-1/2 sm:pr-12 pl-10 sm:text-right">
+                        <span class="inline-block text-xs font-bold text-brand-highlight mb-1">May 2018 - Sep 2022</span>
+                        <h3 class="text-xl font-bold text-white">Sr. Research Executive / Process Expert</h3>
+                        <h4 class="text-slate-300 text-sm font-semibold">Ziff Davis Performance Marketing</h4>
+                        <p class="text-slate-400 text-xs mt-1">Pune, Maharashtra</p>
+                    </div>
+                    
+                    <div class="w-full sm:w-1/2 sm:pl-12 pl-10 mt-4 sm:mt-0">
+                        <div class="bg-brand-navy p-6 rounded-2xl border border-slate-800 hover:border-slate-700 transition-all">
+                            <ul class="space-y-2 text-xs text-slate-300">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-brand-highlight mt-0.5"><i class="fa-solid fa-circle-check"></i></span>
+                                    <span>Designed streamlined GTM search workflows that significantly reduced delivery turnaround lags.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-brand-highlight mt-0.5"><i class="fa-solid fa-circle-check"></i></span>
+                                    <span>Managed buying committee outreach (RPCs) and qualified prospect research to align leads directly to ICP criteria.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-brand-highlight mt-0.5"><i class="fa-solid fa-circle-check"></i></span>
+                                    <span>Mentored newer team members on best practices, data management, and operational KPI alignment.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Position 4: Core Elite Consulting -->
+                <div class="relative flex flex-col sm:flex-row-reverse sm:items-center group">
+                    <div class="absolute left-4 sm:left-1/2 w-4 h-4 rounded-full bg-purple-600 -translate-x-1.5 ring-4 ring-brand-deep z-10 transition-transform group-hover:scale-125"></div>
+                    
+                    <div class="w-full sm:w-1/2 sm:pl-12 pl-10 sm:text-left">
+                        <span class="inline-block text-xs font-bold text-purple-400 mb-1">Jan 2017 - May 2018</span>
+                        <h3 class="text-xl font-bold text-white">Operation Team Lead</h3>
+                        <h4 class="text-slate-300 text-sm font-semibold">Core Elite Consulting Pvt Ltd</h4>
+                        <p class="text-slate-400 text-xs mt-1">Pune, Maharashtra</p>
+                    </div>
+                    
+                    <div class="w-full sm:w-1/2 sm:pr-12 pl-10 mt-4 sm:mt-0">
+                        <div class="bg-brand-navy p-6 rounded-2xl border border-slate-800 hover:border-slate-700 transition-all">
+                            <ul class="space-y-2 text-xs text-slate-300">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-purple-400 mt-0.5"><i class="fa-solid fa-circle-check"></i></span>
+                                    <span>Supervised daily operational queues, assuring tight SLA alignment with international clients.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-purple-400 mt-0.5"><i class="fa-solid fa-circle-check"></i></span>
+                                    <span>Created and owned progress dashboard systems to inform process adjustments.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-purple-400 mt-0.5"><i class="fa-solid fa-circle-check"></i></span>
+                                    <span>Coached team members, elevating average task accuracy metrics.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Professional Credentials Section -->
+    <section id="education-certs" class="py-16 bg-slate-900/40 border-y border-slate-800/80 no-print">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12">
+                
+                <!-- Credentials List -->
+                <div class="space-y-6">
+                    <h3 class="text-xl font-extrabold text-white flex items-center gap-2">
+                        <i class="fa-solid fa-graduation-cap text-brand-accent"></i> Education History
+                    </h3>
+                    
+                    <!-- BBA General -->
+                    <div class="bg-brand-navy/60 p-5 rounded-xl border border-slate-800">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-bold text-white text-sm">BBA: General</h4>
+                                <p class="text-xs text-slate-400">AISECT University — Remote</p>
+                            </div>
+                            <span class="bg-slate-800 text-[10px] text-brand-accent px-2 py-1 rounded font-mono font-bold">75% (First Div)</span>
+                        </div>
+                        <p class="text-xs text-slate-300 mt-2">
+                            Built deep conceptual frameworks across marketing mechanics, business strategy, operational compliance, and organizational psychology.
+                        </p>
+                    </div>
+
+                    <!-- HSC & SSC -->
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-brand-navy/60 p-4 rounded-xl border border-slate-800">
+                            <h4 class="font-bold text-white text-xs">HSC</h4>
+                            <p class="text-[11px] text-slate-400">D.Y. Patil College</p>
+                            <span class="text-[10px] text-slate-400 block mt-1">Pune, Maharashtra</span>
+                        </div>
+                        <div class="bg-brand-navy/60 p-4 rounded-xl border border-slate-800">
+                            <h4 class="font-bold text-white text-xs">SSC</h4>
+                            <p class="text-[11px] text-slate-400">Jai Hind High School</p>
+                            <span class="text-[10px] text-slate-400 block mt-1">Pune, Maharashtra</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certifications & Awards -->
+                <div class="space-y-6">
+                    <h3 class="text-xl font-extrabold text-white flex items-center gap-2">
+                        <i class="fa-solid fa-award text-brand-gold"></i> Credentials & Accomplishments
+                    </h3>
+
+                    <!-- Certification: Prompt Engineering -->
+                    <div class="bg-brand-navy/60 p-5 rounded-xl border border-slate-800 flex items-start gap-4">
+                        <span class="p-3 bg-indigo-500/10 text-indigo-400 rounded-lg"><i class="fa-solid fa-brain-circuit text-xl"></i></span>
+                        <div>
+                            <div class="flex items-center gap-2">
+                                <h4 class="font-bold text-white text-sm">Prompt Engineering for ChatGPT</h4>
+                                <span class="bg-slate-800 text-[9px] text-brand-highlight px-1.5 py-0.5 rounded font-mono font-bold">JAN 2025</span>
+                            </div>
+                            <p class="text-xs text-slate-400">Great Learning Support</p>
+                            <p class="text-xs text-slate-300 mt-1">
+                                Certified operational automation using engineered prompt logic to reduce repetitive spreadsheet analysis and workflow cycles.
                             </p>
                         </div>
                     </div>
-                </div>
 
-                <!-- Tool 2: Virtual Text-Interview Chatbot -->
-                <div class="lg:col-span-6 bg-brand-navy/60 border border-slate-800 rounded-2xl backdrop-blur-md overflow-hidden flex flex-col h-[460px]">
-                    <!-- Chat Header -->
-                    <div class="bg-slate-900/80 p-4 border-b border-slate-800 flex items-center justify-between">
-                        <div class="flex items-center gap-3">
-                            <div class="relative">
-                                <span class="w-3 h-3 rounded-full bg-emerald-500 absolute -bottom-0.5 -right-0.5 border-2 border-brand-navy"></span>
-                                <div class="w-9 h-9 rounded-full bg-brand-accent/20 flex items-center justify-center text-brand-accent text-sm font-bold">
-                                    <i class="fa-solid fa-robot"></i>
+                    <!-- Awards List -->
+                    <div class="space-y-3">
+                        <div class="bg-brand-navy/60 p-4 rounded-xl border border-slate-800 flex justify-between items-center">
+                            <div class="flex items-center gap-3">
+                                <span class="text-brand-gold"><i class="fa-solid fa-trophy"></i></span>
+                                <div>
+                                    <h4 class="font-bold text-white text-xs">Certificate of Achievement</h4>
+                                    <p class="text-[10px] text-slate-400">Exceptional Performance — InfuseB2B</p>
                                 </div>
                             </div>
+                            <span class="text-[10px] bg-slate-800 text-brand-gold px-2 py-0.5 rounded font-mono">Q3 2025</span>
+                        </div>
+
+                        <div class="bg-brand-navy/60 p-4 rounded-xl border border-slate-800 flex justify-between items-center">
+                            <div class="flex items-center gap-3">
+                                <span class="text-brand-gold"><i class="fa-solid fa-medal"></i></span>
+                                <div>
+                                    <h4 class="font-bold text-white text-xs">Leader of the Quarter</h4>
+                                    <p class="text-[10px] text-slate-400">Consistent Team Delivery — InfuseB2B</p>
+                                </div>
+                            </div>
+                            <span class="text-[10px] bg-slate-800 text-brand-gold px-2 py-0.5 rounded font-mono">Q1 2024</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Suite Section: ROI Pipeline Calculator & Interactive Interview Bot -->
+    <section id="interactive-suite" class="py-20 relative no-print">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+            
+            <div class="text-center max-w-3xl mx-auto">
+                <span class="text-xs text-brand-accent font-bold uppercase tracking-widest block mb-2">Tactile Recruiter Suite</span>
+                <h2 class="text-3xl font-extrabold text-white">Interactive Decision Dashboard</h2>
+                <p class="text-slate-400 mt-2 text-sm">Test Dinesh's operational impact through simulated parameters or ask real interview questions dynamically.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-start">
+                
+                <!-- Left Sub-card: Interactive Pipeline Calculator -->
+                <div class="bg-brand-navy/80 border border-slate-800 rounded-2xl p-8 space-y-6">
+                    <div>
+                        <h3 class="text-xl font-bold text-white flex items-center gap-2">
+                            <i class="fa-solid fa-calculator text-brand-accent"></i> Pipeline Efficiency Calculator
+                        </h3>
+                        <p class="text-xs text-slate-400 mt-1">
+                            Simulate how setting up standard operations guidelines (similar to Dinesh's 94% accuracy standard) saves capital and resource hours.
+                        </p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <!-- Input 1 -->
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-1.5">Monthly Processing Lead Count</label>
+                            <input type="number" id="calcLeads" value="5000" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-white text-sm focus:outline-none focus:border-brand-accent">
+                        </div>
+                        <!-- Input 2 -->
+                        <div class="grid grid-cols-2 gap-4">
                             <div>
-                                <h3 class="font-display font-bold text-sm text-white">Dinesh Interview Bot</h3>
-                                <p class="text-[10px] text-emerald-400 font-medium">Online • Instantly responsive</p>
+                                <label class="block text-xs font-semibold text-slate-300 mb-1.5">Base Error Rate (%)</label>
+                                <input type="number" id="calcErrorRate" value="12" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-white text-sm focus:outline-none focus:border-brand-accent">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-300 mb-1.5">Cost Per Fix ($)</label>
+                                <input type="number" id="calcFixCost" value="15" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-white text-sm focus:outline-none focus:border-brand-accent">
                             </div>
                         </div>
                     </div>
 
-                    <!-- Chat Log Arena -->
-                    <div id="chatLog" class="p-5 overflow-y-auto flex-1 space-y-4 text-xs">
-                        <!-- Initial Message -->
+                    <!-- Results block -->
+                    <div class="bg-slate-950 p-5 rounded-xl border border-slate-800 space-y-3">
+                        <div class="flex justify-between text-xs">
+                            <span class="text-slate-400">Monthly Error Lags (Standard Setup):</span>
+                            <span class="text-slate-300 font-mono font-bold" id="resBaseErrors">600 errors</span>
+                        </div>
+                        <div class="flex justify-between text-xs">
+                            <span class="text-slate-400">Monthly Error Lags (Dinesh Standard):</span>
+                            <span class="text-brand-highlight font-mono font-bold" id="resNewErrors">300 errors</span>
+                        </div>
+                        <div class="border-t border-slate-800 pt-3 flex justify-between items-center">
+                            <span class="text-sm font-bold text-white">Estimated Monthly Savings:</span>
+                            <span class="text-lg font-extrabold text-brand-highlight" id="resSavings">$4,500</span>
+                        </div>
+                    </div>
+
+                    <button onclick="calculateSavings()" class="w-full bg-brand-accent hover:bg-brand-accent/90 text-white font-semibold py-3 rounded-xl transition-all text-xs tracking-wider uppercase">
+                        Recalculate Operational ROI
+                    </button>
+                </div>
+
+                <!-- Right Sub-card: Interactive Chatbot -->
+                <div class="bg-brand-navy/80 border border-slate-800 rounded-2xl p-6 flex flex-col h-[520px]">
+                    <!-- Chat Header -->
+                    <div class="flex items-center gap-3 pb-4 border-b border-slate-800">
+                        <div class="relative">
+                            <span class="w-2.5 h-2.5 rounded-full bg-brand-highlight absolute -bottom-0.5 -right-0.5 border-2 border-brand-navy"></span>
+                            <div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-brand-accent text-sm font-bold">
+                                <i class="fa-solid fa-robot"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-sm text-white">Dinesh Interview Bot</h3>
+                            <p class="text-[10px] text-brand-highlight font-semibold">Online • Dynamic Knowledge Base</p>
+                        </div>
+                    </div>
+
+                    <!-- Chat Logs -->
+                    <div id="chatLog" class="flex-1 overflow-y-auto p-4 space-y-4 text-xs">
                         <div class="flex items-start gap-3 max-w-[85%]">
-                            <div class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 flex-shrink-0">
+                            <div class="w-8 h-8 rounded-full bg-slate-850 flex items-center justify-center text-slate-400 flex-shrink-0">
                                 <i class="fa-solid fa-robot"></i>
                             </div>
                             <div class="bg-slate-800/80 text-slate-200 p-3 rounded-2xl rounded-tl-none leading-relaxed">
-                                Hello! I am Dinesh's Portfolio Interactive Assistant. Ask me anything about his qualifications, experience, and certifications. Choose a prompt below!
+                                Hello! Ask me about Dinesh's experience, operational metrics, or his alignment with Product Operations and Product Management. Select a question below to start!
                             </div>
                         </div>
                     </div>
 
-                    <!-- Quick Answers Selector -->
-                    <div class="bg-slate-900/60 p-4 border-t border-slate-800 space-y-2">
-                        <span class="text-[10px] text-slate-400 font-bold block mb-1">Select Question:</span>
-                        <div class="flex flex-wrap gap-2">
-                            <button onclick="askBot(1)" class="bg-brand-navy hover:bg-slate-800 text-slate-300 border border-slate-800 hover:border-slate-700 px-3 py-1.5 rounded-lg text-xs transition-colors">
-                                What is your global B2B outreach experience?
+                    <!-- Quick Prompts Panel -->
+                    <div class="pt-4 border-t border-slate-800">
+                        <span class="text-[10px] text-slate-400 font-bold block mb-2">SELECT A QUESTION:</span>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                            <button onclick="askBot(1)" class="text-left bg-slate-900 hover:bg-slate-850 border border-slate-800 hover:border-slate-700 p-2 rounded-lg text-slate-300 text-[11px] transition-colors truncate">
+                                1. What is Dinesh's global outreach experience?
                             </button>
-                            <button onclick="askBot(2)" class="bg-brand-navy hover:bg-slate-800 text-slate-300 border border-slate-800 hover:border-slate-700 px-3 py-1.5 rounded-lg text-xs transition-colors">
-                                Tell me about the 96% error reduction.
+                            <button onclick="askBot(2)" class="text-left bg-slate-900 hover:bg-slate-850 border border-slate-800 hover:border-slate-700 p-2 rounded-lg text-slate-300 text-[11px] transition-colors truncate">
+                                2. Tell me about standardizing workflows.
                             </button>
-                            <button onclick="askBot(3)" class="bg-brand-navy hover:bg-slate-800 text-slate-300 border border-slate-800 hover:border-slate-700 px-3 py-1.5 rounded-lg text-xs transition-colors">
-                                What certifications do you hold?
+                            <button onclick="askBot(3)" class="text-left bg-slate-900 hover:bg-slate-850 border border-slate-800 hover:border-slate-700 p-2 rounded-lg text-slate-300 text-[11px] transition-colors truncate">
+                                3. What technical stack does he manage?
                             </button>
-                            <button onclick="askBot(4)" class="bg-brand-navy hover:bg-slate-800 text-slate-300 border border-slate-800 hover:border-slate-700 px-3 py-1.5 rounded-lg text-xs transition-colors">
-                                What is your leadership approach?
+                            <button onclick="askBot(4)" class="text-left bg-slate-900 hover:bg-slate-850 border border-slate-800 hover:border-slate-700 p-2 rounded-lg text-slate-300 text-[11px] transition-colors truncate">
+                                4. How do his skills translate to Product Management?
                             </button>
                         </div>
                     </div>
+
                 </div>
 
             </div>
         </div>
     </section>
 
-    <section id="education" class="py-20 bg-slate-900/10 border-t border-slate-800/60">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
-                
-                <!-- Left: Certifications & Accomplishments -->
-                <div class="lg:col-span-7 space-y-8">
-                    <div>
-                        <span class="text-xs text-brand-accent font-semibold uppercase tracking-widest block mb-2">Qualifications</span>
-                        <h2 class="font-display font-extrabold text-3xl text-white">Certifications & Honors</h2>
-                    </div>
-
-                    <!-- Certification Card -->
-                    <div class="bg-brand-navy/50 border border-slate-800 p-6 rounded-2xl flex items-start gap-4 hover:border-brand-accent/30 transition-all">
-                        <div class="w-12 h-12 rounded-xl bg-brand-accent/10 flex items-center justify-center text-brand-accent text-xl flex-shrink-0">
-                            <i class="fa-solid fa-graduation-cap"></i>
-                        </div>
-                        <div>
-                            <span class="text-xs font-semibold text-brand-accent tracking-widest uppercase font-mono">Issued Jan 2025</span>
-                            <h4 class="font-display font-bold text-white text-base mt-1">Prompt Engineering for ChatGPT</h4>
-                            <p class="text-slate-400 text-xs mt-1">Great Learning Support</p>
-                            <p class="text-slate-300 text-sm mt-3 leading-relaxed">
-                                Enhanced organizational design frameworks and automated outreach campaign logic utilizing AI model prompt-engineering protocols.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Achievements Block -->
-                    <div class="space-y-4">
-                        <h3 class="font-display font-bold text-lg text-slate-200 flex items-center gap-2">
-                            <i class="fa-solid fa-award text-brand-gold"></i> Career Honors & Awards
-                        </h3>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <div class="bg-brand-navy/30 border border-slate-800/80 p-4 rounded-xl">
-                                <span class="text-xs font-mono text-brand-gold font-semibold">Q3 2025</span>
-                                <h5 class="font-semibold text-white text-sm mt-1">Certificate of Achievement</h5>
-                                <p class="text-slate-400 text-xs mt-0.5">Exceptional Performance • InfuseB2B</p>
-                            </div>
-                            <div class="bg-brand-navy/30 border border-slate-800/80 p-4 rounded-xl">
-                                <span class="text-xs font-mono text-brand-gold font-semibold">Q1 2024</span>
-                                <h5 class="font-semibold text-white text-sm mt-1">Leader of the Quarter</h5>
-                                <p class="text-slate-400 text-xs mt-0.5">InfuseB2B Operations</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right: Academic Background -->
-                <div class="lg:col-span-5 space-y-8">
-                    <div>
-                        <span class="text-xs text-brand-accent font-semibold uppercase tracking-widest block mb-2">Education</span>
-                        <h2 class="font-display font-extrabold text-3xl text-white">Academic History</h2>
-                    </div>
-
-                    <div class="relative border-l-2 border-slate-800 pl-6 space-y-8 ml-3">
-                        <!-- Degree 1 -->
-                        <div class="relative">
-                            <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-brand-accent ring-4 ring-brand-deep"></span>
-                            <div>
-                                <h4 class="font-display font-bold text-white text-lg">BBA: General</h4>
-                                <p class="text-xs text-slate-400 mt-1">AISECT University — Remote</p>
-                                <div class="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-400 mt-2 bg-emerald-500/10 px-2 py-0.5 rounded-md">
-                                    75% (First Division)
-                                </div>
-                                <p class="text-slate-300 text-xs leading-relaxed mt-3">
-                                    Core studies built upon foundational pillars of marketing, commercial finance, human resources, presentation skills, and customer relationship management (CRM) workflows.
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Degree 2 -->
-                        <div class="relative">
-                            <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-slate-700 ring-4 ring-brand-deep"></span>
-                            <div>
-                                <h4 class="font-display font-bold text-slate-300 text-base">HSC</h4>
-                                <p class="text-xs text-slate-400 mt-1">D.Y. Patil College of Arts, Commerce & Science — Pune</p>
-                            </div>
-                        </div>
-
-                        <!-- Degree 3 -->
-                        <div class="relative">
-                            <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-slate-700 ring-4 ring-brand-deep"></span>
-                            <div>
-                                <h4 class="font-display font-bold text-slate-300 text-base">SSC</h4>
-                                <p class="text-xs text-slate-400 mt-1">Jai Hind High School — Pune</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+    <!-- Footer Section -->
+    <footer class="bg-brand-deep border-t border-slate-800/60 py-12 no-print">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div>
+                <p class="text-xs text-slate-400">© 2026 Dinesh Jaybhay. All rights reserved.</p>
+                <p class="text-[10px] text-slate-500 mt-1">References and complete job history align with "DINESH_JAYBHAY_Resume (1) (2) (1) (1).pdf".</p>
             </div>
-        </div>
-    </section>
-
-    <footer class="no-print bg-slate-950 border-t border-slate-900 py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
-                <div class="text-center md:text-left">
-                    <span class="font-display font-bold text-lg text-white block">Dinesh Jaybhay</span>
-                    <span class="text-xs text-slate-400 mt-1 block">Senior Team Leader Operations • B2B Expert</span>
-                </div>
-
-                <div class="flex items-center gap-4">
-                    <a href="https://linkedin.com/in/dinesh-jaybhay-83049118a/" target="_blank" class="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-brand-accent hover:border-brand-accent transition-all text-sm">
-                        <i class="fa-brands fa-linkedin-in"></i>
-                    </a>
-                    <a href="mailto:dineshjaybhay@gmail.com" class="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-brand-accent hover:border-brand-accent transition-all text-sm">
-                        <i class="fa-regular fa-envelope"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="mt-8 pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
-                <p>&copy; 2026 Dinesh Jaybhay. All rights reserved.</p>
-                <div class="flex items-center gap-4">
-                    <span>Pune, MH, India</span>
-                    <span class="w-1 h-1 rounded-full bg-slate-700"></span>
-                    <span>9561015344</span>
-                </div>
+            <div class="flex gap-4">
+                <a href="https://linkedin.com/in/dinesh-jaybhay-83049118a/" target="_blank" class="w-8 h-8 rounded-lg bg-slate-800 hover:bg-slate-750 flex items-center justify-center text-slate-400 hover:text-white transition-colors">
+                    <i class="fa-brands fa-linkedin-in text-sm"></i>
+                </a>
+                <a href="mailto:dineshjaybhay@gmail.com" class="w-8 h-8 rounded-lg bg-slate-800 hover:bg-slate-750 flex items-center justify-center text-slate-400 hover:text-white transition-colors">
+                    <i class="fa-regular fa-envelope text-sm"></i>
+                </a>
             </div>
         </div>
     </footer>
 
-    <div class="hidden print-layout">
-        <!-- Header -->
-        <div class="print-header flex justify-between items-start">
+
+    <!-- ========================================== -->
+    <!-- PRINT LAYOUT (Optimized Multi-page B&W Resume) -->
+    <!-- ========================================== -->
+    <div class="print-layout p-8 bg-white text-slate-900 selection:bg-slate-200">
+        <!-- Header Print block -->
+        <div class="border-b-2 border-slate-800 pb-4 flex justify-between items-end">
             <div>
-                <h1 style="font-size: 28pt; font-weight: 800; color: #0F172A; margin: 0;">DINESH JAYBHAY</h1>
-                <p style="font-size: 14pt; font-weight: 600; color: #0EA5E9; margin: 5px 0 0 0;">Senior Team Leader Operations</p>
+                <h1 class="text-3xl font-extrabold tracking-tight text-slate-900">DINESH JAYBHAY</h1>
+                <p class="text-sm font-semibold text-brand-accent uppercase tracking-wider mt-1">Senior Operations & Product Operations Leader</p>
             </div>
-            <div style="text-align: right; font-size: 10pt; line-height: 1.5;">
-                <p style="margin: 0;"><strong>Address:</strong> Pune, Maharashtra, India</p>
-                <p style="margin: 0;"><strong>Phone:</strong> +91 9561015344</p>
-                <p style="margin: 0;"><strong>Email:</strong> dineshjaybhay@gmail.com</p>
-                <p style="margin: 0;"><strong>LinkedIn:</strong> linkedin.com/in/dinesh-jaybhay-83049118a/</p>
+            <div class="text-right text-xs text-slate-600 space-y-1">
+                <p><i class="fa-solid fa-location-dot"></i> Pune, Maharashtra, India</p>
+                <p><i class="fa-solid fa-phone"></i> +91 9561015344</p>
+                <p><i class="fa-solid fa-envelope"></i> dineshjaybhay@gmail.com</p>
+                <p><i class="fa-brands fa-linkedin"></i> linkedin.com/in/dinesh-jaybhay-83049118a/</p>
             </div>
         </div>
 
-        <!-- Career Summary -->
-        <div class="print-card" style="margin-top: 20px;">
-            <h3 style="font-size: 13pt; border-bottom: 2px solid #0F172A; padding-bottom: 4px; color: #0F172A; text-transform: uppercase;">Professional Profile</h3>
-            <p style="font-size: 10.5pt; line-height: 1.6; margin-top: 8px;">
-                Sales professional with 8 years of experience in B2B sales, sales operations, and customer success across global markets including US, APAC, ANZ, and EMEA. Proven track record in managing demand generation, optimizing pipelines, and delivering client solutions. Expertise in CRM workflow optimization and collaboration with sales, marketing, and customer success teams to drive revenue growth and exceed performance metrics.
+        <!-- Career Summary Print -->
+        <div class="mt-6 space-y-2">
+            <h3 class="text-sm font-bold text-slate-900 border-b border-slate-300 pb-1 uppercase tracking-wider">Executive Summary</h3>
+            <p class="text-xs text-slate-700 leading-relaxed">
+                Operations & B2B growth specialist with 8 years of cross-functional experience across global markets including US, APAC, ANZ, and EMEA. Exceptional track record managing complex pipelines, instituting standard workflow guidelines, and translating operational metrics into robust GTM solutions. Expert in Product Operations, standardizing SLAs/KPIs, CRM customization, and database integrity management.
             </p>
         </div>
 
-        <!-- Work History -->
-        <div class="print-card" style="margin-top: 25px;">
-            <h3 style="font-size: 13pt; border-bottom: 2px solid #0F172A; padding-bottom: 4px; color: #0F172A; text-transform: uppercase;">Work History</h3>
+        <!-- Core Competencies Print -->
+        <div class="mt-6 space-y-2">
+            <h3 class="text-sm font-bold text-slate-900 border-b border-slate-300 pb-1 uppercase tracking-wider">Core PM & Operations Competencies</h3>
+            <div class="grid grid-cols-2 gap-4 text-xs text-slate-700">
+                <ul class="space-y-1">
+                    <li><strong>• Product Operations:</strong> Standardized process guidelines, bottleneck removal.</li>
+                    <li><strong>• GTM Alignment:</strong> ICP definition, persona discovery, cross-functional roadmap sync.</li>
+                </ul>
+                <ul class="space-y-1">
+                    <li><strong>• Analytics & Quality:</strong> Funnel speed, validation rules, 94%+ target accuracy.</li>
+                    <li><strong>• Stack Administration:</strong> Salesforce CRM administration, HubSpot database management.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Professional Experience Print -->
+        <div class="mt-6 space-y-4">
+            <h3 class="text-sm font-bold text-slate-900 border-b border-slate-300 pb-1 uppercase tracking-wider">Professional Experience</h3>
             
-            <!-- Job 1 -->
-            <div class="print-timeline-item" style="margin-top: 15px;">
-                <div class="flex justify-between" style="font-size: 11pt; font-weight: 700;">
-                    <span>Sr. Team Leader Operations — Infuse Media, Pune</span>
-                    <span style="font-weight: 500;">Feb 2023 - Current</span>
+            <!-- Pos 1 -->
+            <div class="space-y-1">
+                <div class="flex justify-between items-center text-xs">
+                    <span class="font-bold text-slate-900">Sr. Team Leader Operations — Infuse Media</span>
+                    <span class="text-slate-600 font-semibold">Feb 2023 - Present | Pune, India</span>
                 </div>
-                <ul style="margin: 8px 0 0 0; padding-left: 20px; font-size: 10pt; line-height: 1.5; list-style-type: square;">
-                    <li>Led and executed global B2B lead generation and sales operations campaigns across US, APAC, ANZ, and EMEA markets, supporting enterprise and mid-market clients.</li>
-                    <li>Delivered results as both a Team Leader and Individual Contributor, driving lead generation, pipeline management, and end-to-end client delivery.</li>
-                    <li>Collaborated with Sales, Marketing, and Customer Success teams to align campaign strategy, accelerating pipeline velocity and driving revenue growth.</li>
-                    <li>Managed CRM workflows, lead research, data hygiene, and outbound operations, enhancing lead quality and conversion rates while boosting campaign performance.</li>
+                <ul class="list-disc pl-4 text-xs text-slate-700 space-y-1">
+                    <li>Led and executed global B2B lead generation campaigns targeting US, APAC, ANZ, and EMEA markets.</li>
+                    <li>Acted as Team Leader and Individual Contributor (IC) to maximize customer campaign speed-to-revenue.</li>
+                    <li>Managed advanced CRM custom workflows, validating lead quality and ensuring flawless database hygiene.</li>
+                    <li>Consistently met and exceeded client SLA demands through pipeline oversight.</li>
                 </ul>
             </div>
 
-            <!-- Job 2 -->
-            <div class="print-timeline-item" style="margin-top: 15px;">
-                <div class="flex justify-between" style="font-size: 11pt; font-weight: 700;">
-                    <span>Business Development Manager — Oxytech Systems, Pune (Remote)</span>
-                    <span style="font-weight: 500;">Oct 2022 - Jan 2023</span>
+            <!-- Pos 2 -->
+            <div class="space-y-1">
+                <div class="flex justify-between items-center text-xs">
+                    <span class="font-bold text-slate-900">Business Development Manager — Oxytech Systems</span>
+                    <span class="text-slate-600 font-semibold">Oct 2022 - Jan 2023 | Remote</span>
                 </div>
-                <ul style="margin: 8px 0 0 0; padding-left: 20px; font-size: 10pt; line-height: 1.5; list-style-type: square;">
-                    <li>Led the end-to-end sales function, managing the full cycle from lead generation to contract closure, boosting overall sales conversion performance.</li>
-                    <li>Expanded market presence for software development and staff augmentation, delivering consistent new, and repeat revenue.</li>
-                    <li>Created scalable sales playbooks, scripts, and objection-handling frameworks, accelerating deal velocity, and improving close rates.</li>
+                <ul class="list-disc pl-4 text-xs text-slate-700 space-y-1">
+                    <li>Managed full-cycle B2B processes from persona target mapping to contract finalization.</li>
+                    <li>Formulated standardized operational blueprints, reducing execution error rates down to just 6% (94% accuracy).</li>
+                    <li>Created repeatable client onboarding frameworks to accelerate delivery cycles.</li>
                 </ul>
             </div>
 
-            <!-- Job 3 -->
-            <div class="print-timeline-item" style="margin-top: 15px;">
-                <div class="flex justify-between" style="font-size: 11pt; font-weight: 700;">
-                    <span>Sr. Research Executive / Process Expert — Ziff Davis Performance Marketing, Pune</span>
-                    <span style="font-weight: 500;">May 2018 - Sep 2022</span>
+            <!-- Page Break for Clean Layout if printed -->
+            <div class="page-break"></div>
+
+            <!-- Header Print block Page 2 -->
+            <div class="border-b-2 border-slate-800 pb-2 flex justify-between items-end">
+                <h2 class="text-lg font-bold text-slate-900">DINESH JAYBHAY</h2>
+                <span class="text-xs text-slate-600">Senior Operations & Product Operations Leader</span>
+            </div>
+
+            <!-- Pos 3 -->
+            <div class="space-y-1 mt-4">
+                <div class="flex justify-between items-center text-xs">
+                    <span class="font-bold text-slate-900">Sr. Research Executive / Process Expert — Ziff Davis Performance Marketing</span>
+                    <span class="text-slate-600 font-semibold">May 2018 - Sep 2022 | Pune, India</span>
                 </div>
-                <ul style="margin: 8px 0 0 0; padding-left: 20px; font-size: 10pt; line-height: 1.5; list-style-type: square;">
-                    <li>Drove IT pre-sales and B2B demand generation, delivering high-quality, sales-ready leads aligned to client ICPs, and campaign goals.</li>
-                    <li>Executed contact discovery and decision-maker outreach (RPCs), positioning client solutions to build brand awareness and buying interest.</li>
-                    <li>Mentored team members, set clear goals, shared best practices, and fostered collaboration for better outcomes.</li>
+                <ul class="list-disc pl-4 text-xs text-slate-700 space-y-1">
+                    <li>Designed structured data discovery guidelines that eliminated repetitive process loops and boosted throughput.</li>
+                    <li>Executed detailed buying center research (RPCs) and qualified outbound prospect segments.</li>
+                    <li>Exceeded lead accuracy SLAs continuously while mentoring newer process joiners.</li>
+                </ul>
+            </div>
+
+            <!-- Pos 4 -->
+            <div class="space-y-1">
+                <div class="flex justify-between items-center text-xs">
+                    <span class="font-bold text-slate-900">Operation Team Lead — Core Elite Consulting Pvt Ltd</span>
+                    <span class="text-slate-600 font-semibold">Jan 2017 - May 2018 | Pune, India</span>
+                </div>
+                <ul class="list-disc pl-4 text-xs text-slate-700 space-y-1">
+                    <li>Supervised operational pipeline tracking, keeping key metrics aligned to corporate standards.</li>
+                    <li>Formulated quality assurance templates to prevent processing error losses.</li>
+                    <li>Turned complex escalations into pipeline adjustments, securing account retention.</li>
                 </ul>
             </div>
         </div>
 
-        <!-- Page Break Indicator for Print PDF -->
-        <div style="page-break-before: always;"></div>
-
-        <!-- Education -->
-        <div class="print-card" style="margin-top: 20px;">
-            <h3 style="font-size: 13pt; border-bottom: 2px solid #0F172A; padding-bottom: 4px; color: #0F172A; text-transform: uppercase;">Education</h3>
-            <div style="margin-top: 10px;">
-                <p style="font-size: 11pt; font-weight: 700; margin: 0;">BBA: General — AISECT University (Remote)</p>
-                <p style="font-size: 10pt; font-weight: 500; margin: 2px 0 5px 0;">Bachelor of Business Administration (BBA) — 75% First Division</p>
-                <p style="font-size: 9.5pt; line-height: 1.4; margin: 0; color: #334155;">Coursework in Marketing, Finance, HR, Operations, Presentation skills, Management principles and CRM system deployment.</p>
+        <!-- Education & Credentials Print -->
+        <div class="mt-6 grid grid-cols-2 gap-6">
+            <div class="space-y-2">
+                <h3 class="text-sm font-bold text-slate-900 border-b border-slate-300 pb-1 uppercase tracking-wider">Education</h3>
+                <div class="text-xs text-slate-750 space-y-1">
+                    <p class="font-bold text-slate-900">BBA: General — AISECT University</p>
+                    <p class="text-slate-600">Result: 75% (First Division Score)</p>
+                    <p class="text-[11px] text-slate-600 mt-1">Foundational training in operations strategy and communication.</p>
+                </div>
             </div>
-            <div style="margin-top: 15px;">
-                <p style="font-size: 11pt; font-weight: 700; margin: 0;">HSC — D.Y. Patil College of Arts, Commerce & Science, Pune</p>
-            </div>
-            <div style="margin-top: 10px;">
-                <p style="font-size: 11pt; font-weight: 700; margin: 0;">SSC — Jai Hind High School, Pune</p>
+            <div class="space-y-2">
+                <h3 class="text-sm font-bold text-slate-900 border-b border-slate-300 pb-1 uppercase tracking-wider">Certifications & Honors</h3>
+                <div class="text-xs text-slate-750 space-y-1">
+                    <p class="font-bold text-slate-900">Prompt Engineering for ChatGPT — Jan 2025</p>
+                    <p class="text-slate-600">Leader of the Quarter Award — InfuseB2B (Q1 2024)</p>
+                    <p class="text-slate-600">Certificate of Achievement — InfuseB2B (Q3 2025)</p>
+                </div>
             </div>
         </div>
 
-        <!-- Projects -->
-        <div class="print-card" style="margin-top: 25px;">
-            <h3 style="font-size: 13pt; border-bottom: 2px solid #0F172A; padding-bottom: 4px; color: #0F172A; text-transform: uppercase;">Key Projects</h3>
-            <p style="font-size: 10pt; line-height: 1.5; margin: 8px 0;">
-                <strong>Oxcytech Systems:</strong> Set up operations guidelines for the team to standardize processes, ensure compliance, and improve overall efficiency, leading to a quantifiable 96% reduction in errors (down to 6%).
-            </p>
-            <p style="font-size: 10pt; line-height: 1.5; margin: 8px 0;">
-                <strong>Ziff Davis Performance Marketing:</strong> Designed streamlined workflows that simplified day-to-day tasks, reduced bottlenecks, and improved productivity across multiple projects.
-            </p>
-            <p style="font-size: 10pt; line-height: 1.5; margin: 8px 0;">
-                <strong>Core Elite Consulting:</strong> Implemented quality-focused processes to prevent operational losses, boosting accuracy and efficiency while ensuring project success.
-            </p>
-        </div>
-
-        <!-- Certifications & Languages -->
-        <div class="print-card" style="margin-top: 25px;">
-            <div class="flex justify-between">
-                <div style="width: 48%;">
-                    <h3 style="font-size: 13pt; border-bottom: 2px solid #0F172A; padding-bottom: 4px; color: #0F172A; text-transform: uppercase;">Certifications</h3>
-                    <p style="font-size: 10pt; line-height: 1.4; margin: 8px 0 0 0;">
-                        <strong>Prompt Engineering for ChatGPT</strong> <br>
-                        Great Learning Support — Issued Jan 2025
-                    </p>
-                </div>
-                <div style="width: 48%;">
-                    <h3 style="font-size: 13pt; border-bottom: 2px solid #0F172A; padding-bottom: 4px; color: #0F172A; text-transform: uppercase;">Languages</h3>
-                    <p style="font-size: 10pt; line-height: 1.4; margin: 8px 0 0 0;">
-                        English, Marathi, Hindi (Professional Professional Proficiency)
-                    </p>
-                </div>
-            </div>
+        <!-- Verification note print footer -->
+        <div class="mt-8 pt-4 border-t border-slate-300 text-center text-[10px] text-slate-500">
+            Professional records and history verified in formal document: <strong>"DINESH_JAYBHAY_Resume (1) (2) (1) (1).pdf"</strong>.
         </div>
     </div>
 
+
+    <!-- ========================================== -->
+    <!-- JAVASCRIPT LOGIC                           -->
+    <!-- ========================================== -->
     <script>
-        // Mobile Navigation Toggle
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const mobileMenu = document.getElementById('mobileMenu');
 
@@ -952,130 +908,150 @@
             mobileMenu.classList.toggle('hidden');
         });
 
-        // Interactive Career ROI Pipeline Calculator
-        function calculateROI() {
-            const leads = parseInt(document.getElementById('leadsInput').value);
-            const currentErrorRate = parseInt(document.getElementById('errorRateInput').value);
-            
-            // Format labels dynamically
-            document.getElementById('leadsVal').innerText = leads.toLocaleString();
-            document.getElementById('errorRateVal').innerText = currentErrorRate + "%";
-            
-            // Dinesh standard error rate is 6% (96% reduction from 20% would be approx 6% or less)
-            const dineshErrorRate = 6.0;
-            
-            // Calculations
-            const originalErrors = leads * (currentErrorRate / 100);
-            const newErrors = leads * (dineshErrorRate / 100);
-            const gains = Math.round(originalErrors - newErrors);
-            
-            // Render outputs
-            document.getElementById('newErrorVal').innerText = dineshErrorRate.toFixed(1) + "%";
-            document.getElementById('gainLeadsVal').innerText = gains.toLocaleString() + " Leads";
-        }
-
-        // Initialize ROI calculations
-        calculateROI();
-
-        // Work History Interactive Filtering
-        function filterExperience(category) {
-            const cards = document.querySelectorAll('.exp-card');
-            const tabs = document.querySelectorAll('.tab-btn');
-            
-            // Reset active styles on tabs
-            tabs.forEach(tab => {
-                tab.classList.remove('bg-brand-accent', 'text-white');
-                tab.classList.add('bg-brand-navy/50', 'text-slate-300');
+        function switchPMTab(tabName) {
+            // Un-highlight all tab buttons
+            const tabButtons = document.querySelectorAll('.pm-tab-btn');
+            tabButtons.forEach(btn => {
+                btn.classList.remove('bg-brand-accent', 'text-white');
+                btn.classList.add('text-slate-400', 'hover:text-white');
             });
-            
-            // Set active state on target tab
-            const targetTab = document.getElementById(`tab-${category}`);
-            if (targetTab) {
-                targetTab.classList.remove('bg-brand-navy/50', 'text-slate-300');
-                targetTab.classList.add('bg-brand-accent', 'text-white');
+
+            // Highlight the selected tab button
+            let activeBtn;
+            if (tabName === 'product-ops') {
+                activeBtn = document.getElementById('tab-pm-ops');
+            } else if (tabName === 'product-strategy') {
+                activeBtn = document.getElementById('tab-pm-strat');
+            } else if (tabName === 'growth-analytics') {
+                activeBtn = document.getElementById('tab-pm-growth');
             }
 
-            // Filter experience blocks
-            cards.forEach(card => {
-                const itemCategory = card.getAttribute('data-category');
-                if (category === 'all' || itemCategory.includes(category)) {
-                    card.style.opacity = '1';
-                    card.style.transform = 'scale(1)';
-                    card.style.display = 'block';
-                } else {
-                    card.style.opacity = '0';
-                    card.style.transform = 'scale(0.95)';
-                    setTimeout(() => {
-                        card.style.display = 'none';
-                    }, 200);
-                }
+            if (activeBtn) {
+                activeBtn.classList.add('bg-brand-accent', 'text-white');
+                activeBtn.classList.remove('text-slate-400', 'hover:text-white');
+            }
+
+            // Hide all skill card components
+            const allCards = document.querySelectorAll('.pm-skill-card');
+            allCards.forEach(card => {
+                card.classList.add('hidden');
+                card.classList.remove('block');
+            });
+
+            // Show current selected group components
+            const selectedCards = document.querySelectorAll(`.pm-skill-card.${tabName}`);
+            selectedCards.forEach(card => {
+                card.classList.remove('hidden');
+                card.classList.add('block');
             });
         }
 
-        // Virtual Assistant Bot Conversation Logic
+        function calculateSavings() {
+            const leads = parseFloat(document.getElementById('calcLeads').value) || 0;
+            const baseRate = parseFloat(document.getElementById('calcErrorRate').value) || 0;
+            const costPerFix = parseFloat(document.getElementById('calcFixCost').value) || 0;
+
+            // Base Errors calculation
+            const baseErrors = Math.round(leads * (baseRate / 100));
+            // Dinesh standard is 6% error rate (from Oxytech Systems 94% accuracy standard)
+            const dineshRate = 6; 
+            const dineshErrors = Math.round(leads * (dineshRate / 100));
+
+            // Savings calculation
+            const monthlySavings = (baseErrors - dineshErrors) * costPerFix;
+
+            // Output values safely inside document
+            document.getElementById('resBaseErrors').innerText = baseErrors.toLocaleString() + ' errors';
+            document.getElementById('resNewErrors').innerText = dineshErrors.toLocaleString() + ' errors (6% Rate)';
+            
+            if (monthlySavings > 0) {
+                document.getElementById('resSavings').innerText = '$' + monthlySavings.toLocaleString();
+                document.getElementById('resSavings').className = 'text-lg font-extrabold text-brand-highlight';
+            } else if (monthlySavings < 0) {
+                document.getElementById('resSavings').innerText = '-$' + Math.abs(monthlySavings).toLocaleString();
+                document.getElementById('resSavings').className = 'text-lg font-extrabold text-rose-500';
+            } else {
+                document.getElementById('resSavings').innerText = '$0';
+                document.getElementById('resSavings').className = 'text-lg font-extrabold text-slate-300';
+            }
+        }
+
+        // Run the initial calculations when the window starts
+        window.onload = function() {
+            calculateSavings();
+        };
+
         const botAnswers = {
-            1: "Dinesh has managed massive scale B2B Lead Generation and outbound processes specifically custom-tailored for regional regulatory frameworks across the United States, APAC, ANZ, and EMEA markets.",
-            2: "At Oxcytech Systems, Dinesh structured unified work delivery blueprints and QA criteria that successfully normalized task error outputs from typical double digits directly down to 6%, proving his meticulous compliance framework design.",
-            3: "Dinesh holds a formal credential in Prompt Engineering for ChatGPT (issued Jan 2025) which he leverages to automate daily report assembly workflows, optimizing task delivery times significantly.",
-            4: "In senior roles at Infuse Media and Core Elite Consulting, Dinesh prioritized targeted mentorship, structuring routine pipeline tracking dashboards, and maintaining SLA standards with global clients."
+            1: "Dinesh holds over 8 years of dedicated experience executing B2B operations and lead qualification programs mapped to region-specific requirements across the US, APAC, ANZ, and EMEA markets.",
+            2: "During his tenure at Oxytech Systems, Dinesh structured unified operations guidelines that standardized execution, successfully dropping typical high double-digit error rates to just 6% (a 94% accuracy rate).",
+            3: "Dinesh is highly experienced with CRM workflows (HubSpot/Salesforce), lead research APIs, task queues, operational tracking dashboards, and Prompt Engineering strategies (Certified Jan 2025).",
+            4: "Dinesh offers excellent Product Operations skills. His ability to build standard guidelines to minimize process defects (94% accuracy), align GTM personas (RPC discovery), and optimize CRM database structures translates directly into structured, user-centric Product Ops execution."
         };
 
         const botQuestions = {
-            1: "What is your B2B global outreach scope?",
-            2: "Tell me about the 96% error reduction.",
-            3: "What certifications do you hold?",
-            4: "What is your leadership approach?"
+            1: "What is Dinesh's global outreach experience?",
+            2: "Tell me about standardizing workflows.",
+            3: "What technical stack does he manage?",
+            4: "How do his skills translate to Product Management?"
         };
 
         function askBot(id) {
             const chatLog = document.getElementById('chatLog');
-            
-            // User Message
-            const userMsg = document.createElement('div');
-            userMsg.className = "flex items-start justify-end gap-3 max-w-[85%] ml-auto";
-            userMsg.innerHTML = `
-                <div class="bg-brand-accent text-white p-3 rounded-2xl rounded-tr-none leading-relaxed text-right">
-                    ${botQuestions[id]}
+            if (!chatLog) return;
+
+            // Fetch Question & Answer text strings
+            const questionText = botQuestions[id];
+            const answerText = botAnswers[id];
+
+            // 1. Append User Bubble
+            const userBubble = document.createElement('div');
+            userBubble.className = 'flex items-start gap-3 justify-end max-w-[85%] ml-auto';
+            userBubble.innerHTML = `
+                <div class="bg-brand-accent text-white p-3 rounded-2xl rounded-tr-none leading-relaxed">
+                    ${questionText}
                 </div>
             `;
-            chatLog.appendChild(userMsg);
-            
-            // Scroll to bottom
+            chatLog.appendChild(userBubble);
             chatLog.scrollTop = chatLog.scrollHeight;
 
-            // Loader animation logic
-            const loader = document.createElement('div');
-            loader.className = "flex items-start gap-3 max-w-[85%]";
-            loader.innerHTML = `
-                <div class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 flex-shrink-0">
+            // 2. Append temporary 'Typing Indicator' bubble
+            const typingBubble = document.createElement('div');
+            typingBubble.id = 'botTyping';
+            typingBubble.className = 'flex items-start gap-3 max-w-[85%]';
+            typingBubble.innerHTML = `
+                <div class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 flex-shrink-0 animate-pulse">
                     <i class="fa-solid fa-robot"></i>
                 </div>
-                <div class="bg-slate-800/80 text-slate-400 p-3 rounded-2xl rounded-tl-none flex items-center gap-1.5 font-bold">
-                    <span class="w-1.5 h-1.5 bg-slate-400 rounded-full animate-bounce"></span>
-                    <span class="w-1.5 h-1.5 bg-slate-400 rounded-full animate-bounce delay-100"></span>
-                    <span class="w-1.5 h-1.5 bg-slate-400 rounded-full animate-bounce delay-200"></span>
+                <div class="bg-slate-800/80 text-slate-400 p-3 rounded-2xl rounded-tl-none italic flex items-center gap-1">
+                    <span>Typing</span>
+                    <span class="animate-bounce">.</span>
+                    <span class="animate-bounce delay-100">.</span>
+                    <span class="animate-bounce delay-200">.</span>
                 </div>
             `;
-            chatLog.appendChild(loader);
+            chatLog.appendChild(typingBubble);
             chatLog.scrollTop = chatLog.scrollHeight;
 
-            // Trigger Bot Response simulated delay
+            // 3. Simulate natural typing lag
             setTimeout(() => {
-                chatLog.removeChild(loader);
-                
-                const botMsg = document.createElement('div');
-                botMsg.className = "flex items-start gap-3 max-w-[85%]";
-                botMsg.innerHTML = `
-                    <div class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 flex-shrink-0">
+                // Delete Typing Bubble
+                const typingEl = document.getElementById('botTyping');
+                if (typingEl) typingEl.remove();
+
+                // Append real Bot answer bubble
+                const botBubble = document.createElement('div');
+                botBubble.className = 'flex items-start gap-3 max-w-[85%]';
+                botBubble.innerHTML = `
+                    <div class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-brand-accent flex-shrink-0">
                         <i class="fa-solid fa-robot"></i>
                     </div>
-                    <div class="bg-slate-850 text-slate-200 p-3 rounded-2xl rounded-tl-none leading-relaxed">
-                        ${botAnswers[id]}
+                    <div class="bg-slate-800/85 text-slate-200 p-3 rounded-2xl rounded-tl-none leading-relaxed border border-slate-800">
+                        ${answerText}
                     </div>
                 `;
-                chatLog.appendChild(botMsg);
+                chatLog.appendChild(botBubble);
                 chatLog.scrollTop = chatLog.scrollHeight;
-            }, 1000);
+            }, 750);
         }
     </script>
 </body>

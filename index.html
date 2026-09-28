@@ -3,668 +3,673 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dinesh Jaybhay | Product & Growth RevOps Leader</title>
-    
+    <title>Dinesh Jaybhay | Certified Product Manager (CPM) Portfolio</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <!-- Google Fonts: Inter & Plus Jakarta Sans -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-
     <script>
         tailwind.config = {
             darkMode: 'class',
             theme: {
                 extend: {
-                    fontFamily: {
-                        sans: ['Plus Jakarta Sans', 'sans-serif'],
-                        heading: ['Space Grotesk', 'sans-serif'],
-                    },
                     colors: {
                         brand: {
-                            50: '#eff6ff',
-                            100: '#dbeafe',
+                            50: '#f0f5ff',
+                            100: '#e0ebff',
                             500: '#3b82f6',
                             600: '#2563eb',
                             700: '#1d4ed8',
+                            800: '#1e40af',
                             900: '#1e3a8a',
-                            accent: '#6366f1',
-                            teal: '#14b8a6'
-                        },
-                        dark: {
-                            950: '#090d16',
-                            900: '#0f172a',
-                            800: '#1e293b',
-                            700: '#334155'
+                            violet: '#6366f1',
+                            accent: '#06b6d4'
                         }
                     },
-                    animation: {
-                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                        'float': 'float 6s ease-in-out infinite',
-                    },
-                    keyframes: {
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0px)' },
-                            '50%': { transform: 'translateY(-10px)' },
-                        }
+                    fontFamily: {
+                        sans: ['Inter', 'Plus Jakarta Sans', 'sans-serif'],
                     }
                 }
             }
         }
     </script>
-
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Alpine.js for lightweight interactivity -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <style>
-        .glass-panel {
-            background: rgba(15, 23, 42, 0.75);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .bg-grid-pattern {
+            background-size: 30px 30px;
+            background-image: radial-gradient(circle, rgba(99, 102, 241, 0.12) 1px, transparent 1px);
+        }
+        .dark .bg-grid-pattern {
+            background-image: radial-gradient(circle, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(229, 231, 235, 0.8);
+        }
+        .dark .glass-card {
+            background: rgba(17, 24, 39, 0.7);
+            backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.08);
         }
-        .glass-panel-hover {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .glass-panel-hover:hover {
-            background: rgba(30, 41, 59, 0.85);
-            border-color: rgba(99, 102, 241, 0.3);
-            transform: translateY(-4px);
-            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
-        }
-        .text-gradient {
-            background: linear-gradient(135deg, #60a5fa 0%, #818cf8 50%, #c084fc 100%);
+        .gradient-text {
+            background: linear-gradient(135deg, #3b82f6 0%, #6366f1 50%, #8b5cf6 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        .text-gradient-teal {
-            background: linear-gradient(135deg, #2dd4bf 0%, #38bdf8 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
         }
-        .glow-effect {
-            position: relative;
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.05);
         }
-        .glow-effect::before {
-            content: '';
-            position: absolute;
-            inset: -1px;
-            background: linear-gradient(90deg, #3b82f6, #6366f1, #a855f7);
-            border-radius: inherit;
-            z-index: -1;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        .glow-effect:hover::before {
-            opacity: 0.6;
-        }
-        /* Custom scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #090d16;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #1e293b;
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: rgba(99, 102, 241, 0.3);
             border-radius: 4px;
         }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #334155;
+        [x-cloak] {
+            display: none !important;
         }
     </style>
 </head>
-<body class="bg-dark-950 text-slate-200 font-sans antialiased selection:bg-brand-600 selection:text-white min-h-screen">
+<body x-data="portfolioApp" :class="{ 'dark': darkMode }" class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 transition-colors duration-300 min-h-screen flex flex-col custom-scrollbar">
 
-    <!-- Toast Notification -->
-    <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
-        <div class="glass-panel px-5 py-3 rounded-xl shadow-2xl border border-emerald-500/30 flex items-center gap-3">
-            <div class="w-8 h-8 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-sm">
-                <i class="fa-solid fa-check"></i>
-            </div>
-            <div>
-                <p id="toast-title" class="text-xs font-bold text-white">Success</p>
-                <p id="toast-message" class="text-xs text-slate-400">Copied to clipboard!</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Case Study Detail Modal Overlay -->
-    <div id="modal-overlay" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4 md:p-6 overflow-y-auto">
-        <div class="glass-panel border border-slate-800 rounded-3xl w-full max-w-4xl p-6 md:p-8 relative max-h-[90vh] overflow-y-auto shadow-2xl">
-            <button onclick="closeModal()" aria-label="Close modal" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-slate-900 border border-slate-700 hover:border-slate-500 text-slate-400 hover:text-white flex items-center justify-center transition-colors">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-            <div id="modal-body"></div>
-        </div>
-    </div>
-
-    <!-- Navigation Header -->
-    <nav class="fixed top-0 left-0 w-full z-40 glass-panel border-b border-slate-800/80 px-4 md:px-8 py-4 transition-all duration-300" id="navbar">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <a href="#" class="group flex items-center gap-3">
-                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-indigo-600 flex items-center justify-center text-white font-bold text-lg shadow-lg shadow-brand-600/30 group-hover:scale-105 transition-transform">
-                    DJ
+    <!-- NAVIGATION BAR -->
+    <nav class="sticky top-0 z-40 w-full glass-card border-b border-slate-200 dark:border-slate-800/80 transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <!-- Logo / Brand -->
+            <a href="#hero" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 via-indigo-600 to-cyan-400 p-0.5 shadow-md shadow-brand-500/20 group-hover:scale-105 transition-transform">
+                    <div class="w-full h-full bg-white dark:bg-slate-900 rounded-[10px] flex items-center justify-center font-bold text-brand-600 dark:text-indigo-400 text-lg">
+                        DJ
+                    </div>
                 </div>
                 <div>
-                    <span class="block font-heading font-bold text-white tracking-tight group-hover:text-brand-500 transition-colors">Dinesh Jaybhay</span>
-                    <span class="block text-[10px] text-slate-400 font-medium uppercase tracking-wider">Product & Growth Leader</span>
+                    <span class="font-extrabold text-base tracking-tight text-slate-900 dark:text-white block leading-none">Dinesh Jaybhay</span>
+                    <span class="text-xs font-semibold text-indigo-600 dark:text-indigo-400">Certified PM (CPM)</span>
                 </div>
             </a>
 
-            <!-- Desktop Links -->
-            <div class="hidden lg:flex items-center space-x-8 text-sm font-medium text-slate-300">
-                <a href="#about" class="hover:text-brand-500 transition-colors">About</a>
-                <a href="#pillars" class="hover:text-brand-500 transition-colors">Framework</a>
-                <a href="#case-studies" class="hover:text-brand-500 transition-colors">Case Studies</a>
-                <a href="#experience" class="hover:text-brand-500 transition-colors">Experience</a>
-                <a href="#skills" class="hover:text-brand-500 transition-colors">Skills</a>
-                <a href="#certifications" class="hover:text-brand-500 transition-colors">Certifications</a>
-            </div>
-
-            <div class="hidden sm:flex items-center gap-3">
-                <button onclick="copyToClipboard('dineshjaybhay@gmail.com', 'Email Address')" class="px-4 py-2 text-xs font-semibold rounded-lg bg-slate-900 border border-slate-700 hover:border-slate-500 text-slate-300 hover:text-white transition-all flex items-center gap-2">
-                    <i class="fa-regular fa-copy text-brand-500"></i> Copy Email
-                </button>
-                <a href="#contact" class="px-4 py-2 text-xs font-semibold rounded-lg bg-brand-600 hover:bg-brand-500 text-white shadow-lg shadow-brand-600/20 transition-all">
-                    Connect
+            <!-- Desktop Nav Links -->
+            <div class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-600 dark:text-slate-300">
+                <a href="#case-studies" class="hover:text-brand-600 dark:hover:text-indigo-400 transition-colors">Case Studies</a>
+                <a href="#fireflies-spotlight" class="hover:text-brand-600 dark:hover:text-indigo-400 transition-colors flex items-center gap-1.5">
+                    <span class="relative flex h-2 w-2">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
+                    </span>
+                    Fireflies.ai Prototype
                 </a>
+                <a href="#experience" class="hover:text-brand-600 dark:hover:text-indigo-400 transition-colors">PM Experience</a>
+                <a href="#skills" class="hover:text-brand-600 dark:hover:text-indigo-400 transition-colors">PM Skillset</a>
+                <a href="#certifications" class="hover:text-brand-600 dark:hover:text-indigo-400 transition-colors">Certifications</a>
             </div>
 
-            <!-- Mobile menu button -->
-            <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg bg-slate-900 text-slate-300 hover:text-white border border-slate-800">
-                <i class="fa-solid fa-bars text-lg"></i>
-            </button>
+            <!-- Action Buttons -->
+            <div class="flex items-center gap-3">
+                <!-- Theme Toggle Button -->
+                <button @click="toggleDarkMode()" class="p-2 rounded-lg text-slate-500 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors" title="Toggle Dark/Light Mode">
+                    <i x-show="!darkMode" data-lucide="moon" class="w-5 h-5"></i>
+                    <i x-show="darkMode" data-lucide="sun" class="w-5 h-5 text-amber-400"></i>
+                </button>
+
+                <button @click="openPrototypeModal()" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-brand-600 to-indigo-600 hover:from-brand-700 hover:to-indigo-700 text-white font-semibold text-xs tracking-wide uppercase shadow-lg shadow-brand-500/25 hover:shadow-brand-500/40 transition-all transform hover:-translate-y-0.5">
+                    <i data-lucide="play" class="w-3.5 h-3.5 fill-current"></i> Live Prototype
+                </button>
+
+                <!-- Mobile Menu Button -->
+                <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
         </div>
 
-        <!-- Mobile Dropdown -->
-        <div id="mobile-menu" class="hidden lg:hidden pt-4 pb-2 border-t border-slate-800/60 mt-4 space-y-3">
-            <a href="#about" class="block px-3 py-2 rounded-lg hover:bg-slate-800 text-sm font-medium text-slate-300">About</a>
-            <a href="#pillars" class="block px-3 py-2 rounded-lg hover:bg-slate-800 text-sm font-medium text-slate-300">Framework</a>
-            <a href="#case-studies" class="block px-3 py-2 rounded-lg hover:bg-slate-800 text-sm font-medium text-slate-300">Case Studies</a>
-            <a href="#experience" class="block px-3 py-2 rounded-lg hover:bg-slate-800 text-sm font-medium text-slate-300">Experience</a>
-            <a href="#skills" class="block px-3 py-2 rounded-lg hover:bg-slate-800 text-sm font-medium text-slate-300">Skills</a>
-            <a href="#certifications" class="block px-3 py-2 rounded-lg hover:bg-slate-800 text-sm font-medium text-slate-300">Certifications</a>
-            <div class="pt-2 flex flex-col gap-2">
-                <button onclick="copyToClipboard('dineshjaybhay@gmail.com', 'Email Address')" class="w-full py-2.5 text-xs font-semibold rounded-lg bg-slate-900 border border-slate-700 text-slate-300 flex items-center justify-center gap-2">
-                    <i class="fa-regular fa-copy text-brand-500"></i> Copy Email
-                </button>
-            </div>
+        <!-- Mobile Menu Dropdown -->
+        <div x-show="mobileMenuOpen" x-transition class="md:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-4 py-4 space-y-3 text-sm font-medium">
+            <a href="#case-studies" @click="mobileMenuOpen = false" class="block py-2 text-slate-700 dark:text-slate-200">Case Studies</a>
+            <a href="#fireflies-spotlight" @click="mobileMenuOpen = false" class="block py-2 text-indigo-600 dark:text-indigo-400 font-semibold">Fireflies.ai Prototype</a>
+            <a href="#experience" @click="mobileMenuOpen = false" class="block py-2 text-slate-700 dark:text-slate-200">PM Experience</a>
+            <a href="#skills" @click="mobileMenuOpen = false" class="block py-2 text-slate-700 dark:text-slate-200">PM Skillset</a>
+            <a href="#certifications" @click="mobileMenuOpen = false" class="block py-2 text-slate-700 dark:text-slate-200">Certifications</a>
+            <button @click="openPrototypeModal(); mobileMenuOpen = false;" class="w-full mt-2 py-2.5 rounded-lg bg-indigo-600 text-white font-semibold text-center flex items-center justify-center gap-2">
+                <i data-lucide="play" class="w-4 h-4"></i> Launch Fireflies AI Prototype
+            </button>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="relative pt-36 pb-20 px-4 md:px-8 overflow-hidden">
-        <!-- Background Ambient Lights -->
-        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-brand-600/10 rounded-full blur-[120px] -z-10 pointer-events-none"></div>
-        <div class="absolute top-1/3 right-10 w-[400px] h-[400px] bg-purple-600/10 rounded-full blur-[100px] -z-10 pointer-events-none"></div>
-
-        <div class="max-w-6xl mx-auto">
-            <div class="flex flex-col items-center text-center">
+    <!-- HERO SECTION -->
+    <section id="hero" class="relative py-16 lg:py-24 overflow-hidden bg-grid-pattern">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 
-                <!-- Status & Location Pill -->
-                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-panel border border-brand-500/30 text-xs font-semibold text-slate-300 mb-8 animate-pulse-slow">
-                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
-                    <span>Pune, India</span>
-                    <span class="text-slate-600">•</span>
-                    <span class="text-brand-400">Open for Product & Growth Roles</span>
-                </div>
-
-                <!-- Main Headline -->
-                <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold font-heading text-white tracking-tight leading-[1.1] max-w-5xl mb-6">
-                    Fixing Leaky Revenue Funnels with <span class="text-gradient">Product Thinking</span>
-                </h1>
-
-                <!-- Subtitle -->
-                <p class="text-base sm:text-lg md:text-xl text-slate-400 max-w-3xl leading-relaxed mb-10">
-                    7+ years optimizing B2B growth, CRM architectures, and user drop-offs. Transitioning revenue operations into scalable B2B SaaS product features, retention loops, and AI-enabled workflows.
-                </p>
-
-                <!-- CTA Action Buttons -->
-                <div class="flex flex-wrap justify-center items-center gap-4 w-full sm:w-auto">
-                    <a href="#case-studies" class="w-full sm:w-auto px-7 py-4 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-semibold text-sm transition-all shadow-xl shadow-brand-600/25 flex items-center justify-center gap-2 group">
-                        <span>Explore Case Studies</span>
-                        <i class="fa-solid fa-arrow-down text-xs group-hover:translate-y-0.5 transition-transform"></i>
-                    </a>
-                    <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-7 py-4 rounded-xl glass-panel hover:bg-slate-800 text-white font-semibold text-sm transition-all flex items-center justify-center gap-2 border border-slate-700">
-                        <i class="fa-brands fa-linkedin text-brand-500 text-base"></i>
-                        <span>LinkedIn Profile</span>
-                    </a>
-                </div>
-
-                <!-- Metric Highlights Bar -->
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-6 mt-16 w-full max-w-4xl">
-                    <div class="glass-panel p-6 rounded-2xl border border-slate-800/80 text-center relative overflow-hidden group">
-                        <div class="text-3xl lg:text-4xl font-extrabold font-heading text-white mb-1 tracking-tight">7+</div>
-                        <div class="text-xs font-medium text-slate-400 uppercase tracking-wider">Years Growth & Ops</div>
+                <!-- Hero Left: Bio & Tagline -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-indigo-50 dark:bg-indigo-950/80 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800/60 shadow-sm">
+                        <i data-lucide="award" class="w-4 h-4 text-indigo-500"></i>
+                        Airtribe Certified Product Manager (CPM) · 2026
                     </div>
-                    <div class="glass-panel p-6 rounded-2xl border border-slate-800/80 text-center relative overflow-hidden group">
-                        <div class="text-3xl lg:text-4xl font-extrabold font-heading text-brand-400 mb-1 tracking-tight">4</div>
-                        <div class="text-xs font-medium text-slate-400 uppercase tracking-wider">Global Markets (US, APAC, ANZ, EMEA)</div>
-                    </div>
-                    <div class="glass-panel p-6 rounded-2xl border border-slate-800/80 text-center relative overflow-hidden group">
-                        <div class="text-3xl lg:text-4xl font-extrabold font-heading text-indigo-400 mb-1 tracking-tight">60%</div>
-                        <div class="text-xs font-medium text-slate-400 uppercase tracking-wider">B2B Base Growth</div>
-                    </div>
-                    <div class="glass-panel p-6 rounded-2xl border border-slate-800/80 text-center relative overflow-hidden group">
-                        <div class="text-3xl lg:text-4xl font-extrabold font-heading text-purple-400 mb-1 tracking-tight">CPM</div>
-                        <div class="text-xs font-medium text-slate-400 uppercase tracking-wider">Airtribe Certified PM</div>
-                    </div>
-                </div>
 
-            </div>
-        </div>
-    </section>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.15]">
+                        Data-Backed <span class="gradient-text">Product Strategy</span> & User-Friction Discovery
+                    </h1>
 
-    <!-- About / Core Philosophy Section -->
-    <section id="about" class="py-20 px-4 md:px-8 bg-slate-900/40 relative">
-        <div class="max-w-6xl mx-auto">
-            <div class="grid lg:grid-cols-12 gap-12 items-center">
-                
-                <div class="lg:col-span-5 space-y-6">
-                    <div class="inline-flex items-center gap-2 text-brand-500 font-bold text-xs uppercase tracking-wider">
-                        <i class="fa-solid fa-lightbulb"></i> Philosophy & Pivot
-                    </div>
-                    <h2 class="text-3xl sm:text-4xl font-bold font-heading text-white leading-tight">
-                        "Fixing a leaky revenue funnel isn't just an ops problem—it's a product problem."
-                    </h2>
-                    <p class="text-slate-400 text-sm leading-relaxed">
-                        Spent years staring at one fundamental metric: <strong>where and why users drop off</strong>. From revenue operations and CRM workflows to international sales engines, the root causes behind lost leads almost always stem from friction, usability bottlenecks, and misaligned user value.
+                    <p class="text-lg text-slate-600 dark:text-slate-300 leading-relaxed font-normal max-w-2xl">
+                        Product Manager with <strong>7+ years</strong> of cross-functional experience driving discovery, user research, usability heuristics, and systemic workflow solutions across 4 global markets (US, APAC, ANZ, EMEA). Focused on turning complex user friction into seamless digital product experiences.
                     </p>
-                    <div class="pt-2">
-                        <div class="flex items-center gap-4 text-xs font-medium text-slate-300">
-                            <span class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-emerald-400"></i> User Friction Discovery</span>
-                            <span class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-emerald-400"></i> Data-Driven Loops</span>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Interactive Card: Ops vs Product Perspective -->
-                <div class="lg:col-span-7">
-                    <div class="glass-panel p-6 sm:p-8 rounded-3xl border border-slate-800 relative">
-                        <!-- Toggle Header -->
-                        <div class="flex items-center justify-between pb-6 border-b border-slate-800">
-                            <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">Interactive Shift Matrix</span>
-                            <div class="flex bg-slate-950 p-1 rounded-xl border border-slate-800 text-xs font-semibold">
-                                <button id="btn-ops" onclick="switchPerspective('ops')" class="px-3 py-1.5 rounded-lg bg-slate-800 text-white transition-all">Ops View</button>
-                                <button id="btn-pm" onclick="switchPerspective('pm')" class="px-3 py-1.5 rounded-lg text-slate-400 hover:text-white transition-all">Product Mindset</button>
+                    <!-- Key Metrics Callouts -->
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-2">
+                        <div class="p-3.5 rounded-xl glass-card border-l-4 border-l-indigo-500">
+                            <div class="text-2xl font-extrabold text-slate-900 dark:text-white flex items-center gap-1">
+                                +17% <span class="text-xs font-semibold text-emerald-500 bg-emerald-50 dark:bg-emerald-950 px-1.5 py-0.5 rounded">Lift</span>
                             </div>
+                            <div class="text-xs text-slate-500 dark:text-slate-400 font-medium mt-0.5">14-Day Commitment Closure (28% → 45%)</div>
                         </div>
-
-                        <!-- Content Container -->
-                        <div id="perspective-content" class="py-6 min-h-[200px] flex flex-col justify-center space-y-4">
-                            <!-- Injected dynamically via JavaScript -->
+                        <div class="p-3.5 rounded-xl glass-card border-l-4 border-l-cyan-500">
+                            <div class="text-2xl font-extrabold text-slate-900 dark:text-white">4 Markets</div>
+                            <div class="text-xs text-slate-500 dark:text-slate-400 font-medium mt-0.5">US, APAC, ANZ, EMEA Managed</div>
                         </div>
-
-                        <div class="pt-4 border-t border-slate-800/60 flex items-center justify-between text-xs text-slate-500">
-                            <span>Click toggle to view the paradigm shift</span>
-                            <i class="fa-solid fa-arrow-right-arrow-left text-brand-500"></i>
+                        <div class="p-3.5 rounded-xl glass-card border-l-4 border-l-purple-500 col-span-2 sm:col-span-1">
+                            <div class="text-2xl font-extrabold text-slate-900 dark:text-white">Nielsen's 10</div>
+                            <div class="text-xs text-slate-500 dark:text-slate-400 font-medium mt-0.5">Heuristics & UX Laws Applied</div>
                         </div>
                     </div>
-                </div>
 
-            </div>
-        </div>
-    </section>
-
-    <!-- Core Pillars / Competencies -->
-    <section id="pillars" class="py-24 px-4 md:px-8">
-        <div class="max-w-6xl mx-auto">
-            <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
-                <span class="text-xs font-bold text-brand-500 uppercase tracking-wider">Core Capabilities</span>
-                <h2 class="text-3xl sm:text-4xl font-bold font-heading text-white">4 Pillars of My Framework</h2>
-                <p class="text-slate-400 text-sm">Combining revenue systems depth with structured product management discovery.</p>
-            </div>
-
-            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                
-                <!-- Pillar 1 -->
-                <div class="glass-panel p-6 rounded-2xl glass-panel-hover flex flex-col justify-between">
-                    <div>
-                        <div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-400 flex items-center justify-center text-xl mb-6">
-                            <i class="fa-solid fa-magnifying-glass-chart"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-white mb-2">Product Strategy & Discovery</h3>
-                        <p class="text-slate-400 text-xs leading-relaxed">
-                            Uncovering hidden friction in B2B user journeys through structured user interviews, market research, and quantitative funnel analysis.
-                        </p>
-                    </div>
-                    <div class="mt-6 pt-4 border-t border-slate-800/80 text-[11px] font-semibold text-brand-400 flex items-center gap-1">
-                        <span>Problem Discovery</span>
-                        <i class="fa-solid fa-chevron-right text-[9px]"></i>
-                    </div>
-                </div>
-
-                <!-- Pillar 2 -->
-                <div class="glass-panel p-6 rounded-2xl glass-panel-hover flex flex-col justify-between">
-                    <div>
-                        <div class="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center text-xl mb-6">
-                            <i class="fa-solid fa-arrows-spin"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-white mb-2">Growth & Funnel Optimization</h3>
-                        <p class="text-slate-400 text-xs leading-relaxed">
-                            Leveraging revenue telemetry and user metrics to turn leaky touchpoints into high-velocity onboarding and retention loops.
-                        </p>
-                    </div>
-                    <div class="mt-6 pt-4 border-t border-slate-800/80 text-[11px] font-semibold text-indigo-400 flex items-center gap-1">
-                        <span>Conversion Loops</span>
-                        <i class="fa-solid fa-chevron-right text-[9px]"></i>
-                    </div>
-                </div>
-
-                <!-- Pillar 3 -->
-                <div class="glass-panel p-6 rounded-2xl glass-panel-hover flex flex-col justify-between">
-                    <div>
-                        <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center text-xl mb-6">
-                            <i class="fa-solid fa-wand-magic-sparkles"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-white mb-2">AI-Enabled Workflows</h3>
-                        <p class="text-slate-400 text-xs leading-relaxed">
-                            Designing prompt-engineered integrations (ChatGPT Certified) to automate complex operational workflows and boost productivity.
-                        </p>
-                    </div>
-                    <div class="mt-6 pt-4 border-t border-slate-800/80 text-[11px] font-semibold text-purple-400 flex items-center gap-1">
-                        <span>Prompt Engineering</span>
-                        <i class="fa-solid fa-chevron-right text-[9px]"></i>
-                    </div>
-                </div>
-
-                <!-- Pillar 4 -->
-                <div class="glass-panel p-6 rounded-2xl glass-panel-hover flex flex-col justify-between">
-                    <div>
-                        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl mb-6">
-                            <i class="fa-solid fa-cubes"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-white mb-2">Productization of Ops</h3>
-                        <p class="text-slate-400 text-xs leading-relaxed">
-                            Transforming manual operations, fragmented CRM workflows, and team processes into scalable, repeatable software systems.
-                        </p>
-                    </div>
-                    <div class="mt-6 pt-4 border-t border-slate-800/80 text-[11px] font-semibold text-emerald-400 flex items-center gap-1">
-                        <span>Internal Software</span>
-                        <i class="fa-solid fa-chevron-right text-[9px]"></i>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Case Studies Section -->
-    <section id="case-studies" class="py-24 px-4 md:px-8 bg-slate-900/40 relative">
-        <div class="max-w-6xl mx-auto">
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
-                <div>
-                    <span class="text-xs font-bold text-brand-500 uppercase tracking-wider">Product Projects</span>
-                    <h2 class="text-3xl sm:text-4xl font-bold font-heading text-white mt-1">Featured Case Studies</h2>
-                </div>
-                <p class="text-slate-400 text-sm max-w-md">Detailed product strategies, user discovery projects, and interactive prototypes built by Dinesh.</p>
-            </div>
-
-            <div class="grid lg:grid-cols-3 gap-8">
-                
-                <!-- Case Study 1 Card -->
-                <div class="glass-card p-8 rounded-3xl border border-slate-800 flex flex-col justify-between hover:border-slate-700 transition-all">
-                    <div>
-                        <div class="flex justify-between items-center mb-6">
-                            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-brand-500/10 text-brand-400 border border-brand-500/20">B2B SaaS Strategy</span>
-                            <span class="text-xs text-slate-500"><i class="fa-regular fa-clock me-1"></i> 3-Year Roadmap</span>
-                        </div>
+                    <!-- Call to Action Buttons -->
+                    <div class="flex flex-wrap items-center gap-4 pt-4">
+                        <a href="#case-studies" class="px-6 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 dark:bg-indigo-600 dark:hover:bg-indigo-500 text-white font-semibold text-sm shadow-xl shadow-slate-900/10 dark:shadow-indigo-600/30 transition-all flex items-center gap-2">
+                            <i data-lucide="briefcase" class="w-4 h-4"></i> Explore Case Studies
+                        </a>
                         
-                        <h3 class="text-2xl font-bold font-heading text-white mb-3">
-                            Workforce Capability Intelligence OS
-                        </h3>
-                        
-                        <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-6">
-                            Most enterprise companies don't have a learning problem—they have a capability visibility problem. Designed a 3-year SaaS strategy transforming corporate learning from course completion to skill graph intelligence.
-                        </p>
-
-                        <!-- Key Highlights list -->
-                        <div class="space-y-2.5 mb-8">
-                            <div class="flex items-start gap-3 text-xs text-slate-300">
-                                <i class="fa-solid fa-check text-brand-400 mt-0.5"></i>
-                                <span>Shifted focus: LMS Course Completions &rarr; Real Capability Tracking</span>
-                            </div>
-                            <div class="flex items-start gap-3 text-xs text-slate-300">
-                                <i class="fa-solid fa-check text-brand-400 mt-0.5"></i>
-                                <span>AI-driven skill gap analysis mapped to business outcomes</span>
-                            </div>
-                            <div class="flex items-start gap-3 text-xs text-slate-300">
-                                <i class="fa-solid fa-check text-brand-400 mt-0.5"></i>
-                                <span>Workforce intelligence dashboard for internal mobility</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="pt-6 border-t border-slate-800 flex items-center justify-between">
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-2.5 py-1 rounded bg-slate-900 text-slate-400 text-[11px]">Skill Graph</span>
-                            <span class="px-2.5 py-1 rounded bg-slate-900 text-slate-400 text-[11px]">AI Analytics</span>
-                        </div>
-                        <button onclick="openModal('cs1')" class="px-4 py-2 rounded-xl bg-brand-600/20 hover:bg-brand-600 text-brand-300 hover:text-white text-xs font-semibold transition-all">
-                            Read Strategy <i class="fa-solid fa-arrow-right ms-1"></i>
+                        <button @click="openPrototypeModal()" class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold text-sm shadow-xl shadow-cyan-500/20 transition-all flex items-center gap-2 group">
+                            <i data-lucide="external-link" class="w-4 h-4 group-hover:scale-110 transition-transform"></i>
+                            Launch Live Prototype
                         </button>
-                    </div>
-                </div>
 
-                <!-- Case Study 2 Card -->
-                <div class="glass-card p-8 rounded-3xl border border-slate-800 flex flex-col justify-between hover:border-slate-700 transition-all">
-                    <div>
-                        <div class="flex justify-between items-center mb-6">
-                            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">User Experience & UX</span>
-                            <span class="text-xs text-slate-500"><i class="fa-regular fa-clock me-1"></i> PM Discovery</span>
-                        </div>
-
-                        <h3 class="text-2xl font-bold font-heading text-white mb-3">
-                            SmartRide Connect: Pickup Experience
-                        </h3>
-
-                        <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-6">
-                            Pickup confusion in crowded locations (airports, malls, office parks) caused 90% of riders to lose 5–10 minutes per trip. Conducted user interviews and designed SmartRide Connect to streamline physical pickups.
-                        </p>
-
-                        <!-- Key Highlights list -->
-                        <div class="space-y-2.5 mb-8">
-                            <div class="flex items-start gap-3 text-xs text-slate-300">
-                                <i class="fa-solid fa-check text-indigo-400 mt-0.5"></i>
-                                <span>Discovered 90% of riders call drivers due to entrance confusion</span>
-                            </div>
-                            <div class="flex items-start gap-3 text-xs text-slate-300">
-                                <i class="fa-solid fa-check text-indigo-400 mt-0.5"></i>
-                                <span>Designed Smart Meeting Point & Gate Selection UI</span>
-                            </div>
-                            <div class="flex items-start gap-3 text-xs text-slate-300">
-                                <i class="fa-solid fa-check text-indigo-400 mt-0.5"></i>
-                                <span>Side-of-road detection & landmark-guided pickup loops</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="pt-6 border-t border-slate-800 flex items-center justify-between">
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-2.5 py-1 rounded bg-slate-900 text-slate-400 text-[11px]">User Discovery</span>
-                            <span class="px-2.5 py-1 rounded bg-slate-900 text-slate-400 text-[11px]">Prototyping</span>
-                        </div>
-                        <button onclick="openModal('cs2')" class="px-4 py-2 rounded-xl bg-indigo-600/20 hover:bg-indigo-600 text-indigo-300 hover:text-white text-xs font-semibold transition-all">
-                            Read Deep-Dive <i class="fa-solid fa-arrow-right ms-1"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Case Study 3 Card (Full PDF Document Direct Integration) -->
-                <div class="glass-card p-8 rounded-3xl border border-slate-800 flex flex-col justify-between hover:border-slate-700 transition-all">
-                    <div>
-                        <div class="flex justify-between items-center mb-6">
-                            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">UX & Redesign Document</span>
-                            <span class="text-xs text-slate-500"><i class="fa-solid fa-file-pdf me-1"></i> Full 10-Page Report</span>
-                        </div>
-
-                        <h3 class="text-2xl font-bold font-heading text-white mb-3">
-                            Improving Porter's Mini Truck Booking Flow
-                        </h3>
-
-                        <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-6">
-                            A heuristic evaluation of the Mini Truck booking journey, mapped against Nielsen's usability principles and Hick's, Fitts's, and Jakob's UX laws — with concrete redesign recommendations.
-                        </p>
-
-                        <!-- Key Highlights list -->
-                        <div class="space-y-2.5 mb-8">
-                            <div class="flex items-start gap-3 text-xs text-slate-300">
-                                <i class="fa-solid fa-check text-emerald-400 mt-0.5"></i>
-                                <span>Complete Heuristic Evaluation against Nielsen's 10 Principles</span>
-                            </div>
-                            <div class="flex items-start gap-3 text-xs text-slate-300">
-                                <i class="fa-solid fa-check text-emerald-400 mt-0.5"></i>
-                                <span>UX Laws Mapping (Hick's, Fitts's, Jakob's Laws)</span>
-                            </div>
-                            <div class="flex items-start gap-3 text-xs text-slate-300">
-                                <i class="fa-solid fa-check text-emerald-400 mt-0.5"></i>
-                                <span>Targeted Redesign Recommendations & Impact Analysis</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="pt-6 border-t border-slate-800 flex flex-col gap-3">
-                        <button onclick="openModal('porter')" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-brand-600 to-indigo-600 hover:from-brand-500 hover:to-indigo-500 text-white font-semibold text-xs transition-all shadow-lg shadow-brand-600/20 flex items-center justify-center gap-2 text-center group">
-                            <i class="fa-solid fa-book-open text-xs"></i>
-                            <span>View Full Case Study Document</span>
-                        </button>
-                        <a href="https://swift-truck-flow.lovable.app" target="_blank" rel="noopener noreferrer" class="w-full py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-white text-xs font-medium transition-all text-center flex items-center justify-center gap-1.5">
-                            <span>Launch Live Prototype App</span>
-                            <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                        <a href="mailto:dineshjaybhay@gmail.com" class="px-5 py-3.5 rounded-xl glass-card hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200 font-medium text-sm transition-colors flex items-center gap-2">
+                            <i data-lucide="mail" class="w-4 h-4 text-slate-400"></i> Contact Me
                         </a>
                     </div>
                 </div>
 
+                <!-- Hero Right: Interactive PM Profile Card -->
+                <div class="lg:col-span-5">
+                    <div class="relative glass-card rounded-2xl p-6 sm:p-8 shadow-2xl border border-slate-200 dark:border-slate-800">
+                        <div class="absolute -top-3 -right-3 px-3 py-1 bg-gradient-to-r from-amber-500 to-orange-500 text-white text-[11px] font-bold uppercase tracking-wider rounded-full shadow-md">
+                            Certified PM
+                        </div>
+
+                        <!-- Card Header -->
+                        <div class="flex items-center gap-4 border-b border-slate-200 dark:border-slate-800/80 pb-5">
+                            <div class="w-16 h-16 rounded-2xl bg-indigo-600 flex items-center justify-center text-white font-bold text-2xl shadow-lg shadow-indigo-500/30">
+                                DJ
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white">Dinesh Jaybhay</h3>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 flex items-center gap-1 mt-0.5">
+                                    <i data-lucide="map-pin" class="w-3.5 h-3.5 text-indigo-500"></i> Pune, Maharashtra, India
+                                </p>
+                                <div class="flex items-center gap-2 mt-2">
+                                    <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-medium bg-emerald-100 text-emerald-800 dark:bg-emerald-950/80 dark:text-emerald-300">
+                                        Open to PM Roles
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Quick Competencies Grid -->
+                        <div class="py-5 space-y-3">
+                            <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider">PM Core Focus</div>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-slate-100 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Product Discovery</span>
+                                <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-slate-100 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">PRD & User Stories</span>
+                                <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800">RICE / MoSCoW</span>
+                                <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-slate-100 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Nielsen's 10 UX Laws</span>
+                                <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-slate-100 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">AI Workflow Design</span>
+                                <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-cyan-50 dark:bg-cyan-950/60 text-cyan-700 dark:text-cyan-300 border border-cyan-200 dark:border-cyan-800">Funnel & Drop-off</span>
+                            </div>
+                        </div>
+
+                        <!-- Contact Badges -->
+                        <div class="pt-4 border-t border-slate-200 dark:border-slate-800/80 flex flex-col gap-2.5 text-xs text-slate-600 dark:text-slate-300">
+                            <a href="mailto:dineshjaybhay@gmail.com" class="flex items-center gap-2 hover:text-indigo-500 transition-colors">
+                                <i data-lucide="mail" class="w-4 h-4 text-indigo-500"></i> dineshjaybhay@gmail.com
+                            </a>
+                            <a href="tel:+919561015344" class="flex items-center gap-2 hover:text-indigo-500 transition-colors">
+                                <i data-lucide="phone" class="w-4 h-4 text-emerald-500"></i> +91 95610 15344
+                            </a>
+                            <a href="https://linkedin.com/in/dinesh-jaybhay-83049118a" target="_blank" class="flex items-center gap-2 hover:text-indigo-500 transition-colors">
+                                <i data-lucide="linkedin" class="w-4 h-4 text-blue-500"></i> linkedin.com/in/dinesh-jaybhay-83049118a
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Work Experience Section -->
-    <section id="experience" class="py-24 px-4 md:px-8">
-        <div class="max-w-4xl mx-auto">
-            <div class="text-center mb-16 space-y-3">
-                <span class="text-xs font-bold text-brand-500 uppercase tracking-wider">Career Journey</span>
-                <h2 class="text-3xl sm:text-4xl font-bold font-heading text-white">Experience Timeline</h2>
-                <p class="text-slate-400 text-sm">7+ years combining operations execution, lead architecture, and product management soft skills.</p>
+    <!-- FIREFLIES.AI CAPSTONE FEATURE SPOTLIGHT -->
+    <section id="fireflies-spotlight" class="py-16 bg-slate-900 text-white relative overflow-hidden">
+        <!-- Subtle Glow Background Effects -->
+        <div class="absolute top-0 right-1/4 w-96 h-96 bg-indigo-600/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-0 left-10 w-80 h-80 bg-cyan-600/20 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 pb-12 border-b border-slate-800">
+                <div>
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 uppercase tracking-widest mb-3">
+                        <i data-lucide="sparkles" class="w-3.5 h-3.5 text-indigo-400"></i> Airtribe Capstone Case Study
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
+                        Fireflies.ai — From Meeting Notes to Closed Commitments
+                    </h2>
+                    <p class="text-slate-400 text-sm sm:text-base mt-2 max-w-3xl">
+                        Designing a closed-loop commitment experience for AI meeting notes. Transforming lost action items into active, tracked, and confirmed resolutions.
+                    </p>
+                </div>
+                <div class="flex items-center gap-3 shrink-0">
+                    <button @click="openPrototypeModal()" class="px-5 py-3 rounded-xl bg-gradient-to-r from-indigo-500 to-cyan-500 hover:from-indigo-600 hover:to-cyan-600 text-white font-bold text-xs uppercase tracking-wider shadow-lg shadow-indigo-500/30 transition-all flex items-center gap-2">
+                        <i data-lucide="play-circle" class="w-4 h-4"></i> Launch Prototype Modal
+                    </button>
+                    <a href="https://Prototype-Dinesh-Fireflies-AI.replit.app" target="_blank" class="px-4 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold border border-slate-700 flex items-center gap-1.5 transition-colors">
+                        Open Full Tab <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                    </a>
+                </div>
             </div>
 
-            <div class="relative border-l-2 border-slate-800 ml-4 md:ml-36 space-y-12">
+            <!-- Problem vs Solution Breakdown Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 py-10">
                 
-                <!-- Role 1 -->
-                <div class="relative pl-6 sm:pl-8 group">
-                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-brand-500 border-4 border-slate-950 shadow-lg shadow-brand-500/50"></div>
-                    <div class="hidden md:block absolute -left-40 top-1 text-xs text-slate-400 font-bold w-32 text-right">
-                        Mar 2025 – Present
+                <!-- Research & Discovery Highlights -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="bg-slate-800/80 rounded-2xl p-6 border border-slate-700/80 shadow-xl">
+                        <h3 class="text-lg font-bold text-white flex items-center gap-2 mb-4">
+                            <i data-lucide="search" class="w-5 h-5 text-cyan-400"></i> User Discovery & Primary Data
+                        </h3>
+                        <div class="grid grid-cols-3 gap-3 text-center mb-6">
+                            <div class="p-3 bg-slate-900/60 rounded-xl border border-slate-800">
+                                <div class="text-2xl font-black text-indigo-400">9</div>
+                                <div class="text-[11px] text-slate-400 font-medium">1-on-1 Interviews</div>
+                            </div>
+                            <div class="p-3 bg-slate-900/60 rounded-xl border border-slate-800">
+                                <div class="text-2xl font-black text-cyan-400">32</div>
+                                <div class="text-[11px] text-slate-400 font-medium">Survey Respondents</div>
+                            </div>
+                            <div class="p-3 bg-slate-900/60 rounded-xl border border-slate-800">
+                                <div class="text-2xl font-black text-purple-400">50</div>
+                                <div class="text-[11px] text-slate-400 font-medium">Desk Datasets</div>
+                            </div>
+                        </div>
+
+                        <div class="space-y-3 text-xs text-slate-300">
+                            <div class="p-3 rounded-lg bg-slate-900/40 border border-slate-800 flex items-start gap-2.5">
+                                <i data-lucide="alert-triangle" class="w-4 h-4 text-amber-400 shrink-0 mt-0.5"></i>
+                                <div>
+                                    <strong class="text-white block">The Core Gap:</strong>
+                                    "Capture works. Closure doesn't." Action items logged in summaries move into daily chaos without explicit dates or reminders.
+                                </div>
+                            </div>
+                            <div class="p-3 rounded-lg bg-slate-900/40 border border-slate-800 flex items-start gap-2.5">
+                                <i data-lucide="trending-up" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+                                <div>
+                                    <strong class="text-white block">North Star Target:</strong>
+                                    Increase 14-Day Commitment Resolution Rate from <span class="text-amber-400 font-bold">28% → 45%</span> (+17 point relative lift).
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
+                    <!-- Stakeholders Reached -->
+                    <div class="p-5 bg-slate-800/40 rounded-2xl border border-slate-800 text-xs space-y-2">
+                        <span class="text-slate-400 font-semibold block uppercase tracking-wider text-[10px]">Stakeholders Covered</span>
+                        <p class="text-slate-300">
+                            Sales / BD Leaders, Account Managers, Operations Managers, Quality Leads, App Developers, and Business Analysts.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Three Pillar Product Solution -->
+                <div class="lg:col-span-7 space-y-4">
+                    <div class="text-xs font-semibold text-cyan-400 uppercase tracking-widest mb-1">Product Solution Architecture</div>
                     
-                    <div class="glass-card p-6 rounded-2xl border border-slate-800 space-y-4">
-                        <div class="flex flex-wrap justify-between items-start gap-2">
-                            <div>
-                                <h3 class="text-lg font-bold text-white">Sr. Team Leader – Sales Operations</h3>
-                                <p class="text-xs text-brand-400 font-semibold">InfuseB2B · Full-time · Pune (On-site)</p>
+                    <!-- FireSpark -->
+                    <div class="p-5 rounded-xl bg-slate-800/90 border-l-4 border-l-cyan-400 border-y border-r border-slate-700/60 shadow-md transition-all hover:bg-slate-800">
+                        <div class="flex items-center justify-between mb-2">
+                            <div class="flex items-center gap-2">
+                                <span class="p-1.5 rounded-lg bg-cyan-500/20 text-cyan-300 font-bold text-xs">01</span>
+                                <h4 class="text-base font-bold text-white">FireSpark — Smart Task Creation</h4>
                             </div>
-                            <span class="md:hidden px-2.5 py-1 rounded bg-slate-900 text-slate-400 text-xs font-medium">Mar 2025 – Present</span>
+                            <span class="text-[11px] font-semibold text-cyan-400 bg-cyan-950/80 px-2 py-0.5 rounded border border-cyan-800">Capture + Confirm</span>
                         </div>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Auto-extracts full commitment details directly from transcripts with explicit Owner + Due Date. Enforces human confirmation (Confirm / Edit / Reject) before creating active tasks to prevent AI hallucination errors.
+                        </p>
+                    </div>
 
-                        <ul class="space-y-2.5 text-xs text-slate-300 leading-relaxed">
-                            <li class="flex items-start gap-2">
-                                <i class="fa-solid fa-angle-right text-brand-500 mt-0.5"></i>
-                                <span><strong>Global Multi-Market Governance:</strong> Own funnel performance across four major global markets (US, APAC, ANZ, EMEA)—navigating international SaaS complexities.</span>
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <i class="fa-solid fa-angle-right text-brand-500 mt-0.5"></i>
-                                <span><strong>CRM Surface Productization:</strong> Treat CRM workflows as internal product surfaces: identifying friction points, formulating hypotheses, and deploying data-backed fixes.</span>
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <i class="fa-solid fa-angle-right text-brand-500 mt-0.5"></i>
-                                <span><strong>Cross-Functional Alignment:</strong> Translate business constraints between sales, customer success, and marketing teams to unblock critical campaign roadmaps.</span>
-                            </li>
-                        </ul>
-
-                        <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
-                            <div class="flex flex-wrap gap-1.5">
-                                <span class="px-2 py-0.5 rounded bg-slate-900 text-slate-400 text-[10px]">Product Thinking</span>
-                                <span class="px-2 py-0.5 rounded bg-slate-900 text-slate-400 text-[10px]">Stakeholder Alignment</span>
-                                <span class="px-2 py-0.5 rounded bg-slate-900 text-slate-400 text-[10px]">CRM Architecture</span>
+                    <!-- FireTrail -->
+                    <div class="p-5 rounded-xl bg-slate-800/90 border-l-4 border-l-indigo-500 border-y border-r border-slate-700/60 shadow-md transition-all hover:bg-slate-800">
+                        <div class="flex items-center justify-between mb-2">
+                            <div class="flex items-center gap-2">
+                                <span class="p-1.5 rounded-lg bg-indigo-500/20 text-indigo-300 font-bold text-xs">02</span>
+                                <h4 class="text-base font-bold text-white">FireTrail — Task Dashboard & Context</h4>
                             </div>
-                            <span class="text-[10px] text-emerald-400 font-semibold"><i class="fa-solid fa-award me-1"></i> Achievement Recognition</span>
+                            <span class="text-[11px] font-semibold text-indigo-400 bg-indigo-950/80 px-2 py-0.5 rounded border border-indigo-800">Track + Visualize</span>
+                        </div>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Dedicated workspace with dual views: "My Commitments" (Owner execution) and "Team Commitments" (Manager visibility with RAG health status, blockers, and % completion without micromanagement).
+                        </p>
+                    </div>
+
+                    <!-- FirePulse -->
+                    <div class="p-5 rounded-xl bg-slate-800/90 border-l-4 border-l-purple-500 border-y border-r border-slate-700/60 shadow-md transition-all hover:bg-slate-800">
+                        <div class="flex items-center justify-between mb-2">
+                            <div class="flex items-center gap-2">
+                                <span class="p-1.5 rounded-lg bg-purple-500/20 text-purple-300 font-bold text-xs">03</span>
+                                <h4 class="text-base font-bold text-white">FirePulse — Context-Aware Nudges</h4>
+                            </div>
+                            <span class="text-[11px] font-semibold text-purple-400 bg-purple-950/80 px-2 py-0.5 rounded border border-purple-800">Remind + Drive Action</span>
+                        </div>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Intelligent status check nudges based on due dates and activity signals. Asks "On track / Blocked / Need more time". Automatically stops nudges upon resolution (Completed, Reassigned, or Dropped with reason).
+                        </p>
+                    </div>
+
+                    <!-- Live Prototype Embed Callout Box -->
+                    <div class="p-4 rounded-xl bg-gradient-to-r from-indigo-900/60 to-slate-900 border border-indigo-500/30 flex items-center justify-between gap-4 mt-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-lg bg-indigo-600/30 flex items-center justify-center text-indigo-400 shrink-0">
+                                <i data-lucide="monitor" class="w-5 h-5"></i>
+                            </div>
+                            <div class="text-xs">
+                                <div class="font-bold text-white">Interactive Prototype Ready</div>
+                                <div class="text-slate-400">Hosted live on Replit (`https://Prototype-Dinesh-Fireflies-AI.replit.app`)</div>
+                            </div>
+                        </div>
+                        <button @click="openPrototypeModal()" class="px-3.5 py-2 rounded-lg bg-indigo-500 hover:bg-indigo-600 text-white text-xs font-semibold shrink-0 transition-colors">
+                            Interact Now
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ALL CASE STUDIES SECTION -->
+    <section id="case-studies" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-indigo-50 dark:bg-indigo-950/80 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800/60 mb-3 uppercase tracking-wider">
+                <i data-lucide="folder-git-2" class="w-3.5 h-3.5"></i> Independent PM Work
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+                Product Case Studies & UX Audits
+            </h2>
+            <p class="text-slate-600 dark:text-slate-400 text-base mt-3">
+                Applying user research, UX heuristics, Nielsen's 10 principles, and AI workflows to real product challenges.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- Case Study 1: Fireflies.ai -->
+            <div class="glass-card rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 flex flex-col justify-between hover:shadow-xl transition-all group">
+                <div class="p-6 space-y-4">
+                    <div class="flex items-center justify-between">
+                        <span class="px-2.5 py-1 rounded-md text-[11px] font-bold bg-indigo-100 text-indigo-800 dark:bg-indigo-950 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800">
+                            AI & B2B SaaS
+                        </span>
+                        <span class="text-xs text-slate-400 font-medium">Airtribe 2026</span>
+                    </div>
+
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                        Fireflies.ai — Closed-Loop Commitment Experience
+                    </h3>
+
+                    <p class="text-xs text-slate-600 dark:text-slate-300 line-clamp-3 leading-relaxed">
+                        Redesigned post-meeting workflow to turn passive AI summaries into active, tracked, owned commitments. Designed FireSpark, FireTrail, and FirePulse to raise 14-day closure rate from 28% to 45%.
+                    </p>
+
+                    <div class="space-y-2 pt-2 border-t border-slate-100 dark:border-slate-800 text-xs">
+                        <div class="flex items-center justify-between text-slate-500 dark:text-slate-400">
+                            <span>Key PM Skills:</span>
+                            <span class="font-semibold text-slate-700 dark:text-slate-200">User Interviews, RICE, PRD</span>
+                        </div>
+                        <div class="flex items-center justify-between text-slate-500 dark:text-slate-400">
+                            <span>Interactive Prototype:</span>
+                            <span class="font-bold text-emerald-600 dark:text-emerald-400">Available Live 🚀</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Role 2 -->
-                <div class="relative pl-6 sm:pl-8 group">
-                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-700 group-hover:bg-indigo-500 border-4 border-slate-950 transition-colors"></div>
-                    <div class="hidden md:block absolute -left-40 top-1 text-xs text-slate-500 font-semibold w-32 text-right">
-                        Feb 2023 – Feb 2025
+                <div class="p-6 pt-0 flex items-center gap-2">
+                    <button @click="openCaseStudyModal('fireflies')" class="w-full py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 dark:bg-slate-800 dark:hover:bg-slate-700 text-white font-semibold text-xs transition-colors text-center">
+                        Read Case Overview
+                    </button>
+                    <button @click="openPrototypeModal()" class="p-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white transition-colors" title="Launch Prototype">
+                        <i data-lucide="play" class="w-4 h-4"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Case Study 2: Workforce Capability Intelligence OS -->
+            <div class="glass-card rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 flex flex-col justify-between hover:shadow-xl transition-all group">
+                <div class="p-6 space-y-4">
+                    <div class="flex items-center justify-between">
+                        <span class="px-2.5 py-1 rounded-md text-[11px] font-bold bg-cyan-100 text-cyan-800 dark:bg-cyan-950 dark:text-cyan-300 border border-cyan-200 dark:border-cyan-800">
+                            Product Strategy & Roadmap
+                        </span>
+                        <span class="text-xs text-slate-400 font-medium">B2B Enterprise SaaS</span>
                     </div>
 
-                    <div class="glass-card p-6 rounded-2xl border border-slate-800 space-y-4">
-                        <div class="flex flex-wrap justify-between items-start gap-2">
-                            <div>
-                                <h3 class="text-lg font-bold text-white">Team Leader – Sales Operations</h3>
-                                <p class="text-xs text-indigo-400 font-semibold">InfuseB2B · 2 yrs 1 mo</p>
-                            </div>
-                            <span class="md:hidden px-2.5 py-1 rounded bg-slate-900 text-slate-400 text-xs font-medium">Feb 2023 – Feb 2025</span>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">
+                        Workforce Capability Intelligence OS
+                    </h3>
+
+                    <p class="text-xs text-slate-600 dark:text-slate-300 line-clamp-3 leading-relaxed">
+                        Architected a 3-year product strategy shifting corporate learning platforms from passive course completion metrics to an AI-driven Skill-Graph Intelligence system for internal workforce mobility.
+                    </p>
+
+                    <div class="space-y-2 pt-2 border-t border-slate-100 dark:border-slate-800 text-xs">
+                        <div class="flex items-center justify-between text-slate-500 dark:text-slate-400">
+                            <span>Focus:</span>
+                            <span class="font-semibold text-slate-700 dark:text-slate-200">3-Year Vision, Skill Graphs</span>
                         </div>
-
-                        <ul class="space-y-2.5 text-xs text-slate-300 leading-relaxed">
-                            <li class="flex items-start gap-2">
-                                <i class="fa-solid fa-angle-right text-indigo-400 mt-0.5"></i>
-                                <span>Owned lead-generation operations end-to-end, closing system gaps as internal software feature enhancements.</span>
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <i class="fa-solid fa-angle-right text-indigo-400 mt-0.5"></i>
-                                <span>Conducted prospect & campaign discovery loops to optimize outreach data quality and campaign conversion rates.</span>
-                            </li>
-                        </ul>
-
-                        <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
-                            <div class="flex flex-wrap gap-1.5">
-                                <span class="px-2 py-0.5 rounded bg-slate-900 text-slate-400 text-[10px]">KPI Tracking</span>
-                                <span class="px-2 py-0.5 rounded bg-slate-900 text-slate-400 text-[10px]">Team Mentorship</span>
-                            </div>
-                            <span class="text-[10px] text-amber-400 font-semibold"><i class="fa-solid fa-trophy me-1"></i> Leader of the Quarter</span>
+                        <div class="flex items-center justify-between text-slate-500 dark:text-slate-400">
+                            <span>Deliverables:</span>
+                            <span class="font-semibold text-slate-700 dark:text-slate-200">Roadmap, Feature Specs</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Role 3 -->
-                <div class="relative pl-6 sm:pl-8 group">
-                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-700 border-4 border-slate-950"></div>
-                    <div class="hidden md:block absolute -left-40 top-1 text-xs text-slate-500 font-semibold w-32 text-right">
-                        2022 – 2023
+                <div class="p-6 pt-0">
+                    <button @click="openCaseStudyModal('workforce')" class="w-full py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 font-semibold text-xs transition-colors">
+                        Explore Strategy & Roadmap
+                    </button>
+                </div>
+            </div>
+
+            <!-- Case Study 3: SmartRide Connect UX -->
+            <div class="glass-card rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 flex flex-col justify-between hover:shadow-xl transition-all group">
+                <div class="p-6 space-y-4">
+                    <div class="flex items-center justify-between">
+                        <span class="px-2.5 py-1 rounded-md text-[11px] font-bold bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-300 border border-amber-200 dark:border-amber-800">
+                            User Research & Discovery
+                        </span>
+                        <span class="text-xs text-slate-400 font-medium">Mobility App</span>
                     </div>
 
-                    <div class="glass-card p-6 rounded-2xl border border-slate-800 space-y-2">
-                        <div class="flex flex-wrap justify-between items-start gap-2">
-                            <div>
-                                <h3 class="text-base font-bold text-white">Business Development Manager</h3>
-                                <p class="text-xs text-slate-400">Oxcytech System · Remote</p>
-                            </div>
-                            <span class="md:hidden text-xs text-slate-500">2022 – 2023</span>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">
+                        SmartRide Connect — Pickup Experience Discovery
+                    </h3>
+
+                    <p class="text-xs text-slate-600 dark:text-slate-300 line-clamp-3 leading-relaxed">
+                        Conducted user discovery interviews revealing that 90% of riders call drivers due to pickup point ambiguity in crowded hubs. Designed a Smart Meeting Point & Landmark-guided flow.
+                    </p>
+
+                    <div class="space-y-2 pt-2 border-t border-slate-100 dark:border-slate-800 text-xs">
+                        <div class="flex items-center justify-between text-slate-500 dark:text-slate-400">
+                            <span>Insight:</span>
+                            <span class="font-semibold text-slate-700 dark:text-slate-200">90% Pickup Confusion</span>
                         </div>
-                        <p class="text-xs text-slate-300">Grew B2B customer base by 60% by conducting discovery to translate technical solutions into business outcomes.</p>
+                        <div class="flex items-center justify-between text-slate-500 dark:text-slate-400">
+                            <span>Solution:</span>
+                            <span class="font-semibold text-slate-700 dark:text-slate-200">Landmark-Guided Meeting Points</span>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Role 4 -->
-                <div class="relative pl-6 sm:pl-8 group">
-                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-700 border-4 border-slate-950"></div>
-                    <div class="hidden md:block absolute -left-40 top-1 text-xs text-slate-500 font-semibold w-32 text-right">
-                        2018 – 2022
+                <div class="p-6 pt-0">
+                    <button @click="openCaseStudyModal('smartride')" class="w-full py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 font-semibold text-xs transition-colors">
+                        View Discovery Details
+                    </button>
+                </div>
+            </div>
+
+            <!-- Case Study 4: Porter Mini Truck Booking Redesign -->
+            <div class="glass-card rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 flex flex-col justify-between hover:shadow-xl transition-all group md:col-span-2 lg:col-span-3">
+                <div class="p-6 lg:p-8 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+                    <div class="space-y-3 max-w-2xl">
+                        <div class="flex items-center gap-3">
+                            <span class="px-2.5 py-1 rounded-md text-[11px] font-bold bg-purple-100 text-purple-800 dark:bg-purple-950 dark:text-purple-300 border border-purple-200 dark:border-purple-800">
+                                Heuristic Evaluation & UX Laws
+                            </span>
+                            <span class="text-xs text-slate-400 font-medium">Logistics Tech UX</span>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-slate-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
+                            Porter Mini Truck Booking Flow Redesign
+                        </h3>
+
+                        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                            Ran an end-to-end usability heuristic evaluation of Porter's mini truck booking journey against <strong>Nielsen's 10 usability principles</strong> and cognitive UX laws (<strong>Hick's, Fitts's, Jakob's Laws</strong>). Delivered a 10-page redesign report and interactive prototype to remove friction points.
+                        </p>
                     </div>
 
-                    <div class="glass-card p-6 rounded-2xl border border-slate-800 space-y-2">
-                        <div class="flex flex-wrap justify-between items-start gap-2">
-                            <div>
-                                <h3 class="text-base font-bold text-white">Senior Demand Generation Executive</h3>
-                                <p class="text-xs text-slate-400">Ziff Davis Performance Marketing</p>
+                    <div class="shrink-0 flex items-center gap-3 w-full lg:w-auto">
+                        <button @click="openCaseStudyModal('porter')" class="w-full lg:w-auto px-6 py-3 rounded-xl bg-purple-600 hover:bg-purple-700 text-white font-semibold text-xs transition-colors">
+                            View 10-Page Audit Summary
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PROFESSIONAL EXPERIENCE SECTION (PM & Growth Ops strictly, no BD) -->
+    <section id="experience" class="py-20 bg-slate-100/70 dark:bg-slate-900/50 border-y border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mb-12">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-indigo-50 dark:bg-indigo-950/80 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800/60 mb-3 uppercase tracking-wider">
+                    <i data-lucide="layers" class="w-3.5 h-3.5"></i> Career Journey
+                </div>
+                <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+                    Product & Growth Operations Experience
+                </h2>
+                <p class="text-slate-600 dark:text-slate-400 text-sm mt-2">
+                    7+ years executing end-to-end product discovery, internal product surfaces, CRM architecture, and growth operations across 4 global markets.
+                </p>
+            </div>
+
+            <!-- Experience Cards Container -->
+            <div class="space-y-8">
+
+                <!-- Role 1: Sr. Team Leader - Sales Operations (Product & Growth Ops) -->
+                <div class="glass-card rounded-2xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 relative">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-200 dark:border-slate-800 pb-4 mb-6">
+                        <div>
+                            <div class="inline-block px-2.5 py-0.5 rounded text-[11px] font-bold bg-indigo-100 text-indigo-800 dark:bg-indigo-950 dark:text-indigo-300 mb-1">
+                                Present Role
                             </div>
-                            <span class="md:hidden text-xs text-slate-500">2018 – 2022</span>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">
+                                Sr. Team Leader — Product & Growth Operations
+                            </h3>
+                            <div class="text-sm font-medium text-indigo-600 dark:text-indigo-400 mt-0.5">
+                                InfuseB2B (Pune, On-site)
+                            </div>
                         </div>
-                        <p class="text-xs text-slate-300">Managed high-value demand generation accounts and research loops, exceeding lead quality benchmarks.</p>
+                        <div class="text-xs text-slate-500 dark:text-slate-400 font-semibold md:text-right">
+                            Mar 2025 — Present<br>
+                            <span class="text-slate-400 dark:text-slate-500 font-normal">US, APAC, ANZ, EMEA Markets</span>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+                        <div class="flex items-start gap-3">
+                            <div class="w-2 h-2 rounded-full bg-indigo-500 mt-2 shrink-0"></div>
+                            <div>
+                                <strong class="text-slate-900 dark:text-white font-semibold">Roadmap & Prioritization (RICE/MoSCoW):</strong> Own funnel performance and feature-level governance across 4 global markets (US, APAC, ANZ, EMEA), prioritizing critical fixes by impact vs. effort trade-offs.
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-2 h-2 rounded-full bg-indigo-500 mt-2 shrink-0"></div>
+                            <div>
+                                <strong class="text-slate-900 dark:text-white font-semibold">Discovery & Problem Framing:</strong> Treat CRM workflows as internal product surfaces: conduct user-friction discovery, form data-backed hypotheses, and ship systemic fixes using the discovery-to-delivery loop.
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-2 h-2 rounded-full bg-indigo-500 mt-2 shrink-0"></div>
+                            <div>
+                                <strong class="text-slate-900 dark:text-white font-semibold">Cross-Functional Stakeholder Alignment:</strong> Serve as the translation layer between Sales, Customer Success, and Marketing priorities, negotiating trade-offs similarly to aligning Engineering, Design, and GTM teams.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2 pt-6 mt-6 border-t border-slate-100 dark:border-slate-800">
+                        <span class="px-2.5 py-1 rounded bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium">Product Thinking</span>
+                        <span class="px-2.5 py-1 rounded bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium">CRM Architecture</span>
+                        <span class="px-2.5 py-1 rounded bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium">Stakeholder Alignment</span>
+                        <span class="px-2.5 py-1 rounded bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium">Funnel Drop-off Analysis</span>
+                    </div>
+                </div>
+
+                <!-- Role 2: Team Leader - Sales Operations (Product & Growth Ops Focus) -->
+                <div class="glass-card rounded-2xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-200 dark:border-slate-800 pb-4 mb-6">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">
+                                Team Leader — Growth Operations & Backlog Management
+                            </h3>
+                            <div class="text-sm font-medium text-indigo-600 dark:text-indigo-400 mt-0.5">
+                                InfuseB2B (Pune)
+                            </div>
+                        </div>
+                        <div class="text-xs text-slate-500 dark:text-slate-400 font-semibold md:text-right">
+                            Feb 2023 — Feb 2025<br>
+                            <span class="inline-block px-2 py-0.5 rounded bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-300 font-bold text-[10px] mt-1">Leader of the Quarter</span>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+                        <div class="flex items-start gap-3">
+                            <div class="w-2 h-2 rounded-full bg-cyan-500 mt-2 shrink-0"></div>
+                            <div>
+                                <strong class="text-slate-900 dark:text-white font-semibold">Backlog & Systemic Fixes:</strong> Managed end-to-end operational gaps, prioritizing and closing systemic issues through internal feature enhancements equivalent to managing a product backlog against user pain points.
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-2 h-2 rounded-full bg-cyan-500 mt-2 shrink-0"></div>
+                            <div>
+                                <strong class="text-slate-900 dark:text-white font-semibold">User Research & Quality Discovery:</strong> Spearheaded campaign discovery loops to enhance outreach quality and conversion rates; recognized as Leader of the Quarter for direct business impact delivered.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2 pt-6 mt-6 border-t border-slate-100 dark:border-slate-800">
+                        <span class="px-2.5 py-1 rounded bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium">KPI Tracking</span>
+                        <span class="px-2.5 py-1 rounded bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium">Backlog Grooming</span>
+                        <span class="px-2.5 py-1 rounded bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium">Team Mentorship</span>
                     </div>
                 </div>
 
@@ -672,732 +677,415 @@
         </div>
     </section>
 
-    <!-- Interactive Skills Section -->
-    <section id="skills" class="py-24 px-4 md:px-8 bg-slate-900/40">
-        <div class="max-w-6xl mx-auto">
-            <div class="text-center max-w-2xl mx-auto mb-12 space-y-3">
-                <span class="text-xs font-bold text-brand-500 uppercase tracking-wider">Skill Architecture</span>
-                <h2 class="text-3xl sm:text-4xl font-bold font-heading text-white">Technical & Leadership Skills</h2>
+    <!-- PM CORE SKILLS & KEYWORDS MATRIX -->
+    <section id="skills" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-indigo-50 dark:bg-indigo-950/80 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800/60 mb-3 uppercase tracking-wider">
+                <i data-lucide="cpu" class="w-3.5 h-3.5"></i> Skills & Methodology Matrix
+            </div>
+            <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+                Product Management Taxonomy
+            </h2>
+            <p class="text-slate-600 dark:text-slate-400 text-sm mt-2">
+                Filter and search through end-to-end PM skills, frameworks, metrics, and tools.
+            </p>
+
+            <!-- Skill Filter Input -->
+            <div class="mt-6 max-w-md mx-auto relative">
+                <input type="text" x-model="skillQuery" placeholder="Filter skills (e.g. RICE, PRD, Nielsen, Funnel, Figma)..." class="w-full px-4 py-3 pl-10 rounded-xl glass-card border border-slate-300 dark:border-slate-700 text-xs focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3.5 top-3.5"></i>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <!-- Category 1: Product Lifecycle -->
+            <div class="glass-card rounded-2xl p-6 border border-slate-200 dark:border-slate-800 space-y-4">
+                <div class="flex items-center gap-3">
+                    <div class="p-2.5 rounded-xl bg-indigo-100 text-indigo-700 dark:bg-indigo-950 dark:text-indigo-300 font-bold">
+                        <i data-lucide="refresh-cw" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 dark:text-white text-base">Product Lifecycle</h3>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <template x-for="skill in filterSkills(['End-to-End Product Lifecycle', 'Discovery → Definition → Delivery', 'MVP Definition', 'Product-Market Fit (PMF)', 'Go-To-Market (GTM) Planning'])">
+                        <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800" x-text="skill"></span>
+                    </template>
+                </div>
             </div>
 
-            <!-- Skill Filter Buttons -->
-            <div class="flex flex-wrap justify-center gap-2 mb-10" id="skill-filters">
-                <button onclick="filterSkills('all')" class="skill-btn active px-4 py-2 rounded-xl text-xs font-semibold bg-brand-600 text-white transition-all">All Skills</button>
-                <button onclick="filterSkills('pm')" class="skill-btn px-4 py-2 rounded-xl text-xs font-semibold bg-slate-900 border border-slate-800 text-slate-400 hover:text-white transition-all">Product Management</button>
-                <button onclick="filterSkills('growth')" class="skill-btn px-4 py-2 rounded-xl text-xs font-semibold bg-slate-900 border border-slate-800 text-slate-400 hover:text-white transition-all">Growth & RevOps</button>
-                <button onclick="filterSkills('ai')" class="skill-btn px-4 py-2 rounded-xl text-xs font-semibold bg-slate-900 border border-slate-800 text-slate-400 hover:text-white transition-all">AI & Tools</button>
+            <!-- Category 2: Discovery & Strategy -->
+            <div class="glass-card rounded-2xl p-6 border border-slate-200 dark:border-slate-800 space-y-4">
+                <div class="flex items-center gap-3">
+                    <div class="p-2.5 rounded-xl bg-cyan-100 text-cyan-700 dark:bg-cyan-950 dark:text-cyan-300 font-bold">
+                        <i data-lucide="compass" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 dark:text-white text-base">Discovery & Strategy</h3>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <template x-for="skill in filterSkills(['User Research & Discovery', 'Competitive Analysis', 'Product Strategy & Vision', 'Product Roadmapping', 'Problem Framing', 'Hypothesis Design', 'Customer Journey Mapping', 'User Personas'])">
+                        <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-cyan-50 dark:bg-cyan-950/60 text-cyan-700 dark:text-cyan-300 border border-cyan-200 dark:border-cyan-800" x-text="skill"></span>
+                    </template>
+                </div>
             </div>
 
-            <!-- Skills Grid -->
-            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4" id="skills-grid">
-                <!-- Skill badges injected via JS -->
+            <!-- Category 3: Execution & Usability Heuristics -->
+            <div class="glass-card rounded-2xl p-6 border border-slate-200 dark:border-slate-800 space-y-4">
+                <div class="flex items-center gap-3">
+                    <div class="p-2.5 rounded-xl bg-purple-100 text-purple-700 dark:bg-purple-950 dark:text-purple-300 font-bold">
+                        <i data-lucide="check-square" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 dark:text-white text-base">Execution & UX Laws</h3>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <template x-for="skill in filterSkills(['PRD & User Story Writing', 'RICE Prioritization', 'MoSCoW Method', 'Nielsen\'s 10 Usability Heuristics', 'Hick\'s Law', 'Fitts\'s Law', 'Jakob\'s Law', 'Agile & Scrum', 'Backlog Grooming', 'Wireframing & Prototyping'])">
+                        <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-purple-50 dark:bg-purple-950/60 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-800" x-text="skill"></span>
+                    </template>
+                </div>
             </div>
+
+            <!-- Category 4: Analytics & Growth -->
+            <div class="glass-card rounded-2xl p-6 border border-slate-200 dark:border-slate-800 space-y-4">
+                <div class="flex items-center gap-3">
+                    <div class="p-2.5 rounded-xl bg-emerald-100 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-300 font-bold">
+                        <i data-lucide="trending-up" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 dark:text-white text-base">Analytics & Growth</h3>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <template x-for="skill in filterSkills(['Funnel & Drop-off Analysis', 'A/B Testing Fundamentals', 'KPI & Metrics Definition', 'Activation & Retention', 'NPS & Churn Reduction', 'Conversion Optimization', 'OKR Setting', 'North Star Metric'])">
+                        <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800" x-text="skill"></span>
+                    </template>
+                </div>
+            </div>
+
+            <!-- Category 5: AI & Modern Toolstack -->
+            <div class="glass-card rounded-2xl p-6 border border-slate-200 dark:border-slate-800 space-y-4 md:col-span-2 lg:col-span-2">
+                <div class="flex items-center gap-3">
+                    <div class="p-2.5 rounded-xl bg-amber-100 text-amber-700 dark:bg-amber-950 dark:text-amber-300 font-bold">
+                        <i data-lucide="wand-2" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 dark:text-white text-base">AI & PM Toolstack</h3>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <template x-for="skill in filterSkills(['Certified Prompt Engineering', 'Generative AI for PMs', 'AI-Enabled Workflow Design', 'Figma', 'Jira & Confluence', 'CRM Platforms', 'Cross-Functional Stakeholder Alignment', 'Team Mentorship'])">
+                        <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-amber-50 dark:bg-amber-950/60 text-amber-700 dark:text-amber-300 border border-amber-200 dark:border-amber-800" x-text="skill"></span>
+                    </template>
+                </div>
+            </div>
+
         </div>
     </section>
 
-    <!-- Certifications & Credentials Section -->
-    <section id="certifications" class="py-24 px-4 md:px-8">
-        <div class="max-w-6xl mx-auto">
-            <div class="grid lg:grid-cols-12 gap-12">
+    <!-- CERTIFICATIONS & EDUCATION -->
+    <section id="certifications" class="py-20 bg-slate-100/70 dark:bg-slate-900/50 border-t border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
                 
-                <!-- Certifications List -->
+                <!-- Certifications -->
                 <div class="lg:col-span-7 space-y-6">
-                    <div class="space-y-2">
-                        <span class="text-xs font-bold text-brand-500 uppercase tracking-wider">Verified Qualifications</span>
-                        <h2 class="text-3xl font-bold font-heading text-white">Licenses & Certifications</h2>
+                    <div>
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-indigo-50 dark:bg-indigo-950/80 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800/60 mb-2 uppercase tracking-wider">
+                            <i data-lucide="award" class="w-3.5 h-3.5"></i> Continuous Learning
+                        </div>
+                        <h2 class="text-2xl font-extrabold text-slate-900 dark:text-white">
+                            Certifications & Credentials
+                        </h2>
                     </div>
 
                     <div class="space-y-3">
                         
-                        <!-- 1. Airtribe CPM -->
-                        <div class="glass-panel p-4 rounded-2xl flex items-center gap-4 hover:border-brand-500/40 transition-all">
-                            <div class="w-11 h-11 rounded-xl bg-brand-500/10 text-brand-400 flex items-center justify-center text-lg shrink-0">
-                                <i class="fa-solid fa-award"></i>
-                            </div>
-                            <div class="flex-1 min-w-0">
-                                <div class="flex items-center justify-between gap-2">
-                                    <h3 class="text-sm font-bold text-white truncate">Certified Product Manager (CPM)</h3>
-                                    <span class="px-2 py-0.5 rounded-full text-[10px] font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 shrink-0">Issued Jun 2026</span>
+                        <!-- Airtribe CPM -->
+                        <div class="glass-card p-4 rounded-xl border border-slate-200 dark:border-slate-800 flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-lg bg-indigo-600 text-white font-bold flex items-center justify-center text-xs shrink-0">
+                                    CPM
                                 </div>
-                                <p class="text-xs text-slate-400">Airtribe</p>
-                                <div class="mt-1 flex flex-wrap gap-1">
-                                    <span class="px-2 py-0.5 rounded bg-slate-900 text-slate-400 text-[10px]">Product Management</span>
+                                <div>
+                                    <div class="font-bold text-slate-900 dark:text-white text-sm">Certified Product Manager (CPM)</div>
+                                    <div class="text-xs text-slate-500 dark:text-slate-400">Airtribe</div>
                                 </div>
                             </div>
+                            <span class="text-xs font-semibold text-indigo-600 dark:text-indigo-400">2026</span>
                         </div>
 
-                        <!-- 2. Generative AI for Product Managers -->
-                        <div class="glass-panel p-4 rounded-2xl flex items-center gap-4 hover:border-purple-500/40 transition-all">
-                            <div class="w-11 h-11 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center text-lg shrink-0">
-                                <i class="fa-solid fa-wand-magic-sparkles"></i>
-                            </div>
-                            <div class="flex-1 min-w-0">
-                                <div class="flex items-center justify-between gap-2">
-                                    <h3 class="text-sm font-bold text-white truncate">Generative AI for Product Managers</h3>
-                                    <span class="px-2 py-0.5 rounded-full text-[10px] font-semibold bg-purple-500/10 text-purple-400 border border-purple-500/20 shrink-0">Issued Jul 2026</span>
+                        <!-- Prompt Engg -->
+                        <div class="glass-card p-4 rounded-xl border border-slate-200 dark:border-slate-800 flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-lg bg-amber-500 text-white font-bold flex items-center justify-center text-xs shrink-0">
+                                    AI
                                 </div>
-                                <p class="text-xs text-slate-400">LinkedIn Learning</p>
-                                <div class="mt-1 flex flex-wrap gap-1">
-                                    <span class="px-2 py-0.5 rounded bg-slate-900 text-slate-400 text-[10px]">Artificial Intelligence (AI)</span>
-                                    <span class="px-2 py-0.5 rounded bg-slate-900 text-slate-400 text-[10px]">Product Management</span>
+                                <div>
+                                    <div class="font-bold text-slate-900 dark:text-white text-sm">Prompt Engineering for ChatGPT</div>
+                                    <div class="text-xs text-slate-500 dark:text-slate-400">Great Learning</div>
                                 </div>
                             </div>
+                            <span class="text-xs font-semibold text-amber-600 dark:text-amber-400">2025</span>
                         </div>
 
-                        <!-- 3. Technical Product Management -->
-                        <div class="glass-panel p-4 rounded-2xl flex items-center gap-4 hover:border-teal-500/40 transition-all">
-                            <div class="w-11 h-11 rounded-xl bg-teal-500/10 text-teal-400 flex items-center justify-center text-lg shrink-0">
-                                <i class="fa-solid fa-code"></i>
-                            </div>
-                            <div class="flex-1 min-w-0">
-                                <div class="flex items-center justify-between gap-2">
-                                    <h3 class="text-sm font-bold text-white truncate">Technical Product Management</h3>
-                                    <span class="px-2 py-0.5 rounded-full text-[10px] font-semibold bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 shrink-0">Issued Jul 2026</span>
-                                </div>
-                                <p class="text-xs text-slate-400">LinkedIn Learning</p>
-                                <div class="mt-1 flex flex-wrap gap-1">
-                                    <span class="px-2 py-0.5 rounded bg-slate-900 text-slate-400 text-[10px]">Technical Product Management</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- 4. Product Management: Building a Product Strategy -->
-                        <div class="glass-panel p-4 rounded-2xl flex items-center gap-4 hover:border-brand-500/40 transition-all">
-                            <div class="w-11 h-11 rounded-xl bg-brand-500/10 text-brand-400 flex items-center justify-center text-lg shrink-0">
-                                <i class="fa-solid fa-chess"></i>
-                            </div>
-                            <div class="flex-1 min-w-0">
-                                <div class="flex items-center justify-between gap-2">
-                                    <h3 class="text-sm font-bold text-white truncate">Product Management: Building a Product Strategy</h3>
-                                    <span class="px-2 py-0.5 rounded-full text-[10px] font-semibold bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 shrink-0">Issued Jul 2026</span>
-                                </div>
-                                <p class="text-xs text-slate-400">LinkedIn Learning</p>
-                                <div class="mt-1 flex flex-wrap gap-1">
-                                    <span class="px-2 py-0.5 rounded bg-slate-900 text-slate-400 text-[10px]">Product Strategy</span>
-                                    <span class="px-2 py-0.5 rounded bg-slate-900 text-slate-400 text-[10px]">Product Management</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- 5. Product Management: Building a Product Roadmap -->
-                        <div class="glass-panel p-4 rounded-2xl flex items-center gap-4 hover:border-indigo-500/40 transition-all">
-                            <div class="w-11 h-11 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center text-lg shrink-0">
-                                <i class="fa-solid fa-map-location-dot"></i>
-                            </div>
-                            <div class="flex-1 min-w-0">
-                                <div class="flex items-center justify-between gap-2">
-                                    <h3 class="text-sm font-bold text-white truncate">Product Management: Building a Product Roadmap</h3>
-                                    <span class="px-2 py-0.5 rounded-full text-[10px] font-semibold bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 shrink-0">Issued Jul 2026</span>
-                                </div>
-                                <p class="text-xs text-slate-400">LinkedIn Learning</p>
-                                <div class="mt-1 flex flex-wrap gap-1">
-                                    <span class="px-2 py-0.5 rounded bg-slate-900 text-slate-400 text-[10px]">Product Road Mapping</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- 6. Product Management First Steps -->
-                        <div class="glass-panel p-4 rounded-2xl flex items-center gap-4 hover:border-slate-500/40 transition-all">
-                            <div class="w-11 h-11 rounded-xl bg-slate-800 text-slate-300 flex items-center justify-center text-lg shrink-0">
-                                <i class="fa-solid fa-compass"></i>
-                            </div>
-                            <div class="flex-1 min-w-0">
-                                <div class="flex items-center justify-between gap-2">
-                                    <h3 class="text-sm font-bold text-white truncate">Product Management First Steps</h3>
-                                    <span class="px-2 py-0.5 rounded-full text-[10px] font-semibold bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 shrink-0">Issued Jul 2026</span>
-                                </div>
-                                <p class="text-xs text-slate-400">LinkedIn Learning</p>
-                                <div class="mt-1 flex flex-wrap gap-1">
-                                    <span class="px-2 py-0.5 rounded bg-slate-900 text-slate-400 text-[10px]">Product Management</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- 7. Prompt Engineering for ChatGPT -->
-                        <div class="glass-panel p-4 rounded-2xl flex items-center gap-4 hover:border-purple-500/40 transition-all">
-                            <div class="w-11 h-11 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center text-lg shrink-0">
-                                <i class="fa-solid fa-brain"></i>
-                            </div>
-                            <div class="flex-1 min-w-0">
-                                <div class="flex items-center justify-between gap-2">
-                                    <h3 class="text-sm font-bold text-white truncate">Prompt Engineering for ChatGPT</h3>
-                                    <span class="px-2 py-0.5 rounded-full text-[10px] font-semibold bg-purple-500/10 text-purple-400 border border-purple-500/20 shrink-0">Issued Jan 2025</span>
-                                </div>
-                                <p class="text-xs text-slate-400">Great Learning</p>
-                                <div class="mt-1 flex flex-wrap gap-1">
-                                    <span class="px-2 py-0.5 rounded bg-slate-900 text-slate-400 text-[10px]">Conversational AI Expertise</span>
-                                    <span class="px-2 py-0.5 rounded bg-slate-900 text-slate-400 text-[10px]">Adaptability to AI Trends</span>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- Education Card -->
-                <div class="lg:col-span-5 space-y-6">
-                    <div class="space-y-2">
-                        <span class="text-xs font-bold text-brand-500 uppercase tracking-wider">Academic Background</span>
-                        <h2 class="text-3xl font-bold font-heading text-white">Education</h2>
-                    </div>
-
-                    <div class="glass-panel p-6 rounded-3xl border border-slate-800 space-y-6">
-                        <div class="space-y-2">
-                            <span class="text-xs font-semibold text-brand-400">2015 – 2018</span>
-                            <h3 class="text-lg font-bold text-white">Bachelor of Business Administration (BBA)</h3>
-                            <p class="text-xs text-slate-400">AISECT University · Business Operations & Strategy</p>
-                        </div>
-                        <div class="pt-4 border-t border-slate-800 space-y-2">
-                            <span class="text-xs font-semibold text-slate-400">Higher Secondary Education</span>
-                            <h4 class="text-sm font-bold text-slate-200">Padmashri Dr. D.Y. Patil College</h4>
-                            <p class="text-xs text-slate-500">Pune, Maharashtra</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact / CTA Section -->
-    <section id="contact" class="py-24 px-4 md:px-8 bg-slate-900/60 relative overflow-hidden">
-        <div class="max-w-4xl mx-auto text-center space-y-8">
-            <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-brand-600 to-indigo-600 flex items-center justify-center text-white text-2xl mx-auto shadow-xl shadow-brand-600/30">
-                <i class="fa-solid fa-paper-plane"></i>
-            </div>
-            
-            <h2 class="text-3xl sm:text-5xl font-extrabold font-heading text-white tracking-tight">
-                Let's build scalable B2B products together.
-            </h2>
-            
-            <p class="text-slate-400 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
-                Whether you're scaling a B2B SaaS platform, eliminating funnel friction, or building AI-driven workflow engines—let's connect!
-            </p>
-
-            <div class="flex flex-wrap justify-center items-center gap-4 pt-4">
-                <button onclick="copyToClipboard('dineshjaybhay@gmail.com', 'Email Address')" class="px-8 py-4 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-semibold text-sm transition-all shadow-xl shadow-brand-600/25 flex items-center gap-2">
-                    <i class="fa-regular fa-envelope"></i> Copy Direct Email
-                </button>
-                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="px-8 py-4 rounded-xl glass-panel hover:bg-slate-800 text-white font-semibold text-sm transition-all border border-slate-700 flex items-center gap-2">
-                    <i class="fa-brands fa-linkedin text-brand-500"></i> LinkedIn Connect
-                </a>
-            </div>
-
-            <div class="pt-12 text-xs text-slate-600 border-t border-slate-800/80">
-                <p>Designed for Dinesh Jaybhay · Product Management & Growth RevOps</p>
-            </div>
-        </div>
-    </section>
-
-    <script>
-        // Data Store for Perspective Toggle
-        const perspectiveData = {
-            ops: {
-                title: "Traditional Ops Paradigm",
-                items: [
-                    { icon: "fa-triangle-exclamation text-amber-400", label: "Treating drop-offs as purely sales execution issues." },
-                    { icon: "fa-solid fa-wrench text-slate-400", label: "Adding manual workflow workarounds in CRM." },
-                    { icon: "fa-solid fa-clock text-slate-400", label: "Reacting to churn after revenue touchpoints fail." }
-                ]
-            },
-            pm: {
-                title: "Product-Minded Growth Approach",
-                items: [
-                    { icon: "fa-solid fa-lightbulb text-brand-400", label: "Identifying core product friction & usability bottlenecks." },
-                    { icon: "fa-solid fa-code text-indigo-400", label: "Productizing CRM workflows into automated software loops." },
-                    { icon: "fa-solid fa-chart-line text-emerald-400", label: "Building retention loops and proactive customer value triggers." }
-                ]
-            }
-        };
-
-        function switchPerspective(type) {
-            const data = perspectiveData[type];
-            if (!data) return;
-
-            const btnOps = document.getElementById('btn-ops');
-            const btnPm = document.getElementById('btn-pm');
-
-            if (type === 'ops') {
-                if (btnOps) btnOps.className = "px-3 py-1.5 rounded-lg bg-slate-800 text-white transition-all";
-                if (btnPm) btnPm.className = "px-3 py-1.5 rounded-lg text-slate-400 hover:text-white transition-all";
-            } else {
-                if (btnPm) btnPm.className = "px-3 py-1.5 rounded-lg bg-slate-800 text-white transition-all";
-                if (btnOps) btnOps.className = "px-3 py-1.5 rounded-lg text-slate-400 hover:text-white transition-all";
-            }
-
-            const container = document.getElementById('perspective-content');
-            if (!container) return;
-
-            container.innerHTML = `
-                <h3 class="text-sm font-bold text-white mb-3 flex items-center gap-2">
-                    ${type === 'ops' ? '<i class="fa-solid fa-sliders text-amber-400"></i>' : '<i class="fa-solid fa-rocket text-brand-400"></i>'}
-                    ${data.title}
-                </h3>
-                <div class="space-y-3">
-                    ${data.items.map(item => `
-                        <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-900/80 border border-slate-800/80">
-                            <i class="${item.icon} text-sm"></i>
-                            <span class="text-xs text-slate-300 font-medium">${item.label}</span>
-                        </div>
-                    `).join('')}
-                </div>
-            `;
-        }
-
-        // Modal Logic for Case Studies (Exact Document Reproduction)
-        const caseStudyDetails = {
-            porter: {
-                title: "UX EVALUATION & REDESIGN CASE STUDY",
-                subtitle: "Improving Porter's Mini Truck Booking Flow",
-                tags: ["PDF Document", "Heuristic Evaluation", "Nielsen Principles", "UX Laws"],
-                body: `
-                    <div class="space-y-8 text-slate-300">
-                        <!-- PDF Header Bar -->
-                        <div class="p-4 rounded-2xl bg-gradient-to-r from-brand-600/20 to-indigo-600/20 border border-brand-500/30 flex flex-wrap justify-between items-center gap-4">
-                            <div>
-                                <span class="text-[10px] font-bold text-brand-400 uppercase tracking-wider block">Document Source: UX Evaluation & Redesign Case Study_3.pdf</span>
-                                <span class="text-xs font-bold text-white">Prepared by Dinesh Jaybhay | App: Porter — On-Demand Logistics Platform</span>
-                            </div>
-                            <a href="https://swift-truck-flow.lovable.app" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-semibold text-xs transition-all flex items-center gap-1.5 shadow-lg shadow-brand-600/20">
-                                <span>Launch Interactive App</span>
-                                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-                            </a>
-                        </div>
-
-                        <!-- Page 1: Title & Overview -->
-                        <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800 space-y-3">
-                            <span class="px-2 py-0.5 rounded bg-brand-500/20 text-brand-300 font-mono text-[10px]">PAGE 1</span>
-                            <h3 class="text-lg font-bold text-white">UX EVALUATION & REDESIGN CASE STUDY: Improving Porter's Mini Truck Booking Flow</h3>
-                            <p class="text-xs text-slate-300 leading-relaxed">
-                                A heuristic evaluation of the Mini Truck booking journey, mapped against Nielsen's usability principles and Hick's, Fitts's, and Jakob's UX laws — with concrete redesign recommendations.
-                            </p>
-                            <div class="text-[11px] text-slate-400 pt-2 border-t border-slate-800/80 grid grid-cols-1 sm:grid-cols-3 gap-2">
-                                <div><strong>Prepared by:</strong> Dinesh Jaybhay</div>
-                                <div><strong>Course:</strong> UX Evaluation & Redesign: Improving Digital User Flows</div>
-                                <div><strong>Focus App:</strong> Porter — On-Demand Logistics Platform</div>
-                            </div>
-                        </div>
-
-                        <!-- Page 2: Why I Chose This Flow -->
-                        <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800 space-y-3">
-                            <span class="px-2 py-0.5 rounded bg-brand-500/20 text-brand-300 font-mono text-[10px]">PAGE 2</span>
-                            <h4 class="text-sm font-bold text-white uppercase tracking-wider text-brand-400">WHY I CHOSE THIS FLOW — The Mini Truck Booking Journey</h4>
-                            <div class="space-y-2 text-xs">
-                                <p><strong>About Porter:</strong> Porter is an on-demand logistics platform that helps users transport goods by booking mini trucks, bikes, and packers & movers, across 20+ Indian cities.</p>
-                                <p><strong>Why this flow?</strong> Mini Truck booking is Porter's primary feature and the journey most users complete. Confusion anywhere in this path directly risks booking abandonment — making it the highest-leverage flow to evaluate.</p>
-                                <p><strong>GOAL OF THE WALKTHROUGH:</strong> I personally completed the booking flow end-to-end as a first-time user would, to test whether the journey was intuitive without prior familiarity with the app.</p>
-                            </div>
-                            
-                            <!-- 5-Step Flow -->
-                            <div class="grid grid-cols-2 sm:grid-cols-5 gap-2 pt-3 text-center">
-                                <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800">
-                                    <span class="text-[10px] font-bold text-brand-400 block">1</span>
-                                    <span class="text-[11px] font-semibold text-white">Open App</span>
-                                </div>
-                                <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800">
-                                    <span class="text-[10px] font-bold text-brand-400 block">2</span>
-                                    <span class="text-[11px] font-semibold text-white">Pickup Location</span>
-                                </div>
-                                <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800">
-                                    <span class="text-[10px] font-bold text-brand-400 block">3</span>
-                                    <span class="text-[11px] font-semibold text-white">Drop Location</span>
-                                </div>
-                                <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800">
-                                    <span class="text-[10px] font-bold text-brand-400 block">4</span>
-                                    <span class="text-[11px] font-semibold text-white">Choose Vehicle</span>
-                                </div>
-                                <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800 col-span-2 sm:col-span-1">
-                                    <span class="text-[10px] font-bold text-brand-400 block">5</span>
-                                    <span class="text-[11px] font-semibold text-white">Review Booking & Searching</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Page 3: My Observations -->
-                        <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800 space-y-3">
-                            <span class="px-2 py-0.5 rounded bg-brand-500/20 text-brand-300 font-mono text-[10px]">PAGE 3</span>
-                            <h4 class="text-sm font-bold text-white uppercase tracking-wider text-indigo-400">MY OBSERVATIONS — A First-Time User's Walkthrough</h4>
-                            <p class="text-xs text-slate-300">
-                                Instead of a fictional persona, I completed the real booking flow myself — wanting to book a mini truck quickly and judge whether the process was simple enough for a first-time user.
-                            </p>
-                            
-                            <div class="grid sm:grid-cols-2 gap-4 pt-2">
-                                <div class="p-3.5 rounded-xl bg-slate-950 border border-emerald-500/20 space-y-2">
-                                    <span class="text-xs font-bold text-emerald-400 block">✓ WHAT WORKED WELL</span>
-                                    <ul class="space-y-1.5 text-xs text-slate-300">
-                                        <li>• Clean, uncluttered home screen</li>
-                                        <li>• Easy location search with saved addresses</li>
-                                        <li>• Multiple vehicle options with upfront fares</li>
-                                        <li>• Live feedback during driver search</li>
-                                    </ul>
-                                </div>
-                                <div class="p-3.5 rounded-xl bg-slate-950 border border-rose-500/20 space-y-2">
-                                    <span class="text-xs font-bold text-rose-400 block">✗ WHERE I FACED FRICTION</span>
-                                    <ul class="space-y-1.5 text-xs text-slate-300">
-                                        <li>• Vehicle names (Mini 3W, Tata Ace) are technical and don't map to real-world capacity</li>
-                                        <li>• Had to compare weight limits and price manually while scrolling</li>
-                                        <li>• GST details pushed the Fare Summary further down the review screen (Technical names, no guidance on fit)</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Page 4: End-to-End Flow (Three Zones) -->
-                        <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800 space-y-3">
-                            <span class="px-2 py-0.5 rounded bg-brand-500/20 text-brand-300 font-mono text-[10px]">PAGE 4</span>
-                            <h4 class="text-sm font-bold text-white uppercase tracking-wider text-purple-400">END-TO-END FLOW — Where Friction Enters the Journey</h4>
-                            <p class="text-xs font-semibold text-slate-300">Three zones, one weak link</p>
-                            
-                            <div class="space-y-2 text-xs">
-                                <div class="p-3 rounded-xl bg-slate-950 border border-slate-800">
-                                    <strong class="text-brand-400">Zone 1 — Initial Attempts:</strong> Location permission and retry states appear early and set the tone for the whole session.
-                                </div>
-                                <div class="p-3 rounded-xl bg-slate-950 border border-brand-500/40">
-                                    <strong class="text-indigo-400">Zone 2 — Booking Confirmation:</strong> Vehicle selection and review are where users spend the most time deliberating.
-                                </div>
-                                <div class="p-3 rounded-xl bg-slate-950 border border-slate-800">
-                                    <strong class="text-purple-400">Zone 3 — Vehicle Assignment & Trip:</strong> Once a driver is matched, the experience runs smoothly with real-time feedback.
-                                </div>
-                            </div>
-                            <p class="text-xs text-amber-300 bg-amber-500/10 p-2.5 rounded-xl border border-amber-500/20">
-                                <strong>Focus:</strong> This report focuses on Zone 2 — the vehicle selection and booking review screens — where the sharpest usability issues surfaced.
-                            </p>
-                        </div>
-
-                        <!-- Page 5: Usability Heuristics Table -->
-                        <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800 space-y-4">
-                            <span class="px-2 py-0.5 rounded bg-brand-500/20 text-brand-300 font-mono text-[10px]">PAGE 5</span>
-                            <h4 class="text-sm font-bold text-white uppercase tracking-wider text-teal-400">USABILITY HEURISTICS — Evaluation Against Nielsen's 10 Principles</h4>
-                            
-                            <div class="overflow-x-auto">
-                                <table class="w-full text-left border-collapse text-xs">
-                                    <thead>
-                                        <tr class="border-b border-slate-800 text-slate-400 bg-slate-950">
-                                            <th class="p-3 font-semibold">Friction Observed</th>
-                                            <th class="p-3 font-semibold">Heuristic Violated</th>
-                                            <th class="p-3 font-semibold">Why It Matters</th>
-                                            <th class="p-3 font-semibold">Suggested Improvement</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody class="divide-y divide-slate-800/60 text-slate-300">
-                                        <tr>
-                                            <td class="p-3">Technical names like “Mini 3W” and “Tata Ace” don't convey real capacity.</td>
-                                            <td class="p-3 font-semibold text-brand-400">Match Between System & Real World</td>
-                                            <td class="p-3">First-time users can't tell which vehicle fits their need.</td>
-                                            <td class="p-3 text-emerald-400">Add labels like “Best for 1 BHK” or “Fits Sofa + Fridge”.</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="p-3">Users must remember price and capacity while comparing vehicles.</td>
-                                            <td class="p-3 font-semibold text-indigo-400">Recognition Rather Than Recall</td>
-                                            <td class="p-3">Memory-dependent decisions raise cognitive load and drop-off.</td>
-                                            <td class="p-3 text-emerald-400">Show capacity, dimensions, and example items on every card.</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="p-3">Booking review doesn't show how many steps remain.</td>
-                                            <td class="p-3 font-semibold text-purple-400">Visibility of System Status</td>
-                                            <td class="p-3">Ambiguity about progress reduces checkout confidence.</td>
-                                            <td class="p-3 text-emerald-400">Add a top-anchored, step-by-step progress indicator.</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="p-3">Location error only offers a generic “Retry”.</td>
-                                            <td class="p-3 font-semibold text-amber-400">Help Users Recognize & Recover from Errors</td>
-                                            <td class="p-3">Vague messaging increases frustration and support tickets.</td>
-                                            <td class="p-3 text-emerald-400">Explain the cause (GPS / permission / network) with direct fixes.</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="p-3">GST details sit above the Fare Summary.</td>
-                                            <td class="p-3 font-semibold text-teal-400">Aesthetic & Minimalist Design</td>
-                                            <td class="p-3">Buries the number users check first: the total fare.</td>
-                                            <td class="p-3 text-emerald-400">Elevate Fare Summary; move GST into a collapsible section.</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-
-                        <!-- Page 6: UX Laws Mapping -->
-                        <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800 space-y-4">
-                            <span class="px-2 py-0.5 rounded bg-brand-500/20 text-brand-300 font-mono text-[10px]">PAGE 6</span>
-                            <h4 class="text-sm font-bold text-white uppercase tracking-wider text-brand-400">UX LAWS MAPPING — Diagnosing Cognitive Friction</h4>
-                            
-                            <div class="grid sm:grid-cols-3 gap-4 text-xs">
-                                <div class="p-4 rounded-xl bg-slate-950 border border-slate-800 space-y-2">
-                                    <span class="font-bold text-brand-400 block">1. Hick's Law</span>
-                                    <p class="text-slate-400 text-[11px]">Choice count increases decision time</p>
-                                    <p><strong>OBSERVATION:</strong> The Vehicle Selection screen presents 5+ similar-looking options, forcing manual comparison before a decision can be made.</p>
-                                    <p class="text-emerald-400"><strong>SOLUTION:</strong> Group vehicles by use case and surface a “Recommended” vehicle by default.</p>
-                                </div>
-                                <div class="p-4 rounded-xl bg-slate-950 border border-slate-800 space-y-2">
-                                    <span class="font-bold text-indigo-400 block">2. Fitts's Law</span>
-                                    <p class="text-slate-400 text-[11px]">Small, far targets slow interaction</p>
-                                    <p><strong>OBSERVATION:</strong> Secondary actions like “Edit Location” and fare breakdowns sit far from the natural thumb zone.</p>
-                                    <p class="text-emerald-400"><strong>SOLUTION:</strong> Enlarge frequent controls and place them within easy thumb reach.</p>
-                                </div>
-                                <div class="p-4 rounded-xl bg-slate-950 border border-slate-800 space-y-2">
-                                    <span class="font-bold text-purple-400 block">3. Jakob's Law</span>
-                                    <p class="text-slate-400 text-[11px]">Users expect familiar patterns</p>
-                                    <p><strong>OBSERVATION:</strong> Users bring mental models from Uber and Ola, expecting a similar linear, progress-tracked booking flow.</p>
-                                    <p class="text-emerald-400"><strong>SOLUTION:</strong> Add a familiar progress bar and use plain, non-technical labels.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Page 7: Proposed Redesign Blueprint -->
-                        <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800 space-y-3">
-                            <span class="px-2 py-0.5 rounded bg-brand-500/20 text-brand-300 font-mono text-[10px]">PAGE 7</span>
-                            <h4 class="text-sm font-bold text-white uppercase tracking-wider text-indigo-400">PROPOSED REDESIGN — Before & After Blueprint</h4>
-                            <p class="text-xs text-slate-300">Master blueprint restructuring information hierarchy, primary interaction targets, and clear visual capacity indicators.</p>
-                        </div>
-
-                        <!-- Page 8: Redesign Recommendations -->
-                        <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800 space-y-4">
-                            <span class="px-2 py-0.5 rounded bg-brand-500/20 text-brand-300 font-mono text-[10px]">PAGE 8</span>
-                            <h4 class="text-sm font-bold text-white uppercase tracking-wider text-purple-400">REDESIGN RECOMMENDATIONS — Three Targeted Interventions</h4>
-                            
-                            <div class="space-y-3 text-xs">
-                                <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-800">
-                                    <strong class="text-brand-400 text-sm block mb-1">1. Vehicle Selection</strong>
-                                    <p><strong>CURRENT:</strong> Technical names, no recommendation, manual comparison.</p>
-                                    <p><strong>PROPOSED:</strong> Vehicle image, capacity, example items, “Best for 1 BHK” tag, “Recommended” badge.</p>
-                                    <p class="text-emerald-400"><strong>EXPECTED BENEFIT:</strong> Faster, more confident vehicle choice.</p>
-                                </div>
-                                <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-800">
-                                    <strong class="text-indigo-400 text-sm block mb-1">2. Booking Review</strong>
-                                    <p><strong>CURRENT:</strong> Fare Summary appears below GST details.</p>
-                                    <p><strong>PROPOSED:</strong> Fare Summary first, top-anchored progress indicator, Confirm button always visible.</p>
-                                    <p class="text-emerald-400"><strong>EXPECTED BENEFIT:</strong> Quicker review before confirming.</p>
-                                </div>
-                                <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-800">
-                                    <strong class="text-purple-400 text-sm block mb-1">3. Error Handling</strong>
-                                    <p><strong>CURRENT:</strong> Location error offers only a “Retry” button.</p>
-                                    <p><strong>PROPOSED:</strong> Explain the cause (GPS / permission / network) + Retry, Open Settings, Enter Manually.</p>
-                                    <p class="text-emerald-400"><strong>EXPECTED BENEFIT:</strong> Users self-recover without frustration.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Page 9: Expected Impact -->
-                        <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800 space-y-4">
-                            <span class="px-2 py-0.5 rounded bg-brand-500/20 text-brand-300 font-mono text-[10px]">PAGE 9</span>
-                            <h4 class="text-sm font-bold text-white uppercase tracking-wider text-emerald-400">EXPECTED IMPACT — User & Business Outcomes</h4>
-                            
-                            <div class="grid sm:grid-cols-2 gap-4 text-xs">
-                                <div class="p-4 rounded-xl bg-slate-950 border border-slate-800 space-y-2">
-                                    <strong class="text-brand-400 block">USER IMPACT</strong>
-                                    <ul class="space-y-1 text-slate-300">
-                                        <li>✓ Faster vehicle selection</li>
-                                        <li>✓ Less confusion during booking</li>
-                                        <li>✓ Better understanding of pricing</li>
-                                        <li>✓ Improved confidence before confirming</li>
-                                        <li>✓ Smoother overall booking experience</li>
-                                    </ul>
-                                </div>
-                                <div class="p-4 rounded-xl bg-slate-950 border border-slate-800 space-y-2">
-                                    <strong class="text-indigo-400 block">BUSINESS IMPACT</strong>
-                                    <table class="w-full text-left divide-y divide-slate-800 text-[11px]">
-                                        <thead>
-                                            <tr class="text-slate-400">
-                                                <th class="py-1">Improvement</th>
-                                                <th class="py-1">Business Benefit</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody class="divide-y divide-slate-800/60 text-slate-300">
-                                            <tr><td class="py-1">Better vehicle descriptions</td><td class="py-1 text-emerald-400">Higher booking completion</td></tr>
-                                            <tr><td class="py-1">Recommended vehicle tags</td><td class="py-1 text-emerald-400">Fewer incorrect bookings</td></tr>
-                                            <tr><td class="py-1">Better progress tracking</td><td class="py-1 text-emerald-400">Lower booking abandonment</td></tr>
-                                            <tr><td class="py-1">Improved error messages</td><td class="py-1 text-emerald-400">Fewer support requests</td></tr>
-                                            <tr><td class="py-1">Improved information hierarchy</td><td class="py-1 text-emerald-400">Faster booking decisions</td></tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                            
-                            <p class="text-xs text-slate-300 bg-slate-950 p-3 rounded-xl border border-slate-800 leading-relaxed">
-                                <strong>Key Takeaway:</strong> None of these changes alter Porter's underlying booking flow. Better descriptions, clearer progress tracking, and more helpful error messages make the existing journey more intuitive — with no engineering re-architecture required.
-                            </p>
-                        </div>
-
-                        <!-- Page 10: Conclusion & References -->
-                        <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800 space-y-4">
-                            <span class="px-2 py-0.5 rounded bg-brand-500/20 text-brand-300 font-mono text-[10px]">PAGE 10</span>
-                            <h4 class="text-sm font-bold text-white uppercase tracking-wider text-brand-400">CONCLUSION & REFERENCES</h4>
-                            
-                            <p class="text-xs text-slate-300 leading-relaxed">
-                                Porter's booking flow is fundamentally sound. Small, targeted changes to language, hierarchy, and feedback can remove the remaining friction for first-time users.
-                            </p>
-                            <p class="text-xs text-slate-300 leading-relaxed">
-                                This project applied Nielsen's Usability Heuristics and core UX laws to move from anecdotal impressions to a structured, evidence-based redesign — benefiting both users and the business.
-                            </p>
-
-                            <div class="pt-3 border-t border-slate-800 space-y-1.5 text-xs text-slate-400">
-                                <strong class="text-white block">REFERENCES</strong>
-                                <p>• Nielsen Norman Group — 10 Usability Heuristics for User Interface Design</p>
-                                <p>• Nielsen Norman Group — Visibility of System Status & Error Message Guidelines</p>
-                                <p>• Baymard Institute — Checkout & Mobile UX Research</p>
-                                <p>• Jakob Nielsen — Jakob's Law of Internet User Experience</p>
-                                <p>• Interaction Design Foundation — Hick's Law and Fitts's Law</p>
-                            </div>
-                        </div>
-
-                        <!-- Footer Sign-off -->
-                        <div class="pt-2 text-center text-xs text-slate-500">
-                            <span>Dinesh Jaybhay • Porter UX Case Study • Document Complete</span>
-                        </div>
-                    </div>
-                `
-            },
-            cs1: {
-                title: "Workforce Capability Intelligence OS",
-                subtitle: "3-Year B2B SaaS Product Strategy Case Study",
-                tags: ["Product Strategy", "Workforce Intelligence", "B2B SaaS"],
-                body: `
-                    <p class="text-sm text-slate-300 mb-4 leading-relaxed">
-                        Most enterprise organizations invest heavily in LMS platforms (Cornerstone, Workday Learning), yet leadership still struggles to answer: 
-                        <em class="text-brand-300">"What skills do we actually possess, and what drives real business impact?"</em>
-                    </p>
-                    <div class="space-y-4 my-6">
-                        <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
-                            <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-2">Core Pillars of Strategy</h4>
-                            <ul class="text-xs text-slate-400 space-y-2">
-                                <li>• <strong>Skill Graph Mapping:</strong> Dynamic talent mapping connecting employee tasks to capability nodes.</li>
-                                <li>• <strong>AI Skill Gap Analysis:</strong> Automated prompt-engineered recommendations for upskilling.</li>
-                                <li>• <strong>Outcome-Based Tracking:</strong> Correlating course completion with revenue KPIs & project delivery.</li>
+                        <!-- LinkedIn Learning Stack -->
+                        <div class="glass-card p-4 rounded-xl border border-slate-200 dark:border-slate-800 space-y-2">
+                            <div class="text-xs font-bold text-slate-400 uppercase tracking-wider">LinkedIn Learning Professional Track</div>
+                            <ul class="text-xs text-slate-700 dark:text-slate-300 space-y-1.5 list-disc list-inside">
+                                <li>Generative AI for Product Managers</li>
+                                <li>Technical Product Management</li>
+                                <li>Building a Product Strategy</li>
+                                <li>Building a Product Roadmap</li>
                             </ul>
                         </div>
-                    </div>
-                    <p class="text-xs text-slate-400">Designed roadmap milestones over 3 years spanning core skill architecture, predictive talent analytics, and automated internal mobility loops.</p>
-                `
-            },
-            cs2: {
-                title: "SmartRide Connect: Pickup Experience",
-                subtitle: "Ride-Hailing Pickup Friction & UX Discovery",
-                tags: ["User Discovery", "UX Research", "Prototyping"],
-                body: `
-                    <p class="text-sm text-slate-300 mb-4 leading-relaxed">
-                        Pickup confusion in crowded locations (airports, shopping centers, railway hubs) causes frustration for riders and financial loss for drivers due to idle time and missed pickups.
-                    </p>
-                    <div class="grid grid-cols-2 gap-3 my-6 text-center">
-                        <div class="p-3 rounded-xl bg-slate-900 border border-slate-800">
-                            <span class="block text-xl font-bold text-indigo-400">90%</span>
-                            <span class="text-[10px] text-slate-400 uppercase">Experienced Pickup Confusion</span>
-                        </div>
-                        <div class="p-3 rounded-xl bg-slate-900 border border-slate-800">
-                            <span class="block text-xl font-bold text-indigo-400">5-10 m</span>
-                            <span class="text-[10px] text-slate-400 uppercase">Lost Per Ride</span>
-                        </div>
-                    </div>
-                    <div class="space-y-2 text-xs text-slate-300">
-                        <h4 class="font-bold text-white mb-1">Proposed Solution Features:</h4>
-                        <p>1. <strong>Smart Meeting Points:</strong> Recommending predefined exit-door meeting hubs based on GPS density.</p>
-                        <p>2. <strong>Side-of-Road Guidance:</strong> Visual cues telling rider exact curb pickup orientation.</p>
-                        <p>3. <strong>Entrance Selection:</strong> In-app gate selector for multi-exit venues.</p>
-                    </div>
-                `
-            }
-        };
 
-        function openModal(id) {
-            const cs = caseStudyDetails[id];
-            if (!cs) return;
-
-            const modalBody = document.getElementById('modal-body');
-            modalBody.innerHTML = `
-                <div class="space-y-4">
-                    <div class="flex flex-wrap gap-2 mb-2">
-                        ${cs.tags.map(t => `<span class="px-2.5 py-1 rounded-full bg-brand-500/10 text-brand-400 text-[10px] font-semibold">${t}</span>`).join('')}
-                    </div>
-                    <h3 class="text-2xl font-bold font-heading text-white">${cs.title}</h3>
-                    <p class="text-xs text-brand-400 font-semibold">${cs.subtitle}</p>
-                    <div class="pt-4 border-t border-slate-800">
-                        ${cs.body}
                     </div>
                 </div>
-            `;
 
-            document.getElementById('modal-overlay').classList.remove('hidden');
-        }
+                <!-- Education & Academic Foundation -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div>
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-cyan-50 dark:bg-cyan-950/80 text-cyan-700 dark:text-cyan-300 border border-cyan-200 dark:border-cyan-800/60 mb-2 uppercase tracking-wider">
+                            <i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i> Academic Background
+                        </div>
+                        <h2 class="text-2xl font-extrabold text-slate-900 dark:text-white">
+                            Education
+                        </h2>
+                    </div>
 
-        function closeModal() {
-            document.getElementById('modal-overlay').classList.add('hidden');
-        }
+                    <div class="glass-card p-6 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-3">
+                        <div class="flex items-center justify-between">
+                            <h3 class="font-bold text-slate-900 dark:text-white text-base">
+                                Bachelor of Business Administration (BBA)
+                            </h3>
+                            <span class="text-xs font-semibold text-slate-400">2015 — 2018</span>
+                        </div>
+                        <p class="text-xs text-indigo-600 dark:text-indigo-400 font-medium">
+                            AISECT University
+                        </p>
+                        <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                            Specialized in Business Operations & Strategy. Groundwork in market analysis, business models, and operational process design.
+                        </p>
+                    </div>
 
-        // Skills Data & Filter
-        const skillsData = [
-            { name: "Product Strategy", category: "pm" },
-            { name: "Problem Discovery", category: "pm" },
-            { name: "Heuristic Evaluation & UX", category: "pm" },
-            { name: "Interactive Prototyping (Lovable)", category: "pm" },
-            { name: "User Research", category: "pm" },
-            { name: "Roadmapping", category: "pm" },
-            { name: "Funnel Analytics", category: "growth" },
-            { name: "RevOps & Lead Gen", category: "growth" },
-            { name: "Conversion Rate Optimization", category: "growth" },
-            { name: "CRM Architecture (HubSpot/Lusha)", category: "growth" },
-            { name: "Prompt Engineering (ChatGPT)", category: "ai" },
-            { name: "AI Workflow Integration", category: "ai" },
-            { name: "Productization of Ops", category: "pm" },
-            { name: "Cross-Functional Leadership", category: "pm" }
-        ];
-
-        function filterSkills(category) {
-            const grid = document.getElementById('skills-grid');
-            const btns = document.querySelectorAll('#skill-filters .skill-btn');
-
-            btns.forEach(btn => {
-                btn.className = "skill-btn px-4 py-2 rounded-xl text-xs font-semibold bg-slate-900 border border-slate-800 text-slate-400 hover:text-white transition-all";
-            });
-            event.target.className = "skill-btn active px-4 py-2 rounded-xl text-xs font-semibold bg-brand-600 text-white transition-all";
-
-            const filtered = category === 'all' ? skillsData : skillsData.filter(s => s.category === category);
-
-            grid.innerHTML = filtered.map(s => `
-                <div class="glass-panel p-4 rounded-xl border border-slate-800 text-center hover:border-brand-500/40 transition-all">
-                    <span class="text-xs font-semibold text-slate-200">${s.name}</span>
+                    <!-- Callout Quote -->
+                    <div class="p-5 rounded-2xl bg-indigo-600/10 border border-indigo-500/20 text-xs space-y-2">
+                        <i data-lucide="quote" class="w-5 h-5 text-indigo-500"></i>
+                        <p class="text-slate-700 dark:text-slate-300 italic">
+                            "A product manager's primary superpower is bringing clarity to ambiguity—converting scattered user friction into measurable value."
+                        </p>
+                    </div>
                 </div>
-            `).join('');
-        }
 
-        // Copy to Clipboard Utility
-        function copyToClipboard(text, label) {
-            const input = document.createElement('textarea');
-            input.value = text;
-            document.body.appendChild(input);
-            input.select();
-            document.execCommand('copy');
-            document.body.removeChild(input);
+            </div>
+        </div>
+    </section>
 
-            const toast = document.getElementById('toast');
-            document.getElementById('toast-title').innerText = label;
-            document.getElementById('toast-message').innerText = `${text} copied!`;
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="space-y-1 text-center md:text-left">
+                <div class="font-bold text-white text-base">Dinesh Jaybhay</div>
+                <div>Certified Product Manager (CPM, Airtribe) · Pune, India</div>
+            </div>
+
+            <div class="flex items-center gap-6">
+                <a href="mailto:dineshjaybhay@gmail.com" class="hover:text-white transition-colors">dineshjaybhay@gmail.com</a>
+                <a href="tel:+919561015344" class="hover:text-white transition-colors">+91 95610 15344</a>
+                <a href="https://linkedin.com/in/dinesh-jaybhay-83049118a" target="_blank" class="hover:text-white transition-colors">LinkedIn</a>
+                <button @click="openPrototypeModal()" class="text-indigo-400 hover:text-indigo-300 font-semibold">Fireflies Prototype</button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE MODAL: LIVE PROTOTYPE VIEWER -->
+    <div x-show="prototypeModalOpen" x-transition.opacity class="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-slate-950/80 backdrop-blur-md" x-cloak>
+        <div @click.away="prototypeModalOpen = false" class="bg-slate-900 rounded-2xl border border-slate-800 w-full max-w-6xl h-[90vh] flex flex-col overflow-hidden shadow-2xl">
             
-            toast.classList.remove('translate-y-20', 'opacity-0');
-            setTimeout(() => {
-                toast.classList.add('translate-y-20', 'opacity-0');
-            }, 3000);
-        }
+            <!-- Modal Header -->
+            <div class="px-6 py-4 bg-slate-900 border-b border-slate-800 flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                    <div class="w-3 h-3 rounded-full bg-amber-500"></div>
+                    <div class="w-3 h-3 rounded-full bg-emerald-500"></div>
+                    <span class="text-xs font-bold text-white ml-2 flex items-center gap-2">
+                        <i data-lucide="play" class="w-3.5 h-3.5 text-indigo-400"></i>
+                        Fireflies.ai Closed-Loop Commitment Prototype
+                    </span>
+                </div>
 
-        // Mobile Menu Toggle
-        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
+                <div class="flex items-center gap-3">
+                    <a href="https://Prototype-Dinesh-Fireflies-AI.replit.app" target="_blank" class="text-xs text-indigo-400 hover:text-indigo-300 font-medium flex items-center gap-1">
+                        Open in Full Tab <i data-lucide="external-link" class="w-3 h-3"></i>
+                    </a>
+                    <button @click="prototypeModalOpen = false" class="p-1 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800">
+                        <i data-lucide="x" class="w-5 h-5"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Modal Body with Responsive Iframe -->
+            <div class="flex-1 bg-slate-950 relative">
+                <iframe src="https://Prototype-Dinesh-Fireflies-AI.replit.app" class="w-full h-full border-0" title="Fireflies.ai Product Prototype"></iframe>
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="px-6 py-3 bg-slate-900 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
+                <span>Designed & Built by Dinesh Jaybhay (CPM)</span>
+                <span class="text-emerald-400 flex items-center gap-1">
+                    <i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i> Live Airtribe Capstone Prototype
+                </span>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- INTERACTIVE MODAL: CASE STUDY DETAIL VIEWER -->
+    <div x-show="caseModalOpen" x-transition.opacity class="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-slate-950/80 backdrop-blur-md" x-cloak>
+        <div @click.away="caseModalOpen = false" class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 w-full max-w-4xl max-h-[85vh] flex flex-col overflow-hidden shadow-2xl">
+            
+            <!-- Modal Header -->
+            <div class="px-6 py-4 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                    <span class="p-1.5 rounded bg-indigo-100 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 font-bold text-xs">
+                        PM Case Study
+                    </span>
+                    <h3 class="font-bold text-slate-900 dark:text-white text-base" x-text="selectedCase.title"></h3>
+                </div>
+                <button @click="caseModalOpen = false" class="p-1.5 rounded-lg text-slate-400 hover:text-slate-600 dark:hover:text-white">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+
+            <!-- Modal Content -->
+            <div class="p-6 sm:p-8 overflow-y-auto custom-scrollbar space-y-6 text-xs sm:text-sm text-slate-700 dark:text-slate-300">
+                <div class="p-4 rounded-xl bg-indigo-50 dark:bg-indigo-950/50 border border-indigo-200 dark:border-indigo-800/60">
+                    <strong class="text-indigo-900 dark:text-indigo-200 font-bold block mb-1">Executive Summary</strong>
+                    <p x-text="selectedCase.summary"></p>
+                </div>
+
+                <div class="space-y-3">
+                    <h4 class="font-bold text-slate-900 dark:text-white text-base">Key Insights & Problem Framing</h4>
+                    <p x-text="selectedCase.problem"></p>
+                </div>
+
+                <div class="space-y-3">
+                    <h4 class="font-bold text-slate-900 dark:text-white text-base">Solution Architecture & Deliverables</h4>
+                    <ul class="list-disc list-inside space-y-1.5">
+                        <template x-for="item in selectedCase.highlights">
+                            <li x-text="item"></li>
+                        </template>
+                    </ul>
+                </div>
+
+                <div class="space-y-3" x-show="selectedCase.metrics">
+                    <h4 class="font-bold text-slate-900 dark:text-white text-base">Target Business Metrics & Impact</h4>
+                    <p x-text="selectedCase.metrics"></p>
+                </div>
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="px-6 py-4 bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between">
+                <span class="text-xs text-slate-400">Author: Dinesh Jaybhay (CPM)</span>
+                <button @click="caseModalOpen = false" class="px-4 py-2 rounded-lg bg-slate-900 dark:bg-slate-800 text-white text-xs font-semibold">
+                    Close Window
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ALPINE APPLICATION SCRIPT -->
+    <script>
+        document.addEventListener('alpine:init', () => {
+            Alpine.data('portfolioApp', () => ({
+                darkMode: true,
+                mobileMenuOpen: false,
+                prototypeModalOpen: false,
+                caseModalOpen: false,
+                skillQuery: '',
+                selectedCase: {
+                    title: '',
+                    summary: '',
+                    problem: '',
+                    highlights: [],
+                    metrics: ''
+                },
+                caseStudies: {
+                    fireflies: {
+                        title: 'Fireflies.ai — Closed-Loop Commitment Experience',
+                        summary: 'Designing a closed-loop commitment tracking system for Fireflies.ai meeting notes to convert spoken action items into actively tracked, owned, and resolved commitments.',
+                        problem: 'Primary user research (9 interviews, 32 survey respondents, 50 desk research datasets) revealed that while AI captures meeting notes well, commitment follow-through breaks post-meeting. Only 28% of commitments resolve within 14 days due to missing due dates, fragmented tracking tools, and lack of follow-up.',
+                        highlights: [
+                            'FireSpark: Smart task creation with required human confirmation (Confirm/Edit/Reject) before activation.',
+                            'FireTrail: Task dashboard featuring "My Commitments" and "Team Commitments" views with RAG health status.',
+                            'FirePulse: Context-aware nudges triggering quick status updates without spamming users.',
+                            'RICE Prioritization matrix selecting FireSpark, FireTrail, and FirePulse out of 10 candidate features.'
+                        ],
+                        metrics: 'Targeting a 17-point lift in 14-day commitment resolution rate from 28% to 45%.'
+                    },
+                    workforce: {
+                        title: 'Workforce Capability Intelligence OS (B2B SaaS Strategy)',
+                        summary: 'A 3-Year B2B SaaS Product Strategy transforming corporate learning from static course completion metrics to dynamic skill-graph intelligence.',
+                        problem: 'Enterprise companies struggle to align employee learning with real skill gaps and internal mobility opportunities, causing talent churn and underutilized training budgets.',
+                        highlights: [
+                            'Mapped AI-driven skill-gap analysis directly to company performance outcomes.',
+                            'Designed an internal mobility workforce dashboard for HR and department managers.',
+                            'Built a phased 3-year strategic product roadmap balancing core platform features and predictive AI models.'
+                        ],
+                        metrics: 'Designed to increase internal talent mobility by 35% and reduce corporate upskilling friction.'
+                    },
+                    smartride: {
+                        title: 'SmartRide Connect — Pickup Experience Discovery',
+                        summary: 'User research and discovery initiative focused on removing pickup friction in ride-hailing applications.',
+                        problem: 'Primary interviews revealed that 90% of riders called drivers immediately after booking due to pickup-point ambiguity and confusion in crowded locations.',
+                        highlights: [
+                            'Conducted contextual interviews and passenger journey mapping.',
+                            'Designed a "Smart Meeting Point & Gate Selection" flow with visual landmarks.',
+                            'Introduced landmark-guided pickup loops to eliminate driver-rider calling overhead.'
+                        ],
+                        metrics: 'Reduced pickup cancellation rates and driver wait times.'
+                    },
+                    porter: {
+                        title: 'Porter Mini Truck Booking Flow Redesign',
+                        summary: 'Heuristic evaluation and UX redesign report for Porter\'s mini truck booking journey.',
+                        problem: 'Booking flow suffered from cognitive overload, unclear vehicle capacity specifications, and high drop-offs prior to order confirmation.',
+                        highlights: [
+                            'Evaluated the flow against Nielsen\'s 10 Usability Heuristics.',
+                            'Applied Hick\'s Law (reducing choice overload) and Fitts\'s Law (optimizing touch targets).',
+                            'Delivered a 10-page detailed redesign report along with an interactive Figma prototype.'
+                        ],
+                        metrics: 'Aimed at optimizing conversion rates and reducing drop-offs during vehicle selection.'
+                    }
+                },
+                init() {
+                    this.darkMode = true;
+                    document.documentElement.classList.add('dark');
+                    this.$nextTick(() => {
+                        if (window.lucide) {
+                            lucide.createIcons();
+                        }
+                    });
+                },
+                toggleDarkMode() {
+                    this.darkMode = !this.darkMode;
+                    if (this.darkMode) {
+                        document.documentElement.classList.add('dark');
+                    } else {
+                        document.documentElement.classList.remove('dark');
+                    }
+                },
+                openPrototypeModal() {
+                    this.prototypeModalOpen = true;
+                },
+                openCaseStudyModal(key) {
+                    if (this.caseStudies[key]) {
+                        this.selectedCase = this.caseStudies[key];
+                        this.caseModalOpen = true;
+                    }
+                },
+                filterSkills(skillsList) {
+                    if (!this.skillQuery || !this.skillQuery.trim()) return skillsList;
+                    const q = this.skillQuery.toLowerCase();
+                    return skillsList.filter(s => s.toLowerCase().includes(q));
+                }
+            }));
         });
-
-        // Initialize on Window Load
-        window.onload = function() {
-            switchPerspective('ops');
-            filterSkills('all');
-
-            // Close modal on overlay backdrop click & Escape key press
-            const modalOverlay = document.getElementById('modal-overlay');
-            if (modalOverlay) {
-                modalOverlay.addEventListener('click', function(e) {
-                    if (e.target === modalOverlay) closeModal();
-                });
-            }
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape') closeModal();
-            });
-        };
     </script>
 </body>
 </html>
